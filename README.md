@@ -36,7 +36,7 @@ pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Alpine/main
 alpine
 ```
 
-3. Stop Debian
+3. Stop Alpine
 
 ```
 exit
