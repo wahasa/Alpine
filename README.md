@@ -27,7 +27,7 @@ pkg update && pkg upgrade
 * Install Alpine
 
 ```
-pkg install wget -y && wget  && chmod +x  && ./
+pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Alpine/main/install-alpine.sh && chmod +x install-alpine.sh && ./install-alpine.sh
 ```
 
 2. Start Alpine
