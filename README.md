@@ -3,7 +3,7 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/channel/UC3sLb7eZCu72iv3G1yUhUHQ">YouTube</a> |</b></p>
 
 ---
-## Debian on Termux Android
+## Alpine on Termux Android
 
 ---------
 Warning :
