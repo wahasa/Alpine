@@ -84,7 +84,9 @@ On Session 1 (termux), run this command :
 
 To Session 2 (alpine), run this command :
 
-> vncstart
+```
+export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 xfce4-session
+```
 
 ---
 * Stop Vnc Server
