@@ -63,7 +63,7 @@ Install Tigervnc
 
 on Termux, run this command :
 ```
-wget https://raw.githubusercontent.com/wahasa/nethunter/main/Patch/tigervnc && chmod +x tigervnc && ./tigervnc
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x tigervnc && ./tigervnc
 ```
 
 ---
