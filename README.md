@@ -42,6 +42,60 @@ alpine
 exit
 
 ```
+
+---
+
+4. Desktop Environment
+
+on Alpine, run this command :
+
+```
+apk update && apk upgrade
+```
+
+* Make 2 Session in Termux
+
+Swipe the screen from left to right in termux, click 'New Session'.
+
+---
+• Session 1 (in termux)
+
+Install Tigervnc
+
+on Termux, run this command :
+```
+wget https://raw.githubusercontent.com/wahasa/nethunter/main/Patch/tigervnc && chmod +x tigervnc && ./tigervnc
+```
+
+---
+• Session 2 (in alpine)
+
+- Install Desktop-xfce
+```
+apk add wget && wget  && chmod +x de-xfce.sh && ./de-xfce.sh
+```
+
+---
+### Vnc Viewer 
+* Start Vnc Server
+
+On Session 1 (termux), run this command :
+
+> vncstart
+
+To Session 2 (alpine), run this command :
+
+> vncstart
+
+---
+* Stop Vnc Server
+
+on Session 1 (termux), run this command :
+
+> vncstop
+
+Close session with 'exit'.
+
 </br>
 
 ---
