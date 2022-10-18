@@ -44,7 +44,6 @@ exit
 ```
 
 ---
-
 4. Desktop Environment
 
 on Alpine, run this command :
@@ -72,7 +71,7 @@ wget https://raw.githubusercontent.com/wahasa/nethunter/main/Patch/tigervnc && c
 
 - Install Desktop-xfce
 ```
-apk add wget && wget  && chmod +x de-xfce.sh && ./de-xfce.sh
+apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh && chmod +x de-xfce.sh && ./de-xfce.sh
 ```
 
 ---
