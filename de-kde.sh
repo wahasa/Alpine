@@ -5,7 +5,7 @@ apk add nano sudo
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
-apk add plasma konsole dolphin firefox dbus 
+apk add plasma konsole dolphin pulseaudio firefox dbus 
 
 #Get the extra components
 
