@@ -74,6 +74,17 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x t
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh && chmod +x de-xfce.sh && ./de-xfce.sh
 ```
 
+- Install Desktop-kde
+```
+apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde.sh && chmod +x de-kde.sh && ./de-kde.sh
+```
+
+- Install Desktop-mate
+
+- Install Desktop-gnome
+
+> No Recommended
+
 ---
 ### Vnc Viewer 
 * Start Vnc Server
