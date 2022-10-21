@@ -80,6 +80,9 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde
 ```
 
 - Install Desktop-mate
+```
+apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh && chmod +x de-mate.sh && ./de-mate.sh
+```
 
 - Install Desktop-gnome
 
@@ -103,6 +106,11 @@ export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 xfce4-session
 - Kde Start
 ```
 export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 plasma_session
+```
+
+- Mate Start
+```
+export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 mate-session
 ```
 
 ---
