@@ -5,12 +5,12 @@
 ---
 ## Alpine on Termux Android
 
----------
+---
 Warning :
 
 Especially for Android 12 there are several bugs, and for more details, please read in Official [Termux](https://github.com/termux/termux-app).
 
----------
+---
 • Install Apps on Android
 - [x] [Termux](https://github.com/termux/termux-app/releases)
 - [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
@@ -18,46 +18,33 @@ Especially for Android 12 there are several bugs, and for more details, please r
 ## Installation
 
 Copy and paste this command to Termux :
-
-```
-pkg update && pkg upgrade
-```
+> pkg update && pkg upgrade
 
 1. Alpine 3.16.2
 * Install Alpine
-
 ```
 pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Alpine/main/install-alpine.sh && chmod +x install-alpine.sh && ./install-alpine.sh
 ```
 
 2. Start Alpine
-
 ```
 alpine
 ```
 
 3. Stop Alpine
-
 ```
 exit
-
 ```
 
 ---
 4. Desktop Environment
 
-on Alpine, run this command :
-
-```
-apk update && apk upgrade
-```
-
-* Make 2 Session in Termux
+Make 2 Session in Termux
 
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-• Session 1 (in termux)
+* Session 1 (in termux)
 
 Install Tigervnc
 
@@ -67,7 +54,10 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x t
 ```
 
 ---
-• Session 2 (in alpine)
+* Session 2 (in alpine)
+
+on Alpine, run this command :
+> apk update && apk upgrade
 
 - Install Desktop-xfce
 ```
@@ -87,6 +77,14 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mat
 - Install Desktop-gnome
 
 > No Recommended
+
+---
+Note :
+- [x] Soundfix
+- [x] Browserfix [Click here](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
+- [x] Install Chromium [Click here](https://github.com/wahasa/Alpine/issues/1#issuecomment-1288258119)
+
+Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Vnc Viewer 
