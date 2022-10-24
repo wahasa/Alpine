@@ -21,7 +21,7 @@ Copy and paste this command to Termux :
 > pkg update && pkg upgrade
 
 1. Alpine 3.16.2
-* Install Alpine
+* [Install Alpine](https://youtu.be/UgHDIcmDQTQ)
 ```
 pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Alpine/main/install-alpine.sh && chmod +x install-alpine.sh && ./install-alpine.sh
 ```
@@ -37,7 +37,7 @@ exit
 ```
 
 ---
-4. Desktop Environment
+4. [Desktop Environment](https://github.com/wahasa/Alpine/issues/2)
 
 Make 2 Session in Termux
 
@@ -59,22 +59,22 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x t
 on Alpine, run this command :
 > apk update && apk upgrade
 
-- Install Desktop-xfce
+- [Install Desktop-xfce](https://youtu.be/KjrNB2WG6l8)
 ```
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh && chmod +x de-xfce.sh && ./de-xfce.sh
 ```
 
-- Install Desktop-kde
+- [Install Desktop-kde](https://youtu.be/MLa_uA3CIgE)
 ```
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde.sh && chmod +x de-kde.sh && ./de-kde.sh
 ```
 
-- Install Desktop-mate
+- [Install Desktop-mate](https://youtu.be/1-FIP9eerfU)
 ```
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh && chmod +x de-mate.sh && ./de-mate.sh
 ```
 
-- Install Desktop-gnome
+- [Install Desktop-gnome](https://github.com/wahasa/Alpine/issues/2#issuecomment-1288363957)
 
 > No Recommended
 
