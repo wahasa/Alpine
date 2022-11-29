@@ -44,10 +44,10 @@ Make 2 Session in Termux
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-* Session 1 (in termux)
+1. Session 1 (in termux)
 > pkg update && pkg Upgrade
 
-Install Tigervnc
+* Install Tigervnc
 
 on Termux, run this command :
 ```
@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x t
 ```
 
 ---
-* Session 2 (in alpine)
+2. Session 2 (in alpine)
 
 on Alpine, run this command :
 > apk update && apk upgrade
