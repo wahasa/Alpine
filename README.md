@@ -88,7 +88,7 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Vnc Viewer 
-* Start Vnc Server
+1. Start Vnc Server
 
 On Session 1 (termux), run this command :
 
@@ -112,7 +112,7 @@ export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 mate-session
 ```
 
 ---
-* Stop Vnc Server
+2. Stop Vnc Server
 
 on Session 1 (termux), run this command :
 
