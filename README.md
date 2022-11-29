@@ -6,9 +6,9 @@
 ## Alpine on Termux Android
 
 ---
-Warning :
+Announcement :
 
-Especially for Android 12 there are several bugs, and for more details, please read in Official [Termux](https://github.com/termux/termux-app).
+For android 12 in [Termux v0.119.1](https://apkcombo.com/termux/com.termux/) fixed.
 
 ---
 • Install Apps on Android
@@ -45,7 +45,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
 * Session 1 (in termux)
-
+> pkg update && pkg Upgrade
 Install Tigervnc
 
 on Termux, run this command :
@@ -74,15 +74,15 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh && chmod +x de-mate.sh && ./de-mate.sh
 ```
 
-- [Install Desktop-gnome](https://github.com/wahasa/Alpine/issues/2#issuecomment-1288363957)
+- Install Desktop-gnome
 
-> No Recommended
+> [No Recommended,.](https://github.com/wahasa/Alpine/issues/2#issuecomment-1288363957)
 
 ---
 Note :
 - [x] Soundfix
-- [x] Browserfix [Click here](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
-- [x] Install Chromium [Click here](https://github.com/wahasa/Alpine/issues/1#issuecomment-1288258119)
+- [x] Browserfix [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
+- [x] Install Chromium [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1288258119)
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
