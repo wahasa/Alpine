@@ -20,10 +20,15 @@ For android 12 in [Termux v0.119.1](https://apkcombo.com/termux/com.termux/) fix
 Copy and paste this command to Termux :
 > pkg update && pkg upgrade
 
-1. Alpine 3.16.2
-* [Install Alpine](https://youtu.be/UgHDIcmDQTQ)
+1. Install Alpine
+* Alpine 3.17.0
 ```
-pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Alpine/main/install-alpine.sh && chmod +x install-alpine.sh && ./install-alpine.sh
+pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.17.0.sh && chmod +x alpine3.17.0.sh && ./alpine3.17.0.sh
+```
+
+* [Alpine 3.16.3](https://youtu.be/UgHDIcmDQTQ)
+```
+pkg install wget -y && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.16.3.sh && chmod +x alpine3.16.3.sh && ./alpine3.16.3.sh
 ```
 
 2. Start Alpine
