@@ -46,6 +46,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 ---
 * Session 1 (in termux)
 > pkg update && pkg Upgrade
+
 Install Tigervnc
 
 on Termux, run this command :
