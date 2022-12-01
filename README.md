@@ -118,7 +118,24 @@ export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 mate-session
 ```
 
 ---
-2. Stop Vnc Server
+2. Open Vnc Viewer
+
+Add (+) VNC Client to connect, fill with :
+
+Address
+```
+localhost:1
+```
+
+Name
+```
+Alpine Desktop
+```
+
+To disconnect VNC Client, click (X) on the right.
+
+---
+3. Stop Vnc Server
 
 on Session 1 (termux), run this command :
 
