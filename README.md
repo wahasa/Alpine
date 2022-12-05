@@ -80,7 +80,7 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh && chmod +x de-mate.sh && ./de-mate.sh
 ```
 
-- Install Desktop-gnome
+- [Install Desktop-gnome](https://youtu.be/1mVlZ4UFQLo)
 
 ```
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh&& chmod +x de-gnome.sh && ./de-gnome.sh
