@@ -82,7 +82,9 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mat
 
 - Install Desktop-gnome
 
-> [No Recommended,.](https://github.com/wahasa/Alpine/issues/2#issuecomment-1288363957)
+```
+apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh&& chmod +x de-gnome.sh && ./de-gnome.sh
+```
 
 ---
 Note :
