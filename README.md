@@ -86,6 +86,10 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mat
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh&& chmod +x de-gnome.sh && ./de-gnome.sh
 ```
 
+Note
+
+After installing the desktop run the command 'ctrl+c, y enter' to go to alpine home.
+
 ---
 Note :
 - [x] Soundfix
@@ -104,20 +108,7 @@ On Session 1 (termux), run this command :
 
 To Session 2 (alpine), run this command :
 
-- Xfce Start
-```
-export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 xfce4-session
-```
-
-- Kde Start
-```
-export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 plasma_session
-```
-
-- Mate Start
-```
-export PULSE_SERVER=127.0.0.1 && DISPLAY=:1 mate-session
-```
+> vncstart
 
 ---
 2. Open Vnc Viewer
