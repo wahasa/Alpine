@@ -21,9 +21,26 @@ Copy and paste this command to Termux :
 > pkg update && pkg upgrade
 
 1. Install Alpine
+
+* Alpine 3.17</br>
+(Armhf,Arm64,Amd64)
 ```
-pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/install.sh && chmod +x install.sh && ./install.sh
+pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.17.sh && chmod +x alpine3.17.sh && ./alpine3.17.sh
 ```
+
+* Alpine 3.16</br>
+(Armhf,Arm64,Amd64)
+```
+pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.16.sh && chmod +x alpine3.16.sh && ./alpine3.16.sh
+```
+
+* Alpine 3.15</br>
+(Armhf,Arm64,Amd64)
+```
+pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.15.sh && chmod +x alpine3.15.sh && ./alpine3.15.sh
+```
+ 
+
 
 2. Start Alpine
 ```
