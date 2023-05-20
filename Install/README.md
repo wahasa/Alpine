@@ -1,4 +1,4 @@
-Ubuntu Releases
+Alpine Releases
 - https://www.alpinelinux.org/releases
 
 Source Rootfs
