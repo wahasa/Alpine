@@ -5,10 +5,10 @@ apk add nano sudo
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
-apk add xfce4 xfce4-terminal faenza-icon-theme xfwm4-themes xfburn parole pulseaudio dbus
+apk add xfce4 xfce4-terminal xfce4-dev-tools adwaita-xfce-icon-theme xfwm4-themes xfburn parole ristretto pulseaudio dbus
 
 #Get the extra components
-apk add mousepad ristretto xfce4-notifyd xfce4-screenshooter xfce4-taskmanager xfce4-power-manager
+apk add xfce4-taskmanager xfce4-mixer xfce4-notifyd xfce4-panel-profiles xfce4-screensaver xfce4-screenshooter gigolo orage mousepad
 
 echo "#!/bin/sh
 export DISPLAY=:1
