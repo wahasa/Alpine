@@ -33,7 +33,7 @@ exit
 
 * Remove Alpine
 ```
-rm -rf Alpine-fs
+rm -rf alpine-fs
 ```
 
 ---
