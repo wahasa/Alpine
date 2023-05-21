@@ -6,13 +6,8 @@
 ## Alpine on Termux Android
 
 ---
-Announcement :
-
-For android 12 in [Termux v0.119.1](https://apkcombo.com/termux/com.termux/) fixed.
-
----
 • Install Apps on Android
-- [x] [Termux](https://github.com/termux/termux-app/releases)
+- [x] [Termux](https://apkcombo.com/termux/com.termux/)
 - [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 
 ## Installation
@@ -20,37 +15,35 @@ For android 12 in [Termux v0.119.1](https://apkcombo.com/termux/com.termux/) fix
 Copy and paste this command to Termux :
 > pkg update && pkg upgrade
 
-1. Install Alpine
+* Install Alpine
 
-* Alpine 3.17</br>
-(Armhf,Arm64,Amd64)
 ```
-pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.17.sh && chmod +x alpine3.17.sh && ./alpine3.17.sh
+pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/install.sh ; chmod +x install.sh ; ./install.sh
 ```
 
-* Alpine 3.16</br>
-(Armhf,Arm64,Amd64)
-```
-pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.16.sh && chmod +x alpine3.16.sh && ./alpine3.16.sh
-```
-
-* Alpine 3.15</br>
-(Armhf,Arm64,Amd64)
-```
-pkg install wget && wget https://raw.githubusercontent.com/wahasa/Project/main/Linux/Alpine/alpine3.15.sh && chmod +x alpine3.15.sh && ./alpine3.15.sh
-```
- 
-
-
-2. Start Alpine
+* Start Alpine
 ```
 alpine
 ```
 
-3. Stop Alpine
+* Stop Alpine
 ```
 exit
 ```
+
+* Remove Alpine
+```
+rm -rf Alpine-fs
+```
+
+---
+Basic commands Alpine
+> apk update : Update list package.</br>
+> apk upgrade : Upgrade package.</br>
+> apk search (pkg) : Search package.</br>
+> apk add (pkg) : Install package.</br>
+> apk del (pkg) : Delete package.</br>
+> apk -h : Help all commands.
 
 ---
 4. [Desktop Environment](https://github.com/wahasa/Alpine/issues/2)
