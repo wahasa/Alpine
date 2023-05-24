@@ -110,8 +110,7 @@ chmod +x $PREFIX/bin/$linux
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> ~/"$folder"/etc/apk/repositories
-	./$bin apk update
+        ./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
         sed -i 's/bin\/sh/bin\/bash/g' $bin
