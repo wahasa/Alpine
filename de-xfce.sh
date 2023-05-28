@@ -5,16 +5,16 @@ apk add nano sudo
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
-apk add xfce4 xfce4-terminal xfce4-mixer xfce4-notifyd adwaita-xfce-icon-theme xfburn parole ristretto
+apk add xfce4 xfce4-terminal
 
 #Get the extra components
-apk add xfce4-taskmanager xfce4-panel-profiles xfce4-screensaver xfce4-screenshooter gigolo orage mousepad
+apk add adwaita-xfce-icon-theme xfburn parole ristretto
 
 echo "#!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 rm -rf /run/dbus/dbus.pid
-dbus-launch xfce4-session" > /usr/local/bin/vncstart
+dbus-launch startxfce4" > /usr/local/bin/vncstart
 chmod +x /usr/local/bin/vncstart
 
 clear
