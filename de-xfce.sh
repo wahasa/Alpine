@@ -5,7 +5,7 @@ apk add nano sudo
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
-apk add xfce4 xfce4-terminal
+apk add xfce4 xfce4-terminal pulseaudio dbus
 
 #Get the extra components
 apk add adwaita-xfce-icon-theme xfburn parole ristretto
