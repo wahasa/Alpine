@@ -5,16 +5,16 @@ apk add nano sudo
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
-apk add xfce4 xfce4-terminal pulseaudio dbus
+apk add lxqt-desktop qterminal pulseaudio dbus
 
 #Get the extra components
-apk add adwaita-xfce-icon-theme xfburn parole ristretto
+apk add oxygen-icons lximage-qt
 
 echo "#!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 rm -rf /run/dbus/dbus.pid
-dbus-launch startxfce4" > /usr/local/bin/vncstart
+dbus-launch startlxqt" > /usr/local/bin/vncstart
 chmod +x /usr/local/bin/vncstart
 
 clear
@@ -35,4 +35,4 @@ echo "Start Vnc, run vncstart"
 echo "Exit  Vnc, run ctrl+c"
 echo ""
 
-rm de-xfce.sh
+rm de-lxqt.sh
