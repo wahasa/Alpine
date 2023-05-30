@@ -1,4 +1,3 @@
-
 List Applications
 
 <details>
