@@ -14,29 +14,28 @@ echo "#!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 rm -rf /run/dbus/dbus.pid
-dbus-daemon --system
-dbus-launch gnome-session --builtin --session=gnome-flashback-metacity --disable-acceleration-check --debug &
-dbus-launch metacity &
-dbus-launch gnome-panel &
-dbus-launch gnome-flashback" > /usr/local/bin/vncstart
-clear
+gnome-session --builtin --session=gnome-flashback-metacity --disable-acceleration-check --debug &
+metacity &
+gnome-panel &
+gnome-flashback &" > /usr/local/bin/vncstart
 chmod +x /usr/local/bin/vncstart
 
-echo " "
+clear
+echo ""
 echo "Installing browser,.."
-echo " "
+echo ""
 apk add firefox
 clear
-echo " "
+echo ""
 echo "Vnc Server address will run at 127.0.0.1:5901"
-echo " "
+echo ""
 echo "In Termux"
 echo "Start Vnc Server, run vncstart"
 echo "Stop  Vnc Server, run vncstop"
-echo " "
+echo ""
 echo "In Linux"
 echo "Start Vnc, run vncstart"
 echo "Exit  Vnc, run ctrl+c"
-echo " "
+echo ""
 
 rm de-gnome.sh
