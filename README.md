@@ -46,7 +46,7 @@ Basic commands Alpine
 > apk -h : Help all commands.
 
 ---
-4. [Desktop Environment](https://github.com/wahasa/Alpine/issues/2)
+## Desktop Environment
 
 Make 2 Session in Termux
 
@@ -89,22 +89,18 @@ apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mat
 ```
 apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh&& chmod +x de-gnome.sh && ./de-gnome.sh
 ```
-
-Note
-
-After installing the desktop run the command 'ctrl+c, y enter' to go to alpine home.
-
 ---
-Note :
-- [x] Soundfix
-- [x] Browserfix [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
-- [x] Install Chromium [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1288258119)
+Feature
+- [x] Fixed Sound
+- [x] Access to Sdcard
+- [x] Fixed Browser Crash [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
+- [x] Install Applications [Click here,.]
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Vnc Viewer 
-1. Start Vnc Server
+* Start Vnc Server
 
 On Session 1 (termux), run this command :
 
@@ -115,7 +111,7 @@ To Session 2 (alpine), run this command :
 > vncstart
 
 ---
-2. Open Vnc Viewer
+* Open Vnc Viewer
 
 Add (+) VNC Client to connect, fill with :
 
@@ -132,13 +128,17 @@ Alpine Desktop
 To disconnect VNC Client, click (X) on the right.
 
 ---
-3. Stop Vnc Server
+* Stop Vnc Server
 
 on Session 1 (termux), run this command :
 
 > vncstop
 
 Close session with 'exit'.
+
+To Session 2 (Alpine), run this command :
+
+> ctrl + c
 
 </br>
 
