@@ -110,7 +110,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 <p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/gnome.jpg"</p>
 </details>
 
-N:There are apps & features that cann't be opened.
+There are apps & features that cann't be opened.
 
 ```
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
