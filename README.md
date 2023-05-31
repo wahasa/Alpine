@@ -89,7 +89,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 
 <details></br>
 <summary><b><code>Install Desktop Kde</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Debian/raw/main/Image/kde.jpg"</p>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/kde.jpg"</p>
 </details>
 
 ```
@@ -98,7 +98,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 
 <details></br>
 <summary><b><code>Install Desktop Mate</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Debian/raw/main/Image/mate.jpg"</p>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/mate.jpg"</p>
 </details>
 
 ```
@@ -109,6 +109,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 <summary><b><code>Install Desktop Gnome</code></b></summary>
 <p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/gnome.jpg"</p>
 </details>
+N : There are apps & features that cann't be opened.
 
 ```
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
