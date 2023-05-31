@@ -60,7 +60,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 on Termux, run this command :
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x tigervnc && ./tigervnc
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
 
 ---
@@ -75,7 +75,7 @@ on Alpine, run this command :
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
 
 <details></br>
@@ -84,7 +84,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
 
 <details></br>
@@ -93,7 +93,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
 
 <details></br>
