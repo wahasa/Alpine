@@ -94,7 +94,7 @@ Feature
 - [x] Fixed Sound
 - [x] Access to Sdcard
 - [x] Fixed Browser Crash [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
-- [x] Install Applications [Click here,.]
+- [x] Install Applications [Click here,.](https://github.com/wahasa/Alpine/blob/main/Apps/README.md)
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
