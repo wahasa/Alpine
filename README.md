@@ -109,8 +109,8 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 <summary><b><code>Install Desktop Gnome</code></b></summary>
 <p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/gnome.jpg"</p>
 </details>
-Note :</br>
-There are apps & features that cann't be opened.
+
+N:There are apps & features that cann't be opened.
 
 ```
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
