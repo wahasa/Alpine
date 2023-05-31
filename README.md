@@ -69,32 +69,57 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc && chmod +x t
 on Alpine, run this command :
 > apk update && apk upgrade
 
-- [Install Desktop-xfce](https://youtu.be/KjrNB2WG6l8)
-```
-apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh && chmod +x de-xfce.sh && ./de-xfce.sh
-```
-
-- [Install Desktop-kde](https://youtu.be/MLa_uA3CIgE)
-```
-apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde.sh && chmod +x de-kde.sh && ./de-kde.sh
-```
-
-- [Install Desktop-mate](https://youtu.be/1-FIP9eerfU)
-```
-apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh && chmod +x de-mate.sh && ./de-mate.sh
-```
-
-- [Install Desktop-gnome](https://youtu.be/1mVlZ4UFQLo)
+<details></br>
+<summary><b><code>Install Desktop Xfce</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/xfce.jpg"</p>
+</details>
 
 ```
-apk add wget && wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh&& chmod +x de-gnome.sh && ./de-gnome.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
+
+<details></br>
+<summary><b><code>Install Desktop Lxqt</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/lxqt.jpg"</p>
+</details>
+
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
+```
+
+<details></br>
+<summary><b><code>Install Desktop Kde</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Debian/raw/main/Image/kde.jpg"</p>
+</details>
+
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
+```
+
+<details></br>
+<summary><b><code>Install Desktop Mate</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Debian/raw/main/Image/mate.jpg"</p>
+</details>
+
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
+```
+
+<details></br>
+<summary><b><code>Install Desktop Gnome</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/gnome.jpg"</p>
+</details>
+
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
+```
+
 ---
 Feature
 - [x] Fixed Sound
 - [x] Access to Sdcard
 - [x] Fixed Browser Crash [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
-- [x] Install Applications [Click here,.](https://github.com/wahasa/Alpine/blob/main/Apps/README.md)
+- [x] Install Applications [Click here,.](https://github.com/wahasa/Alpine/tree/main/Apps)
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
