@@ -131,7 +131,7 @@ chmod +x $PREFIX/bin/$linux
 	echo ""
         echo "You can now start Alpine with 'alpine' script next time"
 	echo ""
-	#rm alpine3.18.sh
+	alpine3.18.sh
 else
 	echo "Installation unsuccessful"
 fi
