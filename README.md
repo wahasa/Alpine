@@ -75,7 +75,7 @@ on Alpine, run this command :
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
 
 <details></br>
@@ -84,7 +84,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
 
 <details></br>
@@ -93,7 +93,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
 
 <details></br>
@@ -102,7 +102,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
 ```
 
 <details></br>
@@ -112,7 +112,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 N : Many have problems when used.
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
 ```
 
 ---
