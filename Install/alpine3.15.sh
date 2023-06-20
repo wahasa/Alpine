@@ -27,7 +27,7 @@ else
 	*)
 		echo "unknown architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.8-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.9-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
