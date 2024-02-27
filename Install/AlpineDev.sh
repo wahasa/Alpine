@@ -3,6 +3,7 @@ pkg install root-repo x11-repo
 pkg install proot pulseaudio -y
 termux-setup-storage
 alpine=edge
+build=20231219
 linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
@@ -27,7 +28,7 @@ else
 	*)
 		echo "unknown architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-20230329-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -43,6 +44,9 @@ if [ -d $folder/var ];then
 
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/bash
+pulseaudio --start \
+    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
+    --exit-idle-time=-1
 	cd \$(dirname \$0)
 	## unset LD_PRELOAD in case termux-exec is installed
 	unset LD_PRELOAD
@@ -85,9 +89,6 @@ if [ -d $folder/var ];then
 		chmod +x $bin
 		termux-fix-shebang $bin
 echo '#!/bin/bash
-pulseaudio --start \
-    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
-    --exit-idle-time=-1
 bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
 	fi
@@ -132,7 +133,7 @@ chmod +x $PREFIX/bin/$linux
 	echo ""
         echo "You can now start Alpine with 'alpine' script next time"
 	echo ""
-	rm alpine.sh
+	#rm AlpineDev.sh
 else
 	echo "Installation unsuccessful"
 fi
