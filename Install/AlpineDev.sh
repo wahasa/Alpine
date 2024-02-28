@@ -28,7 +28,7 @@ else
 	*)
 		echo "unknown architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -113,7 +113,10 @@ chmod +x $PREFIX/bin/$linux
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> ~/"$folder"/etc/apk/repositories
+        echo "Alpine Repositories
+https://dl-cdn.alpinelinux.org/alpine/edge/main
+https://dl-cdn.alpinelinux.org/alpine/edge/testing
+https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
 	./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
@@ -126,10 +129,10 @@ chmod +x $PREFIX/bin/$linux
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-	apk update && apk upgrade
-	apk add nano sudo
-	rm -rf ~/.bash_profile
-	exit" > $folder/root/.bash_profile
+apk update && apk upgrade
+apk add nano sudo
+rm -rf ~/.bash_profile
+exit" > $folder/root/.bash_profile
 	bash $bin
 	clear
 	echo ""
@@ -139,3 +142,4 @@ chmod +x $PREFIX/bin/$linux
 else
 	echo "Installation unsuccessful"
 fi
+#
