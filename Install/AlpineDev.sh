@@ -61,7 +61,9 @@ pulseaudio --start \
     	done
 	fi
 	command+=" -b /dev"
+	command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
 	command+=" -b /proc"
+	command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 	command+=" -b $folder/root:/dev/shm"
 	## uncomment the following line to have access to the home directory of termux
 	#command+=" -b /data/data/com.termux/files/home:/root"
@@ -125,7 +127,7 @@ chmod +x $PREFIX/bin/$linux
 	echo ""
   	echo "#!/bin/bash
 	apk update && apk upgrade
-	apk add nano
+	apk add nano sudo
 	rm -rf ~/.bash_profile
 	exit" > $folder/root/.bash_profile
 	bash $bin
