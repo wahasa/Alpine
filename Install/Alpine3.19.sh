@@ -2,7 +2,8 @@
 pkg install root-repo x11-repo
 pkg install proot pulseaudio -y
 termux-setup-storage
-alpine=3.14
+alpine=v3.19
+build=1
 linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
@@ -27,7 +28,7 @@ else
 	*)
 		echo "unknown architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.10-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -43,6 +44,9 @@ if [ -d $folder/var ];then
 
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/bash
+pulseaudio --start \
+    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
+    --exit-idle-time=-1
 	cd \$(dirname \$0)
 	## unset LD_PRELOAD in case termux-exec is installed
 	unset LD_PRELOAD
@@ -57,7 +61,9 @@ if [ -d $folder/var ];then
     	done
 	fi
 	command+=" -b /dev"
+	command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
 	command+=" -b /proc"
+	command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 	command+=" -b $folder/root:/dev/shm"
 	## uncomment the following line to have access to the home directory of termux
 	#command+=" -b /data/data/com.termux/files/home:/root"
@@ -85,9 +91,6 @@ if [ -d $folder/var ];then
 		chmod +x $bin
 		termux-fix-shebang $bin
 echo '#!/bin/bash
-pulseaudio --start \
-    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
-    --exit-idle-time=-1
 bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
 	fi
@@ -110,7 +113,10 @@ chmod +x $PREFIX/bin/$linux
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        ./$bin apk update
+        echo "Alpine Repositories
+https://dl-cdn.alpinelinux.org/alpine/v3.19/main
+https://dl-cdn.alpinelinux.org/alpine/v3.19/community" > ~/"$folder"/etc/apk/repositories
+	./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
         sed -i 's/bin\/sh/bin\/bash/g' $bin
@@ -122,16 +128,17 @@ chmod +x $PREFIX/bin/$linux
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-	apk update && apk upgrade
-	apk add nano
-	rm -rf ~/.bash_profile
-	exit" > $folder/root/.bash_profile
+apk update && apk upgrade
+apk add nano sudo
+rm -rf ~/.bash_profile
+exit" > $folder/root/.bash_profile
 	bash $bin
 	clear
 	echo ""
         echo "You can now start Alpine with 'alpine' script next time"
 	echo ""
-	rm alpine3.14.sh
+	#rm Alpine3.19.sh
 else
 	echo "Installation unsuccessful"
 fi
+#
