@@ -3,7 +3,7 @@ pkg install root-repo x11-repo
 pkg install proot pulseaudio -y
 termux-setup-storage
 alpine=v3.15
-build=9
+build=11
 linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
