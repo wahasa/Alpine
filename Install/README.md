@@ -13,6 +13,4 @@ Source Rootfs
 - https://dl-cdn.alpinelinux.org/alpine
 - https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Alpine
 - https://github.com/AndronixApp/AndronixOrigin/tree/master/Rootfs/Alpine
-</br>
-
 - https://hub.docker.com/_/alpine
