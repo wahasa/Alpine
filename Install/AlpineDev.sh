@@ -142,4 +142,3 @@ exit" > $folder/root/.bash_profile
 else
 	echo "Installation unsuccessful"
 fi
-#
