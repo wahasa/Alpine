@@ -4,6 +4,7 @@
 
 ---
 ## Alpine on Termux Android
+![a-default](https://github.com/wahasa/Alpine/assets/69626847/83b5456d-5d43-4d03-b88d-f69888bc0326)
 
 ---
 • Install Apps on Android
