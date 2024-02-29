@@ -13,7 +13,7 @@
 
 ## Installation
 
-Copy and paste this command to Termux :
+Copy and paste this command to Termux
 > pkg update && pkg upgrade
 
 * Install Alpine
@@ -47,74 +47,58 @@ Basic commands Alpine
 > apk -h : Help all commands.
 
 ---
-## Desktop Environment
+## Desktop Environments
 
 Make 2 Session in Termux
 
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-1. Session 1 (in termux)
-> pkg update && pkg Upgrade
-
+#### Commands in Termux (Session 1)
+> pkg update
 * Install Tigervnc
 
-on Termux, run this command :
+on Termux, run this command
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
 
 ---
-2. Session 2 (in alpine)
+#### Commands in Linux (Session 2)
+on Alpine, run this command
+> apk update
 
-on Alpine, run this command :
-> apk update && apk upgrade
-
-<details></br>
-<summary><b><code>Install Desktop Xfce</code></b></summary>
+<details><summary><b><code>Install Xfce Desktop</code></b></summary>
 <p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/xfce.jpg"</p>
-</details>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
-
-<details></br>
-<summary><b><code>Install Desktop Lxqt</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/lxqt.jpg"</p>
 </details>
+
+<details><summary><b><code>Install Lxqt Desktop</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/lxqt.jpg"</p>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
-
-<details></br>
-<summary><b><code>Install Desktop Kde</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/kde.jpg"</p>
 </details>
+
+<details><summary><b><code>Install Kde Desktop</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/kde.jpg"</p>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
-
-<details></br>
-<summary><b><code>Install Desktop Mate</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/mate.jpg"</p>
 </details>
+
+<details><summary><b><code>Install Mate Desktop</code></b></summary>
+<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/mate.jpg"</p>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
 ```
-
-<details></br>
-<summary><b><code>Install Desktop Gnome</code></b></summary>
-<p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/gnome.jpg"</p>
 </details>
-N : Many have problems when used.
-
-```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-gnome.sh ; chmod +x de-gnome.sh ; ./de-gnome.sh
-```
 
 ---
 Feature
@@ -129,12 +113,11 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 ### Vnc Viewer 
 * Start Vnc Server
 
-On Session 1 (termux), run this command :
+In Session 1 (Termux), run this command
 
 > vncstart
 
-To Session 2 (alpine), run this command :
-
+To Session 2 (Alpine), run this command
 > vncstart
 
 ---
@@ -157,16 +140,13 @@ To disconnect VNC Client, click (X) on the right.
 ---
 * Stop Vnc Server
 
-on Session 1 (termux), run this command :
-
+In Session 1 (Termux), run this command
 > vncstop
 
 Close session with 'exit'.
 
-To Session 2 (Alpine), run this command :
-
-> ctrl + c
-
+To Session 2 (Alpine), run this command
+> ctrl + c (2X)
 </br>
 
 ---
