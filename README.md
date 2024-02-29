@@ -111,10 +111,12 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Vnc Viewer 
+<details></br>
+<summary><b><code>VNC Viewer Android</code></b></summary>
+
 * Start Vnc Server
 
 In Session 1 (Termux), run this command
-
 > vncstart
 
 To Session 2 (Alpine), run this command
@@ -147,6 +149,15 @@ Close session with 'exit'.
 
 To Session 2 (Alpine), run this command
 > ctrl + c (2X)
+</details>
+
+---
+## Termux-x11
+<details></br>
+<summary><b><code>Termux-x11 Android</code></b></summary>
+
+> Click Here <
+</details>
 </br>
 
 ---
