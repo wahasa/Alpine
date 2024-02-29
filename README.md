@@ -96,7 +96,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 <p align="center"><img src="https://github.com/wahasa/Alpine/raw/main/Image/mate.jpg"</p>
 
 ```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
+apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
 ```
 </details>
 
@@ -110,7 +110,7 @@ Feature
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
-### Vnc Viewer 
+## Vnc Viewer 
 <details></br>
 <summary><b><code>VNC Viewer Android</code></b></summary>
 
@@ -142,13 +142,13 @@ To disconnect VNC Client, click (X) on the right.
 ---
 * Stop Vnc Server
 
+To Session 2 (Alpine), run this command
+> ctrl + c (2X)
+
 In Session 1 (Termux), run this command
 > vncstop
 
 Close session with 'exit'.
-
-To Session 2 (Alpine), run this command
-> ctrl + c (2X)
 </details>
 
 ---
