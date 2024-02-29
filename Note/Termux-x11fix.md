@@ -30,7 +30,7 @@ Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 #### Commands in Alpine
-> apt install nano -y
+> apk add nano
 
 * Edit script
 ```
