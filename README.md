@@ -156,7 +156,7 @@ Close session with 'exit'.
 <details></br>
 <summary><b><code>Termux-x11 Android</code></b></summary>
 
-> Click Here <
+[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Termux-x11fix.md)
 </details>
 </br>
 
