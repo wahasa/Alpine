@@ -1,14 +1,13 @@
 #!/bin/bash
-
 #Get the necessary components
-apk add nano sudo
+apk add gvfs udisks2
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
 apk add xfce4 xfce4-terminal pulseaudio dbus
 
 #Get the extra components
-apk add adwaita-xfce-icon-theme xfburn parole ristretto
+apk add adw-gtk3 adwaita-xfce-icon-theme xfburn parole ristretto
 
 echo "#!/bin/sh
 export DISPLAY=:1
