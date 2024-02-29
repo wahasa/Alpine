@@ -113,7 +113,7 @@ chmod +x $PREFIX/bin/$linux
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "Alpine Repositories
+        echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.17/main
 https://dl-cdn.alpinelinux.org/alpine/v3.17/community" > ~/"$folder"/etc/apk/repositories
 	./$bin apk update
@@ -141,4 +141,3 @@ exit" > $folder/root/.bash_profile
 else
 	echo "Installation unsuccessful"
 fi
-#
