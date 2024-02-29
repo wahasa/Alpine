@@ -16,7 +16,7 @@
 Copy and paste this command to Termux
 > pkg update && pkg upgrade
 
-<details></br><summary><b><code>Install Alpine</code></b></summary>
+<details><summary><b><code>Install Alpine</code></b></summary>
 
 #### Alpine 3.19
 Rootfs : Armhf, Arm64, i386, Amd64
