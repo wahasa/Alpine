@@ -31,10 +31,9 @@ pkg install wget -y ; https://raw.githubusercontent.com/wahasa/Alpine/main/Insta
 ```
 
 #### List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
-
----
 </details>
 
+---
 * Start Alpine
 ```
 alpine
