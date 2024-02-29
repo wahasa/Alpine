@@ -1,6 +1,5 @@
 ### Termux-x11 Alpine
-
-![Screenshot_2024-02-18-19-21-29-654_com termux x11](https://github.com/wahasa/Parrot/assets/69626847/b799a6c9-5b87-4dd9-a0b9-c9874a9e2c35)
+![Screenshot_2024-02-29-18-24-25-397_com termux x11](https://github.com/wahasa/Alpine/assets/69626847/95a01efb-0e17-41c3-972b-9147c7336385)
 
 ---
 #### Commands in Termux
