@@ -1,13 +1,10 @@
 #!/bin/bash
-
 #Get the necessary components
-apk add nano sudo
+apk add gvfs udisks2
 apk add --no-cache ca-certificates openssl bash-completion
 
 #Installing desktop environment
 apk add mate-desktop-environment pulseaudio dbus
-
-#Get the extra components
 
 echo "#!/bin/sh
 export DISPLAY=:1
