@@ -66,7 +66,7 @@ Make 2 Session in Termux
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-#### Commands in Termux (Session 1)
+<b>Commands in Termux (Session 1)</>
 > pkg update
 * Install Tigervnc
 
@@ -76,7 +76,7 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x ti
 ```
 
 ---
-#### Commands in Linux (Session 2)
+<b>Commands in Linux (Session 2)</b>
 on Alpine, run this command
 > apk update
 
