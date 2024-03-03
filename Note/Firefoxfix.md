@@ -1,12 +1,12 @@
-### Fixed Firefox Parrot
+### Fixed Firefox Alpine
 ![Screenshot_2024-02-25-12-14-31-587_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/2fe3c8bc-a5d9-4a59-ac74-a0f756d9ebd7)
 
 ---
 * Install Firefox
-> apt install firefox-esr -y
+> apk add firefox-esr
 
 * Uninstall Firefox
-> apt autoremove firefox-esr -y
+> apk del firefox-esr
 
 ---
 #### Fixed firefox crash
