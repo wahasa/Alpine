@@ -116,8 +116,9 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 Feature
 - [x] Fixed Sound
 - [x] Access to Sdcard
-- [x] Fixed Browser Crash [Click here,.](https://github.com/wahasa/Alpine/issues/1#issuecomment-1283386128)
-- [x] Install Applications [Click here,.](https://github.com/wahasa/Alpine/tree/main/Apps)
+- [x] Access to Termux-x11
+- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Note)
+- [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps)
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
