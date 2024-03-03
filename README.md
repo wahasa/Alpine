@@ -18,13 +18,13 @@ Copy and paste this command to Termux
 
 <details><summary><b><code>Install Alpine</code></b></summary>
 
-#### Alpine 3.19
+<b>Alpine 3.19</b>
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/Alpine3.19.sh ; chmod +x Alpine3.19.sh ; ./Alpine3.19.sh
 ```
 
-#### Alpine 3.18
+<b>Alpine 3.18</b>
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/Alpine3.18.sh ; chmod +x Alpine3.18.sh ; ./Alpine3.18.sh
@@ -66,7 +66,8 @@ Make 2 Session in Termux
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-<b>Commands in Termux (Session 1)</>
+<b>Commands in Termux (Session 1)</b>
+
 > pkg update
 * Install Tigervnc
 
@@ -77,6 +78,7 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x ti
 
 ---
 <b>Commands in Linux (Session 2)</b>
+
 on Alpine, run this command
 > apk update
 
