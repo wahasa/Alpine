@@ -44,7 +44,7 @@ alpine
 exit
 ```
 
-* Remove Alpine
+* Delete Alpine
 ```
 rm -rf alpine-fs
 ```
