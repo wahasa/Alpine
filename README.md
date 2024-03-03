@@ -18,21 +18,19 @@ Copy and paste this command to Termux
 
 <details><summary><b><code>Install Alpine</code></b></summary>
 
-<b>Alpine 3.19</b>
-
+#### Alpine 3.19
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/Alpine3.19.sh ; chmod +x Alpine3.19.sh ; ./Alpine3.19.sh
 ```
 
-<b>Alpine 3.18</b>
-
+#### Alpine 3.18
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/Alpine3.18.sh ; chmod +x Alpine3.18.sh ; ./Alpine3.18.sh
 ```
 
-<b>List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)</b>
+#### List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
 </details>
 
 ---
