@@ -20,7 +20,7 @@ clear
 echo ""
 echo "Installing browser,.."
 echo ""
-apk add firefox
+apk add firefox-esr
 clear
 echo ""
 echo "Vnc Server address will run at 127.0.0.1:5901"
