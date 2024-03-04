@@ -13,7 +13,7 @@ sudo apk add blender
 
 ![Screenshot_2024-02-25-12-13-26-611_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/f1733632-66cb-48bc-abea-06b1452a8f8e)
 
-[> Click Here <](https://github.com/wahasa/Parrot/blob/main/Note/Chromiumfix.md)
+[> Click Here <](https://github.com/wahasa/Alpin/blob/main/Note/Chromiumfix.md)
 </details>
 
 ####
@@ -21,7 +21,7 @@ sudo apk add blender
 
 ![Screenshot_2024-02-25-12-14-31-587_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/2fe3c8bc-a5d9-4a59-ac74-a0f756d9ebd7)
 
-[> Click Here <](https://github.com/wahasa/Parrot/blob/main/Note/Firefoxfix.md)
+[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Firefoxfix.md)
 </details>
 
 ####
