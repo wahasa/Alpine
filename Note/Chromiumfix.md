@@ -10,11 +10,22 @@
 
 ---
 #### Fixed chromium can't be opened
+on Alpine, run this commands
 
-* Commands in Alpine
+* Edit script
 ```
-sed -i 's/chromium %U/chromium --no-sandbox --test-type %U/g' /usr/share/applications/chromium.desktop
+nano /usr/share/applications/chromium.desktop
 ```
+
+* Add script
+```
+Exec=/usr/bin/chromium --no-sandbox --test-type %U
+```
+
+Save : ctrl + x, click Y enter.
+
+Example :
+
 
 * You can open chromium now.
 </br>
