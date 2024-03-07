@@ -1,4 +1,4 @@
-<b>List Applications</b>
+### List Applications
 
 <details><summary><code><b>Blender</b></code></summary>
 
