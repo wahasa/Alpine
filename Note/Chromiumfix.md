@@ -26,6 +26,7 @@ Save : ctrl + x, click Y enter.
 
 Example :
 
+![Screenshot_2024-03-07-14-53-47-408_com termux](https://github.com/wahasa/Alpine/assets/69626847/57c0f0cf-e94a-4cfc-9764-2de938e00e03)
 
 * You can open chromium now.
 </br>
