@@ -45,7 +45,7 @@ sudo apk add gimp
 ####
 <details><summary><code><b>Inkscape</b></code></summary>
 
-![Screenshot_2024-02-25-13-35-31-167_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/c9d68b0a-beea-4235-9e15-bd87dbf4cca5)
+![Screenshot_2024-03-07-14-09-00-801_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/488a03d8-dd2e-4d58-9b3f-fdc64a453fcd)
 ```
 sudo apk add inkscape
 ```
@@ -54,7 +54,7 @@ sudo apk add inkscape
 ####
 <details><summary><code><b>Kdenlive</b></code></summary>
 
-![Screenshot_2024-02-25-13-41-35-534_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/367a0c90-0fc0-40ae-ab00-506a3aab32c0)
+![Screenshot_2024-03-07-14-13-32-854_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/ae8bb425-ef03-4ee0-b0ca-ad9986a4464d)
 ```
 sudo apk add kdenlive
 ```
@@ -63,7 +63,7 @@ sudo apk add kdenlive
 ####
 <details><summary><code><b>Krita</b></code></summary>
 
-![Screenshot_2024-02-25-13-39-45-975_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/ecf55dc7-5c37-4591-bed4-dc638cf0e4a5)
+![Screenshot_2024-03-07-14-10-39-172_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/f41fc379-7572-4ddb-89a3-93c375287fbf)
 ```
 sudo apk add krita
 ```
@@ -81,7 +81,7 @@ wget https://raw.githubusercontent.com/wahasa/Parrot/main/libreofficefix.sh ; ch
 ####
 <details><summary><code><b>Lollypop</b></code></summary>
 
-![Screenshot_2024-02-25-13-42-26-898_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/02abe727-8f23-4ee1-a20b-e4d5e56912a1)
+![Screenshot_2024-03-07-14-15-11-203_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/1f2f3ec1-a23e-48f1-9731-53d6fe8356eb)
 ```
 sudo apk add lollypop
 ```
@@ -91,7 +91,7 @@ sudo apk add lollypop
 <details>
 <summary><code><b>OBS Studio</b></code></summary>
 
-![Screenshot_2024-02-25-12-17-01-291_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/f08dc990-7b19-41af-ac2c-c88600e88ca5)
+![Screenshot_2024-03-07-14-16-01-271_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/fef9a150-ce23-4b8d-a7ab-4680dec95249)
 ```
 sudo apk add obs-studio
 ```
