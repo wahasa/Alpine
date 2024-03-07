@@ -2,7 +2,7 @@
 
 <details><summary><code><b>Blender</b></code></summary>
 
-![Screenshot_2024-02-25-12-56-42-442_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/2d6971f9-68b0-4a6d-a470-050270a36ccf)
+![Screenshot_2024-03-07-13-44-06-123_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/e5c33c81-fb33-400f-a117-00a144e5bd88)
 ```
 sudo apk add blender
 ```
@@ -11,7 +11,7 @@ sudo apk add blender
 ####
 <details><summary><code><b>Chromium</b></code></summary>
 
-![Screenshot_2024-02-25-12-13-26-611_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/f1733632-66cb-48bc-abea-06b1452a8f8e)
+![Screenshot_2024-03-07-13-56-23-466_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/67c466e3-972a-4957-98ef-cdf71be4b539)
 
 [> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Chromiumfix.md)
 </details>
@@ -19,7 +19,7 @@ sudo apk add blender
 ####
 <details><summary><code><b>Firefox</b></code></summary>
 
-![Screenshot_2024-02-25-12-14-31-587_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/2fe3c8bc-a5d9-4a59-ac74-a0f756d9ebd7)
+![Screenshot_2024-03-07-13-42-25-645_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/4750cf77-bf53-4dfe-93af-3c9319e6163a)
 
 [> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Firefoxfix.md)
 </details>
@@ -27,7 +27,7 @@ sudo apk add blender
 ####
 <details><summary><code><b>Gedit</b></code></summary>
 
-![Screenshot_2024-02-25-12-53-02-290_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/98003303-2663-4a0c-9b1b-57e1390ef002)
+![Screenshot_2024-03-07-13-57-45-651_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/b72a68aa-d824-4ed7-99d5-6f8441fa6c2e)
 ```
 sudo apk add gedit
 ```
@@ -36,7 +36,7 @@ sudo apk add gedit
 ####
 <details><summary><code><b>GIMP</b></code></summary>
 
-![Screenshot_2024-02-25-13-34-27-393_com realvnc viewer android](https://github.com/wahasa/Kali-Nethunter/assets/69626847/973960ac-dba8-44c9-a8e5-e9cb174448c0)
+![Screenshot_2024-03-07-13-59-14-810_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/b812e7a5-b8fc-40ab-b6fe-d77ee14c77f7)
 ```
 sudo apk add gimp
 ```
