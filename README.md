@@ -4,11 +4,11 @@
 
 ---
 ## Alpine on Termux Android
-![a-default](https://github.com/wahasa/Alpine/assets/69626847/83b5456d-5d43-4d03-b88d-f69888bc0326)
+![alpine](https://github.com/wahasa/Project/assets/69626847/875da505-2a24-48e1-8b7a-f090eb5020d6)
 
 ---
 • Install Apps on Android
-- [x] [Termux](https://apkcombo.com/termux/com.termux/)
+- [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 
 ## Installation
