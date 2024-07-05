@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot pulseaudio -y
+pkg install proot xz-utils pulseaudio -y
 termux-setup-storage
-alpine=3.18
-build=6
+alpine=3.19
+build=2
 linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
@@ -26,9 +26,9 @@ else
 	x86_64)
 		archurl="x86_64" ;;
 	*)
-		echo "unknown architecture"; exit 1 ;;
+		echo "Unknown Architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -48,7 +48,7 @@ pulseaudio --start \
     --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
     --exit-idle-time=-1
 	cd \$(dirname \$0)
-	## unset LD_PRELOAD in case termux-exec is installed
+	## Unset LD_PRELOAD in case termux-exec is installed
 	unset LD_PRELOAD
 	command="proot"
 	command+=" --kill-on-exit"
@@ -65,9 +65,9 @@ pulseaudio --start \
 	command+=" -b /proc"
 	command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 	command+=" -b $folder/root:/dev/shm"
-	## uncomment the following line to have access to the home directory of termux
+	## Uncomment the following line to have access to the home directory of termux
 	#command+=" -b /data/data/com.termux/files/home:/root"
-	## uncomment the following line to mount /sdcard directly to /
+	## Uncomment the following line to mount /sdcard directly to /
 	command+=" -b /sdcard"
 	command+=" -w /root"
 	command+=" /usr/bin/env -i"
@@ -114,8 +114,8 @@ chmod +x $PREFIX/bin/$linux
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
         echo "#Alpine Repositories
-https://dl-cdn.alpinelinux.org/alpine/v3.18/main
-https://dl-cdn.alpinelinux.org/alpine/v3.18/community" > ~/"$folder"/etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/3.19/main
+https://dl-cdn.alpinelinux.org/alpine/3.19/community" > ~/"$folder"/etc/apk/repositories
 	./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
@@ -128,16 +128,19 @@ https://dl-cdn.alpinelinux.org/alpine/v3.18/community" > ~/"$folder"/etc/apk/rep
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-apk update && apk upgrade
-apk add nano sudo
+apk update && apk upgrade ; apk add nano sudo
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
 	clear
 	echo ""
-        echo "You can now start Alpine with 'alpine' script next time"
+        echo "You can login to Alpine with 'alpine' script next time"
 	echo ""
-	#rm Alpine3.18.sh
+	#rm alpine3.19.sh
 else
-	echo "Installation unsuccessful"
+	echo "Installation Unsuccessful"
 fi
+
+#
+## Script edited by 'WaHaSa', Script V3-revision.
+#
