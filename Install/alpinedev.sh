@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot pulseaudio -y
+pkg install proot xz-utils pulseaudio -y
 termux-setup-storage
 alpine=edge
-build=20240329
+build=20240606
 linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
@@ -26,7 +26,7 @@ else
 	x86_64)
 		archurl="x86_64" ;;
 	*)
-		echo "unknown architecture"; exit 1 ;;
+		echo "Unknown Architecture"; exit 1 ;;
 	esac
 	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
@@ -48,7 +48,7 @@ pulseaudio --start \
     --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
     --exit-idle-time=-1
 	cd \$(dirname \$0)
-	## unset LD_PRELOAD in case termux-exec is installed
+	## Unset LD_PRELOAD in case termux-exec is installed
 	unset LD_PRELOAD
 	command="proot"
 	command+=" --kill-on-exit"
@@ -65,9 +65,9 @@ pulseaudio --start \
 	command+=" -b /proc"
 	command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 	command+=" -b $folder/root:/dev/shm"
-	## uncomment the following line to have access to the home directory of termux
+	## Uncomment the following line to have access to the home directory of termux
 	#command+=" -b /data/data/com.termux/files/home:/root"
-	## uncomment the following line to mount /sdcard directly to /
+	## Uncomment the following line to mount /sdcard directly to /
 	command+=" -b /sdcard"
 	command+=" -w /root"
 	command+=" /usr/bin/env -i"
@@ -136,9 +136,13 @@ exit" > $folder/root/.bash_profile
 	bash $bin
 	clear
 	echo ""
-        echo "You can now start Alpine with 'alpine' script next time"
+        echo "You can login to Alpine with 'alpine' script next time"
 	echo ""
-	#rm AlpineDev.sh
+	#rm alpinedev.sh
 else
 	echo "Installation unsuccessful"
 fi
+
+#
+## Script edited by 'WaHaSa', Script V3-revision.
+#
