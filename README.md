@@ -71,7 +71,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 > pkg update
 * Install Tigervnc
 
-on Termux, run this command
+In Termux, run this command
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
@@ -79,7 +79,7 @@ wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x ti
 ---
 <b>Commands in Linux (Session 2)</b>
 
-on Alpine, run this command
+In Alpine, run this command
 > apk update
 
 <details><summary><b><code>Install Xfce Desktop</code></b></summary>
