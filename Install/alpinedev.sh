@@ -140,7 +140,7 @@ exit" > $folder/root/.bash_profile
 	echo ""
 	#rm alpinedev.sh
 else
-	echo "Installation unsuccessful"
+	echo "Installation Unsuccessful"
 fi
 
 #
