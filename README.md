@@ -18,13 +18,13 @@ Copy and paste this command to Termux
 
 <details><summary><b><code>Install Alpine</code></b></summary>
 
-#### Alpine 3.20.1
+#### Alpine 3.20
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
 ```
 
-#### Alpine Edge (Dev)
+#### Alpine Edge
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
