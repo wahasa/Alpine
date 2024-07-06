@@ -28,7 +28,7 @@ else
 	*)
 		echo "Unknown Architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -90,8 +90,7 @@ pulseaudio --start \
   		echo "Fixing shebang of $linux"
 		chmod +x $bin
 		termux-fix-shebang $bin
-echo '#!/bin/bash
-bash .alpine' > $PREFIX/bin/$linux
+echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
 	fi
 
