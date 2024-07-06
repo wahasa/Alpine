@@ -46,7 +46,7 @@ exit
 
 * Delete Alpine
 ```
-rm -rf alpine-fs
+rm -rf alpine-fs .alpine $PREFIX/bin/alpine
 ```
 
 ---
