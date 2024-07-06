@@ -90,8 +90,7 @@ pulseaudio --start \
   		echo "Fixing shebang of $linux"
 		chmod +x $bin
 		termux-fix-shebang $bin
-echo '#!/bin/bash
-bash .alpine' > $PREFIX/bin/$linux
+echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
 	fi
 
@@ -107,7 +106,6 @@ chmod +x $PREFIX/bin/$linux
 		#rm $tarball
 	fi
 
-	echo ""
 	echo "" > $folder/etc/fstab
 	rm -rf $folder/etc/resolv.conf
 	echo "alpine" > ~/"$folder"/etc/hostname
@@ -129,8 +127,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-apk update && apk upgrade
-apk add nano sudo
+apk update && apk upgrade ; apk add nano sudo
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
