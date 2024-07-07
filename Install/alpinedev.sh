@@ -4,7 +4,6 @@ pkg install proot xz-utils pulseaudio -y
 termux-setup-storage
 alpine=edge
 build=20240606
-linux=alpine
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
 mkdir -p $folder $folder/binds
@@ -37,10 +36,10 @@ else
 	wget -qO- --tries=0 $url --show-progress --progress=bar:force:noscroll |proot --link2symlink tar -zxf - -C $folder --exclude='dev' || :
 fi
 bin=.alpine
+linux=alpine
 if [ -d $folder/var ];then
 	echo ""
 	echo "Writing launch script"
-	echo ""
 
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/bash
@@ -88,16 +87,13 @@ pulseaudio --start \
 
 	if test -f "$bin"; then
   		echo "Fixing shebang of $linux"
-		chmod +x $bin
 		termux-fix-shebang $bin
-echo 'bash .alpine' > $PREFIX/bin/$linux
-chmod +x $PREFIX/bin/$linux
 	fi
 
 	FD=$folder
 	if [ -d "$FD" ]; then
 	echo "Making $linux executable"
-		#chmod +x $bin
+		chmod +x $bin
 	fi
 
 	UFD=$folder/binds
@@ -106,8 +102,9 @@ chmod +x $PREFIX/bin/$linux
 		#rm $tarball
 	fi
 
+echo 'bash .alpine' > $PREFIX/bin/$linux
+chmod +x $PREFIX/bin/$linux
 	echo "" > $folder/etc/fstab
-	rm -rf $folder/etc/resolv.conf
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
@@ -121,13 +118,14 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
         sed -i 's/bin\/sh/bin\/bash/g' $bin
 	echo ""
 	echo "Installation Finished"
-	rm -rf $folder/root/.bash_profile
+        echo ""
 	clear
 	echo ""
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-apk update && apk upgrade ; apk add nano sudo
+apk update && apk upgrade
+apk add nano sudo
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
@@ -137,7 +135,9 @@ exit" > $folder/root/.bash_profile
 	echo ""
 	#rm alpinedev.sh
 else
+        echo ""
 	echo "Installation Unsuccessful"
+        echo ""
 fi
 
 #
