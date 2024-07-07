@@ -110,8 +110,8 @@ bash .alpine' > $PREFIX/bin/$linux
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
         echo "#Alpine Repositories
-https://dl-cdn.alpinelinux.org/alpine/edge/main
-https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/v3.20/main
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
 	./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
