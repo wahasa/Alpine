@@ -14,7 +14,7 @@
 ## Installation
 
 Copy and paste this command to Termux
-> pkg update && pkg upgrade
+> pkg update
 
 <details><summary><b><code>Install Alpine</code></b></summary>
 
