@@ -84,7 +84,7 @@ In Alpine, run this command
 
 <details><summary><b><code>Install Xfce Desktop</code></b></summary>
 
-![Screenshot_2024-02-29-11-33-23-785_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/e5e7bfb8-076d-495f-8464-664e37e65d7f)
+![xfce](https://github.com/wahasa/Project/assets/69626847/8a5d72d8-d08b-491f-a209-80e2fa68786a)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
@@ -92,7 +92,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 
 <details><summary><b><code>Install Lxqt Desktop</code></b></summary>
 
-![Screenshot_2024-02-29-11-40-50-159_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/f1325232-5d36-4815-b23b-6955e6f76b2d)
+![lxqt](https://github.com/wahasa/Project/assets/69626847/e6290702-c845-4a95-b555-65e27d36c234)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
@@ -100,7 +100,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 
 <details><summary><b><code>Install Kde Desktop</code></b></summary>
 
-![Screenshot_2024-02-29-11-28-37-547_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/9ae8bcdc-6a35-4077-9628-b8f5fdae55b4)
+![kde](https://github.com/wahasa/Project/assets/69626847/efaf0ab7-2891-4314-bded-f9d9a25b4721)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
@@ -108,7 +108,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 
 <details><summary><b><code>Install Mate Desktop</code></b></summary>
 
-![Screenshot_2024-02-29-11-30-27-983_com realvnc viewer android](https://github.com/wahasa/Alpine/assets/69626847/40ab4097-04e5-4421-a898-978532f51bca)
+![mate](https://github.com/wahasa/Project/assets/69626847/f69e7da0-8476-44af-9051-92744b7e0b75)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
 ```
