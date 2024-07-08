@@ -24,7 +24,7 @@ Rootfs : Armhf, Arm64, i386, Amd64
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
 ```
 
-#### Alpine Dev
+#### Alpine 3.21 (Dev)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
