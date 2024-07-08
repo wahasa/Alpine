@@ -1,4 +1,4 @@
-### Termux-x11 Alpine
+### Termux-x11 on Alpine
 
 ![TermuxX11](https://github.com/wahasa/Project/assets/69626847/07a7b273-7214-4a94-98b4-90b50b4720c0)
 
