@@ -4,7 +4,7 @@
 
 ---
 ## Alpine on Termux Android
-![alpine](https://github.com/wahasa/Project/assets/69626847/875da505-2a24-48e1-8b7a-f090eb5020d6)
+![Alpine](https://github.com/user-attachments/assets/c7d8d371-f37d-4c36-bcda-80186136624f)
 
 ---
 • Install Apps on Android
@@ -24,7 +24,7 @@ Rootfs : Armhf, Arm64, i386, Amd64
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
 ```
 
-#### Alpine 3.21 (Dev)
+#### Alpine 3.21 (Edge)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
