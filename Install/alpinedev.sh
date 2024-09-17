@@ -101,6 +101,7 @@ pulseaudio --start \
 		#rm $tarball
 	fi
 
+echo ""
 echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
 	echo "" > $folder/etc/fstab
@@ -127,7 +128,18 @@ apk update ; apk upgrade
 apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-	bash $bin
+bash $bin
+echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
+NAME="Alpine"
+VERSION_ID="3.21"
+VERSION="3.21.0 Build-20240807"
+VERSION_CODENAME=edge
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+DOCUMENTATION_URL="https://docs.alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+LOGO=alpine-linux-logo' > ~/"$folder"/etc/os-release
 	clear
 	echo ""
         echo "You can login to Alpine with 'alpine' script next time"
