@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot xz-utils pulseaudio -y
+pkg install proot xz-utils neofetch pulseaudio -y
 termux-setup-storage
 alpine=edge
-build=20240606
+build=20240807
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
 mkdir -p $folder $folder/binds
@@ -40,7 +40,6 @@ linux=alpine
 if [ -d $folder/var ];then
 	echo ""
 	echo "Writing launch script"
-
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/bash
 pulseaudio --start \
@@ -86,7 +85,7 @@ pulseaudio --start \
 	EOM
 
 	if test -f "$bin"; then
-  		echo "Fixing shebang of $linux"
+  	echo "Fixing shebang of $linux"
 		termux-fix-shebang $bin
 	fi
 
@@ -108,7 +107,7 @@ chmod +x $PREFIX/bin/$linux
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "#Alpine Repositories
+        echo "#Alpine Development
 https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
 https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
@@ -124,8 +123,8 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
 	echo "Updating Alpine,.."
 	echo ""
   	echo "#!/bin/bash
-apk update && apk upgrade
-apk add nano sudo
+apk update ; apk upgrade
+apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
@@ -139,7 +138,6 @@ else
 	echo "Installation Unsuccessful"
         echo ""
 fi
-
 #
-## Script edited by 'WaHaSa', Script V3-revision.
+## Script edited by 'WaHaSa', Script revision-4.
 #
