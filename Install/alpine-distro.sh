@@ -57,7 +57,8 @@ LOGO=alpine-linux-logo' > $PREFIX/$rootfs/etc/os-release
     echo ""
     echo "You can login to Alpine with 'alpine' script next time"
     echo ""
-    #rm alpinedev.sh
+    #rm $PREFIX/$distro/alpine-distro.sh
+    #rm alpine-distro.sh
  #
 ### Script edited by 'WaHaSa', Script revision-4.
  #
