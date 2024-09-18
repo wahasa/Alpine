@@ -1,9 +1,9 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils proot-distro pulseaudio -y
 termux-setup-storage
-    distro=bin/etc/proot-distro
-    rootfs=bin/var/lib/proot-distro/installed-rootfs/alpine
-    echo 'DISTRO_NAME="Alpine Linux"
+distro=bin/etc/proot-distro
+rootfs=bin/var/lib/proot-distro/installed-rootfs/alpine
+echo 'DISTRO_NAME="Alpine Linux"
 DISTRO_COMMENT="Alpine Edge (Development Branch)"
 
 TARBALL_URL['aarch64']=""
@@ -15,7 +15,7 @@ TARBALL_SHA256['i686']=""
 TARBALL_URL['x86_64']=""
 TARBALL_SHA256['x86_64']=""
 ' > $PREFIX/$distro/alpine-distro.sh
-    proot-distro install alpine-distro
+    #proot-distro install alpine-distro
     echo "alpine" > $PREFIX/$rootfs/etc/hostname
     echo "127.0.0.1 localhost" > $PREFIX/$rootfs/etc/hosts
     echo "nameserver 8.8.8.8" > $PREFIX/$rootfs/etc/resolv.conf
@@ -23,12 +23,13 @@ TARBALL_SHA256['x86_64']=""
 https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
 https://dl-cdn.alpinelinux.org/alpine/edge/community" > $PREFIX/$rootfs/etc/apk/repositories
-    echo "export PULSE_SERVER=127.0.0.1" >> $PREFIX/$rootfs/root/.bashrc
-    echo 'pulseaudio --start \
+echo '#!/bin/bash
+pulseaudio --start \
     --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
     --exit-idle-time=-1
-    proot-distro login alpine' > $PREFIX/bin/$linux
-    chmod +x $PREFIX/bin/$linux
+proot-distro login alpine --shared-tmp' > $PREFIX/bin/alpine
+echo "export PULSE_SERVER=127.0.0.1" >> $PREFIX/$rootfs/root/.bashrc
+    chmod +x $PREFIX/bin/alpine
     clear
     echo ""
     echo "Updating Alpine,.."
