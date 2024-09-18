@@ -136,9 +136,10 @@ VERSION="3.21.0 Build-20240807"
 VERSION_CODENAME=edge
 ID=alpine
 HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://docs.alpinelinux.org"
+DOCUMENTATION_URL="https://wiki.alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
 LOGO=alpine-linux-logo' > ~/"$folder"/etc/os-release
 	clear
 	echo ""
