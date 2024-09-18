@@ -1,3 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
 pkg install proot xz-utils proot-distro pulseaudio -y
 termux-setup-storage
