@@ -1,6 +1,21 @@
 pkg install root-repo x11-repo
-pkg install proot xz-utils neofetch pulseaudio -y
+pkg install proot xz-utils proot-distro pulseaudio -y
 termux-setup-storage
+distro=etc/proot-distro
+rootfs=var/lib/proot-distro/installed-rootfs/alpine
+    echo 'DISTRO_NAME="Alpine Linux"
+DISTRO_COMMENT="Alpine Edge (Development Branch)"
+
+TARBALL_URL['aarch64']=""
+TARBALL_SHA256['aarch64']=""
+TARBALL_URL['arm']=""
+TARBALL_SHA256['arm']=""
+TARBALL_URL['i686']=""
+TARBALL_SHA256['i686']=""
+TARBALL_URL['x86_64']=""
+TARBALL_SHA256['x86_64']=""
+' >
+    proot-distro install alpine
     echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
     echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
