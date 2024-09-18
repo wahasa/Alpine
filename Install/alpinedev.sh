@@ -101,9 +101,9 @@ pulseaudio --start \
 		#rm $tarball
 	fi
 
-echo ""
-echo 'bash .alpine' > $PREFIX/bin/$linux
-chmod +x $PREFIX/bin/$linux
+	echo ""
+	echo 'bash .alpine' > $PREFIX/bin/$linux
+	chmod +x $PREFIX/bin/$linux
 	echo "" > $folder/etc/fstab
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
@@ -123,13 +123,13 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
 	echo ""
 	echo "Updating Alpine,.."
 	echo ""
-  	echo "#!/bin/bash
+	echo "#!/bin/bash
 apk update ; apk upgrade
 apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-bash $bin
-echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
+	bash $bin
+	echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
 NAME="Alpine"
 VERSION_ID="3.21"
 VERSION="3.21.0 Build-20240807"
@@ -150,6 +150,6 @@ else
 	echo "Installation Unsuccessful"
         echo ""
 fi
-#
-## Script edited by 'WaHaSa', Script revision-4.
-#
+ #
+### Script edited by 'WaHaSa', Script revision-4.
+ #
