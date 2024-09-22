@@ -3,7 +3,6 @@
 
 ---
 ## Alpine on Termux Android
-![Alpine](https://github.com/user-attachments/assets/cedfdaa8-41ea-4779-a369-6a95d01b91e3)
 
 ---
 • Install Apps on Android
@@ -33,12 +32,12 @@ pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/
 </details>
 
 ---
-* Start Alpine
+* Login Alpine
 ```
 alpine
 ```
 
-* Stop Alpine
+* Logout Alpine
 ```
 exit
 ```
@@ -63,28 +62,28 @@ Basic commands Alpine
 In Alpine, run this command
 > apk update
 
-<details><summary><b><code>Xfce Desktop</code></b></summary>
+<details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
 </details>
 
-<details><summary><b><code>Lxqt Desktop</code></b></summary>
+<details><summary><b><code>Lxqt Desktop</code></b></summary></br>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
 </details>
 
-<details><summary><b><code>Kde Desktop</code></b></summary>
+<details><summary><b><code>Kde Desktop</code></b></summary></br>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
 </details>
 
-<details><summary><b><code>Mate Desktop</code></b></summary>
+<details><summary><b><code>Mate Desktop</code></b></summary></br>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
@@ -93,7 +92,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 
 ---
 Feature
-- [x] Fixed Sound
+- [x] Fixed Sound Output
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
 - [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Note)
