@@ -58,56 +58,34 @@ Basic commands Alpine
 > apk -h : Help all commands.
 
 ---
-## Desktop Environments
-
-Make 2 Session in Termux
-
-Swipe the screen from left to right in termux, click 'New Session'.
-
----
-<b>Commands in Termux (Session 1)</b>
-
-> pkg update
-* Install Tigervnc
-
-In Termux, run this command
-```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
-```
-
----
-<b>Commands in Linux (Session 2)</b>
+### Install Desktop Environment
 
 In Alpine, run this command
 > apk update
 
-<details><summary><b><code>Install Xfce Desktop</code></b></summary>
+<details><summary><b><code>Xfce Desktop</code></b></summary>
 
-![xfce](https://github.com/wahasa/Project/assets/69626847/8a5d72d8-d08b-491f-a209-80e2fa68786a)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
 ```
 </details>
 
-<details><summary><b><code>Install Lxqt Desktop</code></b></summary>
+<details><summary><b><code>Lxqt Desktop</code></b></summary>
 
-![lxqt](https://github.com/wahasa/Project/assets/69626847/e6290702-c845-4a95-b555-65e27d36c234)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
 ```
 </details>
 
-<details><summary><b><code>Install Kde Desktop</code></b></summary>
+<details><summary><b><code>Kde Desktop</code></b></summary>
 
-![kde](https://github.com/wahasa/Project/assets/69626847/efaf0ab7-2891-4314-bded-f9d9a25b4721)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
 ```
 </details>
 
-<details><summary><b><code>Install Mate Desktop</code></b></summary>
+<details><summary><b><code>Mate Desktop</code></b></summary>
 
-![mate](https://github.com/wahasa/Project/assets/69626847/f69e7da0-8476-44af-9051-92744b7e0b75)
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
 ```
@@ -124,7 +102,7 @@ Feature
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
-Run Desktop
+### Run Desktop Environment
 
 * Termux-x11
 
