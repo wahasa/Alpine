@@ -72,15 +72,18 @@ wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tige
 apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
 ```
 ```
-apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme firefox-esr pulseaudio xfburn parole ristretto eudev dbus
+apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme firefox-esr xfburn parole ristretto pulseaudio gst-libav eudev dbus
 ```
 ```
-apk add lightdm-gtk-greeter xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce-polkit xfce4-notifyd polkit-elogind elogind
+apk add lightdm-gtk-greeter xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce4-notifyd polkit-elogind elogind
 ```
 </details>
 
 <details><summary><b><code>Lxqt Desktop</code></b></summary></br>
 
+```
+apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+```
 ```
 apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt
 ```
@@ -89,12 +92,18 @@ apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt
 <details><summary><b><code>Kde  Desktop</code></b></summary></br>
 
 ```
+apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+```
+```
 apk add plasma-desktop
 ```
 </details>
 
 <details><summary><b><code>Mate Desktop</code></b></summary></br>
 
+```
+apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+```
 ```
 apk add mate-desktop-environment lxdm adwaita-icon-theme faenza-icon-theme
 ```
