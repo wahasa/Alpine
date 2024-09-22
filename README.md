@@ -69,10 +69,13 @@ wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tige
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
 ```
-apk add xfce4 xfce4-terminal xfce4-screensaver adw-gtk3 adwaita-xfce-icon-theme lightdm-gtk-greeter pulseaudio dbus
+apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
 ```
 ```
-apk add xfce4-screenshooter xfce4-taskmanager xfce4-notifyd firefox-esr xfburn parole ristretto
+apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme firefox-esr pulseaudio xfburn parole ristretto eudev dbus
+```
+```
+apk add lightdm-gtk-greeter xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce-polkit xfce4-notifyd polkit-elogind elogind
 ```
 </details>
 
