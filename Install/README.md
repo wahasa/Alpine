@@ -4,10 +4,10 @@
 <b>Alpine Releases</b>
 - https://alpinelinux.org/releases
 
-<b>Repositories</b>
+<b>Alpine Repository</b>
 - https://dl-cdn.alpinelinux.org/alpine
 
-<b>Source Rootfs</b>
+<b>Alpine Rootfs</b>
 
 (tar.xz)</br>
 - https://github.com/termux/proot-distro/releases/tag/v4.6.0
