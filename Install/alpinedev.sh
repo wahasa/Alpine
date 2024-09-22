@@ -130,7 +130,7 @@ exit" > $folder/root/.bash_profile
 	echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
 NAME="Alpine"
 VERSION_ID="3.21"
-VERSION="3.21.0 Build-20240807"
+VERSION="3.21.0 Edge (Development)"
 VERSION_CODENAME=edge
 ID=alpine
 HOME_URL="https://alpinelinux.org"
