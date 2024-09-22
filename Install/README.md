@@ -1,5 +1,8 @@
+<b>Alpine Site</b>
+- https://alpinelinux.org
+
 <b>Alpine Releases</b>
-- https://www.alpinelinux.org/releases
+- https://alpinelinux.org/releases
 
 <b>Repositories</b>
 - https://dl-cdn.alpinelinux.org/alpine
