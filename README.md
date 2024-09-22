@@ -11,11 +11,9 @@
 ### Installation
 
 Copy and paste this commands to Termux
-> pkg update
+> pkg update ; pkg install wget -y
 
-<details><summary><b><code>Install Alpine</code></b></summary></br>
-
-> pkg install wget -y
+<details><summary><b><code>Install Alpine</code></b></summary>
 
 #### Alpine 3.20
 Rootfs : Armhf, Arm64, i386, Amd64
@@ -58,8 +56,14 @@ Basic commands Alpine
 
 ---
 ### Install Desktop Environment
+- In Termux, run this commands
+> apt update ; apt install wget -y
 
-In Alpine, run this commands
+```
+wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
+```
+
+- In Alpine, run this commands
 > apk update
 
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
