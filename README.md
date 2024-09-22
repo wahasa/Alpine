@@ -1,4 +1,3 @@
-
 <p align="center">My Channel</br><b>
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/channel/UC3sLb7eZCu72iv3G1yUhUHQ">YouTube</a> |</b></p>
 
@@ -125,54 +124,19 @@ Feature
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
-## Vnc Viewer 
-<details></br>
-<summary><b><code>VNC Viewer Android</code></b></summary>
+Run Desktop
 
-* Start Vnc Server
+* Termux-x11
 
-In Session 1 (Termux), run this command
-> vncstart
+Link > [Termux-x11](https://github.com/termux/termux-x11/releases)
 
-To Session 2 (Alpine), run this command
-> vncstart
+* RVNC Viewer
 
----
-* Open Vnc Viewer
+Link > [RVNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 
-Add (+) VNC Client to connect, fill with :
+* BVNC Viewer
 
-Address
-```
-localhost:1
-```
-
-Name
-```
-Alpine Desktop
-```
-
-To disconnect VNC Client, click (X) on the right.
-
----
-* Stop Vnc Server
-
-To Session 2 (Alpine), run this command
-> ctrl + c (2X)
-
-In Session 1 (Termux), run this command
-> vncstop
-
-Close session with 'exit'.
-</details>
-
----
-## Termux-x11
-<details></br>
-<summary><b><code>Termux-x11 Android</code></b></summary>
-
-[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Termux-x11fix.md)
-</details>
+Link > [BVNC Viewer](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC)
 </br>
 
 ---
