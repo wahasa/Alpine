@@ -130,8 +130,8 @@ exit" > $folder/root/.bash_profile
 	bash $bin
 	echo 'PRETTY_NAME="PostmarketOS Edge (Development Branch)"
 NAME="PostmarketOS"
-VERSION_ID="Edge"
-VERSION="24.12.0 Edge (Development)"
+VERSION_ID="24.12"
+VERSION="24.12 Edge (Development)"
 VERSION_CODENAME=master
 ID=postmarketos
 ID_LIKE=alpine
@@ -140,7 +140,7 @@ DOCUMENTATION_URL="https://wiki.postmarketos.org"
 SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
 PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
-ALPINE_VERSION="3.21.0 Edge (Development)"
+ALPINE_VERSION="3.21 Edge (Development)"
 ALPINE_CODENAME=edge
 LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
 	clear
