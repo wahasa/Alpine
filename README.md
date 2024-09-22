@@ -98,7 +98,10 @@ apk add sddm screengrab adwaita-xfce-icon-theme qt5-qtgraphicaleffects qt5-qtqui
 apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
 ```
 ```
-apk add plasma-desktop
+apk add plasma-desktop plasma-desktop-meta firefox-esr pulseaudio dbus
+```
+```
+apk add sddm eudev polkit-elogind elogind
 ```
 </details>
 
