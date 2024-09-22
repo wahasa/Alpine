@@ -72,7 +72,7 @@ wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tige
 apk add xfce4 xfce4-terminal xfce4-screensaver adw-gtk3 adwaita-xfce-icon-theme lightdm-gtk-greeter pulseaudio dbus
 ```
 ```
-apk add firefox-esr xfburn parole ristretto
+apk add xfce4-screenshooter xfce4-taskmanager xfce4-notifyd firefox-esr xfburn parole ristretto
 ```
 </details>
 
