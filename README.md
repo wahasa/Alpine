@@ -1,15 +1,14 @@
 <p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/channel/UC3sLb7eZCu72iv3G1yUhUHQ">YouTube</a> |</b></p>
+| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
 ## Alpine on Termux Android
 
----
-• Install Apps on Android
+* Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
-## Installation
+### Installation
 
 Copy and paste this commands to Termux
 > pkg update
@@ -77,7 +76,7 @@ apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop
 ```
 </details>
 
-<details><summary><b><code>Kde Desktop</code></b></summary></br>
+<details><summary><b><code>Kde  Desktop</code></b></summary></br>
 
 ```
 apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
