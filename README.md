@@ -7,25 +7,27 @@
 ---
 • Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
-- [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+- [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
 ## Installation
 
-Copy and paste this command to Termux
+Copy and paste this commands to Termux
 > pkg update
 
-<details><summary><b><code>Install Alpine</code></b></summary>
+<details><summary><b><code>Install Alpine</code></b></summary></br>
+
+> pkg install wget -y
 
 #### Alpine 3.20
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
 ```
 
 #### Alpine 3.21 (Dev)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
 ```
 
 #### List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
@@ -54,12 +56,11 @@ Basic commands Alpine
 > apk search (pkg) : Search package.</br>
 > apk add (pkg) : Install package.</br>
 > apk del (pkg) : Delete package.</br>
-> apk -h : Help all commands.
 
 ---
 ### Install Desktop Environment
 
-In Alpine, run this command
+In Alpine, run this commands
 > apk update
 
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
