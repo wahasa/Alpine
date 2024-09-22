@@ -64,33 +64,33 @@ wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tige
 ```
 
 - In Alpine, run this commands
-> apk update
+> apk update ; apk add wget
 
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
 ```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-xfce.sh ; chmod +x de-xfce.sh ; ./de-xfce.sh
+apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter
 ```
 </details>
 
 <details><summary><b><code>Lxqt Desktop</code></b></summary></br>
 
 ```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-lxqt.sh ; chmod +x de-lxqt.sh ; ./de-lxqt.sh
+apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt
 ```
 </details>
 
 <details><summary><b><code>Kde  Desktop</code></b></summary></br>
 
 ```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-kde.sh ; chmod +x de-kde.sh ; ./de-kde.sh
+apk add plasma-desktop
 ```
 </details>
 
 <details><summary><b><code>Mate Desktop</code></b></summary></br>
 
 ```
-apk add wget ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Desktop/de-mate.sh ; chmod +x de-mate.sh ; ./de-mate.sh
+apk add mate-desktop-environment lxdm adwaita-icon-theme faenza-icon-theme
 ```
 </details>
 
