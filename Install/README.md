@@ -1,7 +1,7 @@
 <b>Alpine Site</b>
 - https://alpinelinux.org
 
-<b>Alpine Releases</b>
+<b>Alpine Release</b>
 - https://alpinelinux.org/releases
 
 <b>Alpine Repository</b>
