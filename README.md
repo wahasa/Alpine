@@ -123,7 +123,7 @@ Feature
 - [x] Fixed Sound Output
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
-- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Note)
+- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps)
 
 Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
