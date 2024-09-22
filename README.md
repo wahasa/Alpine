@@ -85,10 +85,10 @@ apk add lightdm-gtk-greeter xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-
 apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
 ```
 ```
-apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt adwaita-qt breeze oxygen firefox-esr pulseaudio eudev dbus
+apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt adwaita-xfce-icon-theme adwaita-qt firefox-esr pulseaudio eudev dbus
 ```
 ```
-apk add sddm screengrab adwaita-xfce-icon-theme qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2 polkit-elogind elogind
+apk add sddm screengrab breeze oxygen qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2 polkit-elogind elogind
 ```
 </details>
 
@@ -111,7 +111,10 @@ apk add sddm eudev polkit-elogind elogind
 apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
 ```
 ```
-apk add mate-desktop-environment lxdm adwaita-icon-theme faenza-icon-theme
+apk add mate-desktop-environment adwaita-icon-theme faenza-icon-theme firefox-esr pulseaudio dbus
+```
+```
+apk add lxdm eudev polkit-elogind elogind
 ```
 </details>
 
