@@ -130,7 +130,7 @@ exit" > $folder/root/.bash_profile
 	echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
 NAME="Alpine"
 VERSION_ID="3.21"
-VERSION="3.21.0 Edge (Development)"
+VERSION="3.21 Edge (Development)"
 VERSION_CODENAME=edge
 ID=alpine
 HOME_URL="https://alpinelinux.org"
@@ -138,7 +138,7 @@ DOCUMENTATION_URL="https://wiki.alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpine-linux-logo' > ~/"$folder"/etc/os-release
+LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
 	clear
 	echo ""
         echo "You can login to Alpine with 'alpine' script next time"
