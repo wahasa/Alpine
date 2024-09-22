@@ -9,12 +9,12 @@ apk add blender
 
 <details><summary><code><b>Chromium</b></code></summary></br>
 
-[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Chromiumfix.md)
+[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Apps/Chromiumfix.md)
 </details>
 
 <details><summary><code><b>Firefox</b></code></summary></br>
 
-[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Note/Firefoxfix.md)
+[> Click Here <](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md)
 </details>
 
 <details><summary><code><b>Gedit</b></code></summary></br>
