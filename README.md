@@ -56,15 +56,9 @@ Basic commands Alpine
 
 ---
 ### Install Desktop Environment
-- In Termux, run this commands
-> apt update ; apt install wget -y
 
-```
-wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
-```
-
-- In Alpine, run this commands
-> apk update ; apk add wget
+In Alpine, run this commands
+> apk update
 
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
