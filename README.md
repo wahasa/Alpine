@@ -140,6 +140,22 @@ Install Package
 pkg install termux-x11-nightly -y
 ```
 
+Add script
+```
+echo "termux-x11 :1" > $PREFIX/bin/start-x11
+```
+```
+echo "pkill -f com.termux.x11" > $PREFIX/bin/stop-x11
+```
+
+Activate script
+```
+chmod +x $PREFIX/bin/start-x11
+```
+```
+chmod +x $PREFIX/bin/stop-x11
+```
+
 ---
 Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
