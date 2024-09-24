@@ -11,7 +11,7 @@ mkdir -p $folder $folder/binds
 if [ "$check" -eq "1" ] > /dev/null 2>&1; then
 	echo "Please Waiting,."
 	if [ -x "$(command -v neofetch)" ]; then
-		neofetch --ascii_distro Alpine -L
+		neofetch --ascii_distro PostmarketOS -L
 	fi
 	pv $tarball | proot --link2symlink tar -zxf - -C $folder || :
 else
@@ -31,11 +31,11 @@ else
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
-		neofetch --ascii_distro Alpine -L
+		neofetch --ascii_distro PostmarketOS -L
 	fi
 	wget -qO- --tries=0 $url --show-progress --progress=bar:force:noscroll |proot --link2symlink tar -zxf - -C $folder --exclude='dev' || :
 fi
-bin=.alpine
+bin=.postmarketos
 linux=postmarketos
 if [ -d $folder/var ];then
 	echo ""
@@ -123,6 +123,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
 	echo "Updating PostmarketOS,.."
 	echo ""
 	echo "#!/bin/bash
+apk add -u --allow-untrusted postmarketos-keys
 apk update ; apk upgrade
 apk add nano sudo dialog
 rm -rf ~/.bash_profile
