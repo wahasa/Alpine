@@ -163,7 +163,6 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
 * Commands in Alpine (session 2)
-> apk add nano
 
 Edit script
 ```
