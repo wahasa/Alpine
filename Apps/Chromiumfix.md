@@ -9,7 +9,7 @@
 > apk del chromium
 
 ---
-#### Fixed chromium can't be opened
+#### Fixed chromium not opening
 In Alpine, run this commands
 
 * Edit script
