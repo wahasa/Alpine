@@ -227,7 +227,6 @@ In session 2 (alpine), run this command
 
 In session 1 (termux), run this command
 > stop-x11
-</br>
 
 ---
 </details>
