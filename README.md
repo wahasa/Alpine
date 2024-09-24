@@ -126,15 +126,16 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 ---
 ### Run Desktop Environment
 
-#### Install Termux-x11
+**Install Termux-x11**
 * App Termux-x11
 
 - [x] [Link Download](https://github.com/termux/termux-x11/releases)
 
-* Commands in Termux
-> pkg install nano -y
+---
+* Commands in Termux (session 1)
+> apt install nano
 
-* Install Package
+Install Package
 ```
 pkg install termux-x11-nightly -y
 ```
@@ -143,7 +144,8 @@ pkg install termux-x11-nightly -y
 Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
-* Commands in Alpine
+---
+* Commands in Alpine (session 2)
 > apk add nano
 
 Edit script
@@ -156,8 +158,6 @@ Add script
 #!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
-rm -rf /run/dbus/dbus.pid
-#dbus-launch $HOME/.vnc/xstartup
 
 # --XFCE-- #
 #startxfce4
@@ -181,7 +181,7 @@ Remove the sign (#) on the desktop you are installing now.
 
 * Activate script
 ```
-chmod +x /usr/local/bin/termux-x11
+chmod +x /usr/local/bin/start-x11
 ```
 
 ---
