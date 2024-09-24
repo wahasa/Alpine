@@ -125,6 +125,7 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Run Desktop Environment
+<details><summary><b><code>Termux-x11</code></b></summary></br>
 
 **Install Termux-x11**
 * App Termux-x11
@@ -195,7 +196,7 @@ Save : ctrl + x, click Y enter.
 Note :</br>
 Remove the sign (#) on the desktop you are installing now.
 
-* Activate script
+Activate script
 ```
 chmod +x /usr/local/bin/start-x11
 ```
@@ -229,6 +230,8 @@ In session 1 (termux), run this command
 > stop-x11
 </br>
 
+---
+</details>
 
 * RVNC Viewer
 
