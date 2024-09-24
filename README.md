@@ -126,9 +126,93 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 ---
 ### Run Desktop Environment
 
-* Termux-x11
+#### Install Termux-x11
+* App Termux-x11
 
-Link > [Termux-x11](https://github.com/termux/termux-x11/releases)
+- [x] [Link Download](https://github.com/termux/termux-x11/releases)
+
+* Commands in Termux
+> pkg install nano -y
+
+* Install Package
+```
+pkg install termux-x11-nightly -y
+```
+
+---
+Add new session :</br>
+Swipe the screen from left to right in termux, click 'New Session'.
+
+* Commands in Alpine
+> apk add nano
+
+Edit script
+```
+nano /usr/local/bin/start-x11
+```
+
+Add script
+```
+#!/bin/sh
+export DISPLAY=:1
+export PULSE_SERVER=127.0.0.1
+rm -rf /run/dbus/dbus.pid
+#dbus-launch $HOME/.vnc/xstartup
+
+# --XFCE-- #
+#startxfce4
+
+# --LXQT-- #
+#startlxqt
+
+# --KDE-- #
+#startplasma-x11
+
+# --MATE-- #
+#mate-session
+
+# --END-- #
+```
+
+Save : ctrl + x, click Y enter.
+
+Note :</br>
+Remove the sign (#) on the desktop you are installing now.
+
+* Activate script
+```
+chmod +x /usr/local/bin/termux-x11
+```
+
+---
+#### Run Termux-x11
+* Start termux-x11
+
+In session 1(termux), run this command
+```
+start-x11
+```
+
+In session 2 (alpine), run this command
+```
+start-x11
+```
+
+Open app termux-x11
+</br></br>
+
+---
+* Stop termux-x11
+
+Close app termux-x11
+
+In session 2 (alpine), run this command
+> Click Ctrl+c, enter (2X)
+
+In session 1 (termux), run this command
+> stop-x11
+</br>
+
 
 * RVNC Viewer
 
