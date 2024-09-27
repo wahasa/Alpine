@@ -438,7 +438,6 @@ Port
 
 Vnc Password
 > (Your vnc password)
-</br>
 
 ---
 - Stop VNC Server
