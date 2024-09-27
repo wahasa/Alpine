@@ -126,7 +126,7 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Run Desktop Environment
-<details><summary><b><code>Termux-x11</code></b></summary></br>
+<details><summary><b><code>Run with Termux-x11</code></b></summary></br>
 
 Install Termux-x11
 - App Termux-x11
@@ -232,7 +232,7 @@ In session 1(termux), run this command
 ---
 </details>
 
-<details><summary><b><code>RVNC Viewer</code></b></summary></br>
+<details><summary><b><code>Run with RVNC Viewer</code></b></summary></br>
 
 Install RVNC Viewer
 - App RVNC Viewer
@@ -349,7 +349,7 @@ In session 1(termux), run this command
 ---
 </details>
 
-<details><summary><b><code>BVNC Viewer</code></b></summary></br>
+<details><summary><b><code>Run with BVNC Viewer</code></b></summary></br>
 
 Install BVNC Viewer
 - App BVNC Viewer
