@@ -356,7 +356,7 @@ Install BVNC Viewer
 - [x] [Link Download](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC)
 
 ---
-Commands in Termux (session 1)
+Commands in Termux
 
 - Install Package
 ```
@@ -380,11 +380,19 @@ chmod +x $PREFIX/bin/vncstop
 ```
 
 ---
+#### Run BVNC Viewer
+- Start VNC Server
+
+In session 1(termux), run this command
+```
+vncstart
+```
+---
 Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-Commands in Alpine (session 2)
+In session 2 (alpine), run this command
 ```
 export DISPLAY=:1
 ```
@@ -408,19 +416,6 @@ startplasma-x11
 MATE Desktop
 ```
 mate-session
-```
----
-#### Run BVNC Viewer
-- Start VNC Server
-
-In session 1(termux), run this command
-```
-vncstart
-```
-
-In session 2 (alpine), run this command
-```
-vncstart
 ```
 
 ---
