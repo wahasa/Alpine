@@ -230,9 +230,53 @@ In session 1(termux), run this command
 ---
 </details>
 
-* RVNC Viewer
+<details><summary><b><code>RVNC Viewer</code></b></summary></br>
 
-Link > [RVNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+Install RVNC Viewer
+- App RVNC Viewer
+
+- [x] [Link Download](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+
+---
+#### Run RVNC Viewer
+- Start VNC Server
+
+In session 1(termux), run this command
+```
+vncstart
+```
+
+In session 2 (alpine), run this command
+```
+vncstart
+```
+
+- Open app RVNC Viewer
+
+Add (+) VNC Client to connect, fill with :
+
+Address
+> localhost:1 
+
+Name
+> Desktop
+
+To disconnect VNC Client, click (X) on the right.
+</br>
+
+---
+- Stop VNC Server
+
+Close app RVNC Viewer
+
+In session 2 (alpine), run this command
+> Click Ctrl+c, enter (2X)
+
+In session 1(termux), run this command
+> vncstop
+
+---
+</details>
 
 * BVNC Viewer
 
