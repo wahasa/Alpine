@@ -118,6 +118,7 @@ Feature
 - [x] Fixed Sound Output
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
+- [x] Add New Username | [Click Here >]
 - [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-crash)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps#list-applications)
 
@@ -392,7 +393,7 @@ Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In session 2 (alpine), run this command
+In session 2 (alpine), run this commands
 ```
 export DISPLAY=:1
 ```
