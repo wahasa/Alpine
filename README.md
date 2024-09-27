@@ -429,10 +429,13 @@ vncstart
 Add (+) VNC Client to connect, fill with :
 
 VNC Connection Settings
+
 Vnc Server
 > 127.0.0.1
+
 Port
 > 5901
+
 Vnc Password
 > (Your vnc password)
 </br>
