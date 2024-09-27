@@ -127,21 +127,20 @@ Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
 ### Run Desktop Environment
 <details><summary><b><code>Termux-x11</code></b></summary></br>
 
-**Install Termux-x11**
-* App Termux-x11
+Install Termux-x11
+- App Termux-x11
 
 - [x] [Link Download](https://github.com/termux/termux-x11/releases)
 
 ---
-* Commands in Termux (session 1)
-> apt install nano
+Commands in Termux (session 1)
 
-Install Package
+- Install Package
 ```
 pkg install termux-x11-nightly -y
 ```
 
-Add script
+- Add script
 ```
 echo "termux-x11 :1" > $PREFIX/bin/start-x11
 ```
@@ -149,7 +148,7 @@ echo "termux-x11 :1" > $PREFIX/bin/start-x11
 echo "pkill -f com.termux.x11" > $PREFIX/bin/stop-x11
 ```
 
-Activate script
+- Activate script
 ```
 chmod +x $PREFIX/bin/start-x11
 ```
@@ -162,14 +161,14 @@ Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-* Commands in Alpine (session 2)
+Commands in Alpine (session 2)
 
-Edit script
+- Edit script
 ```
 nano /usr/local/bin/start-x11
 ```
 
-Add script
+- Add script
 ```
 #!/bin/sh
 export DISPLAY=:1
@@ -195,14 +194,14 @@ Save : ctrl + x, click Y enter.
 Note :</br>
 Remove the sign (#) on the desktop you are installing now.
 
-Activate script
+- Activate script
 ```
 chmod +x /usr/local/bin/start-x11
 ```
 
 ---
 #### Run Termux-x11
-* Start termux-x11
+- Start termux-x11
 
 In session 1(termux), run this command
 ```
@@ -215,17 +214,17 @@ start-x11
 ```
 
 Open app termux-x11
-</br></br>
+</br>
 
 ---
-* Stop termux-x11
+- Stop termux-x11
 
 Close app termux-x11
 
 In session 2 (alpine), run this command
 > Click Ctrl+c, enter (2X)
 
-In session 1 (termux), run this command
+In session 1(termux), run this command
 > stop-x11
 
 ---
