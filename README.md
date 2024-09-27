@@ -162,6 +162,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
 Commands in Alpine (session 2)
+> apk add nano
 
 - Edit script
 ```
@@ -201,7 +202,7 @@ chmod +x /usr/local/bin/start-x11
 
 ---
 #### Run Termux-x11
-- Start termux-x11
+- Start Termux-x11
 
 In session 1(termux), run this command
 ```
@@ -213,13 +214,13 @@ In session 2 (alpine), run this command
 start-x11
 ```
 
-Open app termux-x11
+Open app Termux-x11
 </br>
 
 ---
-- Stop termux-x11
+- Stop Termux-x11
 
-Close app termux-x11
+Close app Termux-x11
 
 In session 2 (alpine), run this command
 > Click Ctrl+c, enter (2X)
@@ -267,6 +268,7 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
 Commands in Alpine (session 2)
+> apk add nano
 
 - Edit script
 ```
