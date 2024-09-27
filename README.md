@@ -348,7 +348,7 @@ In session 1(termux), run this command
 ---
 </details>
 
-<details><summary><b><code>RVNC Viewer</code></b></summary></br>
+<details><summary><b><code>BVNC Viewer</code></b></summary></br>
 
 Install BVNC Viewer
 - App BVNC Viewer
