@@ -137,7 +137,7 @@ Commands in Termux (session 1)
 
 - Install Package
 ```
-pkg install termux-x11-nightly -y
+apt install termux-x11-nightly -y
 ```
 
 - Add script
@@ -238,6 +238,73 @@ Install RVNC Viewer
 - [x] [Link Download](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 
 ---
+Commands in Termux (session 1)
+
+- Install Package
+```
+apt install tigervnc xorg-xhost -y
+```
+
+- Add script
+```
+echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart
+```
+```
+echo "vncserver -kill :1" > $PREFIX/bin/vncstop
+```
+
+- Activate script
+```
+chmod +x $PREFIX/bin/vncstart
+```
+```
+chmod +x $PREFIX/bin/vncstop
+```
+
+---
+Add new session :</br>
+Swipe the screen from left to right in termux, click 'New Session'.
+
+---
+Commands in Alpine (session 2)
+
+- Edit script
+```
+nano /usr/local/bin/vncstart
+```
+
+- Add script
+```
+#!/bin/sh
+export DISPLAY=:1
+export PULSE_SERVER=127.0.0.1
+
+# --XFCE-- #
+#startxfce4
+
+# --LXQT-- #
+#startlxqt
+
+# --KDE-- #
+#startplasma-x11
+
+# --MATE-- #
+#mate-session
+
+# --END-- #
+```
+
+Save : ctrl + x, click Y enter.
+
+Note :</br>
+Remove the sign (#) on the desktop you are installing now.
+
+- Activate script
+```
+chmod +x /usr/local/bin/vncstart
+```
+
+---
 #### Run RVNC Viewer
 - Start VNC Server
 
@@ -251,6 +318,7 @@ In session 2 (alpine), run this command
 vncstart
 ```
 
+---
 - Open app RVNC Viewer
 
 Add (+) VNC Client to connect, fill with :
