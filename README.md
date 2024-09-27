@@ -87,7 +87,7 @@ apk add sddm screengrab breeze oxygen qt5-qtgraphicaleffects qt5-qtquickcontrols
 ```
 </details>
 
-<details><summary><b><code>Kde  Desktop</code></b></summary></br>
+<details><summary><b><code>Kde- Desktop</code></b></summary></br>
 
 ```
 apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
@@ -348,9 +348,106 @@ In session 1(termux), run this command
 ---
 </details>
 
-* BVNC Viewer
+<details><summary><b><code>RVNC Viewer</code></b></summary></br>
 
-Link > [BVNC Viewer](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC)
+Install BVNC Viewer
+- App BVNC Viewer
+
+- [x] [Link Download](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC)
+
+---
+Commands in Termux (session 1)
+
+- Install Package
+```
+apt install tigervnc xorg-xhost -y
+```
+
+- Add script
+```
+echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart
+```
+```
+echo "vncserver -kill :1" > $PREFIX/bin/vncstop
+```
+
+- Activate script
+```
+chmod +x $PREFIX/bin/vncstart
+```
+```
+chmod +x $PREFIX/bin/vncstop
+```
+
+---
+Add new session :</br>
+Swipe the screen from left to right in termux, click 'New Session'.
+
+---
+Commands in Alpine (session 2)
+```
+export DISPLAY=:1
+```
+```
+export PULSE_SERVER=127.0.0.1
+```
+
+---
+XFCE Desktop
+```
+startxfce4
+```
+LXQT Desktop
+```
+startlxqt
+```
+KDE- Desktop
+```
+startplasma-x11
+```
+MATE Desktop
+```
+mate-session
+```
+---
+#### Run BVNC Viewer
+- Start VNC Server
+
+In session 1(termux), run this command
+```
+vncstart
+```
+
+In session 2 (alpine), run this command
+```
+vncstart
+```
+
+---
+- Open app BVNC Viewer
+
+Add (+) VNC Client to connect, fill with :
+
+VNC Connection Settings
+Vnc Server
+> 127.0.0.1
+Port
+> 5901
+Vnc Password
+> (Your vnc password)
+</br>
+
+---
+- Stop VNC Server
+
+Close app BVNC Viewer
+
+In session 2 (alpine), run this command
+> Click Ctrl+c, enter (2X)
+
+In session 1(termux), run this command
+> vncstop
+</details>
 </br>
 
 ---
