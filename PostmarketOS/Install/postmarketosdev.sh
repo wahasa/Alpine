@@ -116,7 +116,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
         sed -i 's/ash/bash/g' $folder/etc/passwd
         sed -i 's/bin\/sh/bin\/bash/g' $bin
 	echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-	echo 'bash .alpine' > $PREFIX/bin/$linux
+	echo 'bash .postmarketos' > $PREFIX/bin/$linux
 	chmod +x $PREFIX/bin/$linux
 	clear
 	echo ""
