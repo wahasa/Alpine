@@ -1,5 +1,4 @@
 ### Fixed Firefox on Alpine
-![firefox](https://github.com/wahasa/Project/assets/69626847/1a6adff8-986b-4d10-bf7a-33cc64aae616)
 
 ---
 * Install Firefox
