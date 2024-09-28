@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot xz-utils pulseaudio -y
+pkg install proot xz-utils neofetch pulseaudio -y
 termux-setup-storage
 alpine=3.19
-build=2
+build=4
 folder=alpine-fs
 tarball="alpine-rootfs.tar.gz"
 mkdir -p $folder $folder/binds
@@ -40,7 +40,6 @@ linux=alpine
 if [ -d $folder/var ];then
 	echo ""
 	echo "Writing launch script"
-
 	cat > $bin <<- EOM
 	#!/data/data/com.termux/files/usr/bin/bash
 pulseaudio --start \
@@ -86,7 +85,7 @@ pulseaudio --start \
 	EOM
 
 	if test -f "$bin"; then
-  		echo "Fixing shebang of $linux"
+  	echo "Fixing shebang of $linux"
 		termux-fix-shebang $bin
 	fi
 
@@ -102,9 +101,7 @@ pulseaudio --start \
 		#rm $tarball
 	fi
 
-echo '#!/bin/bash
-bash .alpine' > $PREFIX/bin/$linux
-        chmod +x $PREFIX/bin/$linux
+	echo ""
 	echo "" > $folder/etc/fstab
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
@@ -116,19 +113,30 @@ https://dl-cdn.alpinelinux.org/alpine/v3.19/community" > ~/"$folder"/etc/apk/rep
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
         sed -i 's/bin\/sh/bin\/bash/g' $bin
-	echo ""
-	echo "Installation Finished"
-        echo ""
+	echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
+	echo 'bash .alpine' > $PREFIX/bin/$linux
+	chmod +x $PREFIX/bin/$linux
 	clear
 	echo ""
 	echo "Updating Alpine,.."
 	echo ""
-  	echo "#!/bin/bash
-apk update && apk upgrade
-apk add nano sudo
+	echo "#!/bin/bash
+apk update ; apk upgrade
+apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
+	echo 'PRETTY_NAME="Alpine 3.19 Linux"
+NAME="Alpine"
+VERSION_ID="3.19"
+VERSION="3.19.4"
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+DOCUMENTATION_URL="https://wiki.alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
+LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
 	clear
 	echo ""
         echo "You can login to Alpine with 'alpine' script next time"
@@ -139,7 +147,6 @@ else
 	echo "Installation Unsuccessful"
         echo ""
 fi
-
-#
-## Script edited by 'WaHaSa', Script V3-revision.
-#
+ #
+### Script edited by 'WaHaSa', Script revision-4.
+ #
