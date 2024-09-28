@@ -118,7 +118,7 @@ Feature
 - [x] Fixed Sound Output
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
-- [x] Add New Username | [Click Here >]
+- [x] Add New Username | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/AddUser.md)
 - [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-crash)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps#list-applications)
 
