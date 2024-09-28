@@ -3,9 +3,9 @@
 In Alpine, run this commands
 > apk add sudo
 
-* Add Username
+- Add Username
 ```
-useradd <username>
+adduser <username>
 ```
 ```
 passwd <username>
@@ -17,15 +17,26 @@ echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
 su <username>
 ```
 
-* Del Username
+- Del Username
 ```
-userdel <username>
+deluser <username>
 ```
 
 </br>
 Note :</br>
 (username) : Replace with your username.
-</br></br>
+
+---
+- Login Username
+```
+su <username>
+```
+
+- Logout Username
+```
+exit
+```
+</br>
 
 ---
 <p align="center">Good Luck</p>
