@@ -2,8 +2,8 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 termux-setup-storage
-alpine=3.20
-build=3
+alpine=edge
+build=20240923
 folder=postmarketos-fs
 tarball="postmarketos-rootfs.tar.gz"
 mkdir -p $folder $folder/binds
@@ -27,7 +27,7 @@ else
 	*)
 		echo "Unknown Architecture"; exit 1 ;;
 	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz
+	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
 	echo "Downloading and Extracting Rootfs,."
 	echo ""
 	if [ -x "$(command -v neofetch)" ]; then
@@ -106,10 +106,11 @@ pulseaudio --start \
 	echo "alpine" > ~/"$folder"/etc/hostname
    	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
 	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "#Alpine Repositories
-https://mirror.postmarketos.org/postmarketos/v24.06
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
+        echo "#Alpine Development
+https://mirror.postmarketos.org/postmarketos/master
+https://dl-cdn.alpinelinux.org/alpine/edge/main
+https://dl-cdn.alpinelinux.org/alpine/edge/testing
+https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
 	./$bin apk update
         ./$bin apk add --no-cache bash
         sed -i 's/ash/bash/g' $folder/etc/passwd
@@ -128,10 +129,11 @@ apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 	bash $bin
-	echo 'PRETTY_NAME="PostmarketOS 24.06 Linux"
+	echo 'PRETTY_NAME="PostmarketOS Edge (Development Branch)"
 NAME="PostmarketOS"
-VERSION_ID="24.06"
-VERSION="24.06"
+VERSION_ID="24.12"
+VERSION="24.12 Edge (Development)"
+VERSION_CODENAME=master
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
@@ -139,13 +141,14 @@ DOCUMENTATION_URL="https://wiki.postmarketos.org"
 SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
 PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
-ALPINE_VERSION="3.20"
+ALPINE_VERSION="3.21 Edge (Development)"
+ALPINE_CODENAME=edge
 LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
 	clear
 	echo ""
         echo "You can login to PostmarketOS with 'postmarketos' script next time"
 	echo ""
-	#rm postmarketos24.06.sh
+	#rm postmarketosdev.sh
 else
         echo ""
 	echo "Installation Unsuccessful"
@@ -154,4 +157,3 @@ fi
  #
 ### Script edited by 'WaHaSa', Script revision-4.
  #
-
