@@ -3,7 +3,7 @@ pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 termux-setup-storage
 alpine=edge
-build=20240807
+build=20240923
 folder=postmarketos-fs
 tarball="postmarketos-rootfs.tar.gz"
 mkdir -p $folder $folder/binds
