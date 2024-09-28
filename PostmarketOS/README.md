@@ -28,7 +28,7 @@ Rootfs : Armhf, Arm64, i386, Amd64
 wget https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/PostmarketOS/Install/postmarketosdev.sh ; chmod +x postmarketosdev.sh ; ./postmarketosdev.sh
 ```
 
-#### List PostmarketOS | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
+#### List PostmarketOS | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/PostmarketOS/Install)
 </details>
 
 ---
