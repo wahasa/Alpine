@@ -2,7 +2,7 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-## PostmarketOS on Termux Android
+### PostmarketOS on Termux Android
 
 * Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
