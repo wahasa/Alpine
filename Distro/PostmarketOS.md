@@ -67,7 +67,12 @@ PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
 ALPINE_VERSION="3.20"
 LOGO=postmarketos-logo
 ```
-
+```
+apk add -u --allow-untrusted postmarketos-keys
+```
+```
+apk update ; apk upgrade
+```
 ---
 Basic commands Alpine
 > apk update : Update list package.</br>
