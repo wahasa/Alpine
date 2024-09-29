@@ -88,8 +88,10 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 ```
 
-- Edit Repository
-Repo Alpine 3.20 (Latest)
+Edit Repository
+</br>
+
+- Repo Alpine 3.20 (Latest)
 
 ```
 nano /etc/apk/repositories
@@ -98,8 +100,8 @@ nano /etc/apk/repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 ```
+Save : ctrl + x, click Y enter.
 
----
 ```
 nano /etc/os-release
 ```
@@ -116,8 +118,10 @@ BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
 LOGO=alpinelinux-logo
 ```
+Save : ctrl + x, click Y enter.
 
-Repo Alpine 3.21 (Devel)
+---
+- Repo Alpine 3.21 (Devel)
 
 ```
 nano /etc/apk/repositories
@@ -127,8 +131,8 @@ https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
 https://dl-cdn.alpinelinux.org/alpine/edge/community
 ```
+Save : ctrl + x, click Y enter.
 
----
 ```
 nano /etc/os-release
 ```
@@ -146,6 +150,9 @@ BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
 LOGO=alpinelinux-logo
 ```
+Save : ctrl + x, click Y enter.
+
+- List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
 
 ---
 </details>
