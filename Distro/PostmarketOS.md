@@ -93,7 +93,7 @@ In Termux, run this commands
 apt install pulseaudio nano -y
 ```
 ```
-nano $PREFIX/bin/alpine
+nano $PREFIX/bin/postmarketos
 ```
 
 - Copy Script
@@ -108,18 +108,18 @@ Save : ctrl + x, click y enter.
 
 - Activate script
 ```
-chmod +x $PREFIX/bin/alpine
+chmod +x $PREFIX/bin/postmarketos
 ```
 
 ---
-- Login Alpine
-> alpine
+- Login PostmarketOS
+> postmarketos
 
-- Logout Alpine
+- Logout PostmarketOS
 > exit
 
 ---
-In Alpine,run this commands
+In PostmarketOS,run this commands
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
@@ -137,12 +137,13 @@ rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 Edit Repository
 </br>
 
-- Repo Alpine 3.20 (Latest)
+- Repo PostmarketOS 24.06 (Latest)
 
 ```
 nano /etc/apk/repositories
 ```
 ```
+https://mirror.postmarketos.org/postmarketos/v24.06
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 ```
@@ -152,27 +153,30 @@ Save : ctrl + x, click Y enter.
 nano /etc/os-release
 ```
 ```
-PRETTY_NAME="Alpine 3.20 Linux"
-NAME="Alpine"
-VERSION_ID="3.20"
-VERSION="3.20"
-ID=alpine
-HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://wiki.alpinelinux.org"
-SUPPORT_URL="https://alpinelinux.org/community"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpinelinux-logo
+PRETTY_NAME="PostmarketOS 24.06 Linux"
+NAME="PostmarketOS"
+VERSION_ID="24.06"
+VERSION="24.06"
+ID=postmarketos
+ID_LIKE=alpine
+HOME_URL="https://postmarketos.org"
+DOCUMENTATION_URL="https://wiki.postmarketos.org"
+SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
+BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
+PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
+ALPINE_VERSION="3.20"
+LOGO=postmarketos-logo
 ```
 Save : ctrl + x, click Y enter.
 
 ---
-- Repo Alpine 3.21 (Devel)
+- Repo PostmarketOS 24.12 (Devel)
 
 ```
 nano /etc/apk/repositories
 ```
 ```
+https://mirror.postmarketos.org/postmarketos/master
 https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
 https://dl-cdn.alpinelinux.org/alpine/edge/community
@@ -183,18 +187,21 @@ Save : ctrl + x, click Y enter.
 nano /etc/os-release
 ```
 ```
-PRETTY_NAME="Alpine Edge (Development Branch)"
-NAME="Alpine"
-VERSION_ID="3.21"
-VERSION="3.21 Edge (Development)"
-VERSION_CODENAME=edge
-ID=alpine
-HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://wiki.alpinelinux.org"
-SUPPORT_URL="https://alpinelinux.org/community"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpinelinux-logo
+PRETTY_NAME="PostmarketOS Edge (Development Branch)"
+NAME="PostmarketOS"
+VERSION_ID="24.12"
+VERSION="24.12 Edge (Development)"
+VERSION_CODENAME=master
+ID=postmarketos
+ID_LIKE=alpine
+HOME_URL="https://postmarketos.org"
+DOCUMENTATION_URL="https://wiki.postmarketos.org"
+SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
+BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
+PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
+ALPINE_VERSION="3.21 Edge (Development)"
+ALPINE_CODENAME=edge
+LOGO=postmarketos-logo
 ```
 Save : ctrl + x, click Y enter.
 
@@ -204,7 +211,7 @@ Save : ctrl + x, click Y enter.
 </details>
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
-In Alpine, run this commands
+In PostmarketOS, run this commands
 > apk add sudo
 
 - Add Username
