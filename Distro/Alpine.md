@@ -40,7 +40,7 @@ Feature
 
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
-- In Termux, run this commands
+In Termux, run this commands
 > apt update
 
 ```
@@ -50,7 +50,7 @@ apt install pulseaudio nano -y
 nano $PREFIX/bin/alpine
 ```
 
-Copy Script
+- Copy Script
 ```
 #!/bin/bash
 pulseaudio --start \
@@ -60,27 +60,29 @@ proot-distro login alpine --shared-tmp
 ```
 Save : ctrl + x, click y enter.
 
-Activate script
+- Activate script
 ```
 chmod +x $PREFIX/bin/alpine
 ```
 
 ---
-<b>Login Alpine</b>
+- Login Alpine
 > alpine
 
-<b>Logout Alpine</b>
+- Logout Alpine
 > exit
 
 ---
-- In Alpine,run this commands
+In Alpine,run this commands
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
 
 ---
 </details>
+<details><summary><b><code>Update Repository</code></b></summary></br>
 
+</details>
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
 In Alpine, run this commands
@@ -123,7 +125,7 @@ exit
 ---
 </details>
 
-- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main?tab=readme-ov-file#install-desktop-environment)
+- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
 
 - [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
 </br>
