@@ -2,13 +2,13 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-## Alpine on Termux Android
+### PostmarketOS on Termux Android
 
 * Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
-### Installation
+#### Installation
 Copy and paste this commands to Termux
 
 #### Install Alpine (Distro)
@@ -23,9 +23,50 @@ apt install proot-distro -y ; proot-distro install alpine
 * Logout Alpine
 > exit
 
----
 - Reinstall : proot-distro reset alpine
 - Uninstall : proot-distro remove alpine
+
+---
+#### PostmarketOS 24.06 (Add-Repo)
+
+In Alpine, run this commands
+
+- Edit Repo
+```
+rm -rf /etc/apk/repositories
+```
+```
+nano /etc/apk/repositories
+```
+Copy Script
+```
+https://mirror.postmarketos.org/postmarketos/v24.06
+https://dl-cdn.alpinelinux.org/alpine/v3.20/main
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community
+```
+- Edit Os-release
+```
+rm -rf /etc/os-release
+```
+```
+nano /etc/os-release
+```
+Copy Script
+```
+PRETTY_NAME="PostmarketOS 24.06 Linux"
+NAME="PostmarketOS"
+VERSION_ID="24.06"
+VERSION="24.06"
+ID=postmarketos
+ID_LIKE=alpine
+HOME_URL="https://postmarketos.org"
+DOCUMENTATION_URL="https://wiki.postmarketos.org"
+SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
+BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
+PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
+ALPINE_VERSION="3.20"
+LOGO=postmarketos-logo
+```
 
 ---
 Basic commands Alpine
