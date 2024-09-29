@@ -60,6 +60,7 @@ proot-distro login alpine --shared-tmp
 ```
 Save : ctrl + x, click y enter.
 
+Activate script
 ```
 chmod +x $PREFIX/bin/alpine
 ```
