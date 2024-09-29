@@ -9,7 +9,6 @@
 
 <b>Alpine Rootfs</b>
 
-- https://dl-cdn.alpinelinux.org/alpine
 - https://github.com/termux/proot-distro/releases/tag/v4.6.0
 
 ---
