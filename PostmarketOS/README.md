@@ -19,7 +19,7 @@ Copy and paste this commands to Termux
 #### PostmarketOS 24.06 (Latest)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/PostmarketOS/Install/postmarketos24.6.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
+wget https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
 ```
 
 #### PostmarketOS 24.12 (Devel)
