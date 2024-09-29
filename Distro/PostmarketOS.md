@@ -169,6 +169,13 @@ LOGO=postmarketos-logo
 ```
 Save : ctrl + x, click Y enter.
 
+```
+apk add -u --allow-untrusted postmarketos-keys
+```
+```
+apk update ; apk upgrade
+```
+
 ---
 - Repo PostmarketOS 24.12 (Devel)
 
@@ -205,7 +212,14 @@ LOGO=postmarketos-logo
 ```
 Save : ctrl + x, click Y enter.
 
-- List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
+```
+apk add -u --allow-untrusted postmarketos-keys
+```
+```
+apk update ; apk upgrade
+```
+
+- List Repository | [Click Hare >](https://mirror.postmarketos.org/postmarketos)
 
 ---
 </details>
