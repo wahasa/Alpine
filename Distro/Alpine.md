@@ -109,7 +109,7 @@ nano /etc/os-release
 PRETTY_NAME="Alpine 3.20 Linux"
 NAME="Alpine"
 VERSION_ID="3.20"
-VERSION="3.20.3"
+VERSION="3.20"
 ID=alpine
 HOME_URL="https://alpinelinux.org"
 DOCUMENTATION_URL="https://wiki.alpinelinux.org"
