@@ -36,3 +36,98 @@ Basic commands Alpine
 > apk del (pkg) : Delete package.</br>
 
 ---
+Feature
+
+<details><summary><b><code>Fixed Sound Output</code></b></summary></br>
+
+- In Termux, run this commands
+> apt update
+
+```
+apt install pulseaudio nano -y
+```
+```
+nano $PREFIX/bin/alpine
+```
+
+Copy Script
+```
+#!/bin/bash
+pulseaudio --start \
+    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
+    --exit-idle-time=-1
+proot-distro login alpine --shared-tmp
+```
+Save : ctrl + x, click y enter.
+
+```
+chmod +x $PREFIX/bin/alpine
+```
+
+---
+<b>Login Alpine</b>
+> alpine
+
+<b>Logout Alpine</b>
+> exit
+
+---
+- In Alpine,run this commands
+```
+echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
+```
+
+---
+</details>
+
+<details><summary><b><code>Add New Username</code></b></summary></br>
+
+In Alpine, run this commands
+> apk add sudo
+
+- Add Username
+```
+adduser <username>
+```
+```
+passwd <username>
+```
+```
+echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+```
+```
+su <username>
+```
+
+- Del Username
+```
+deluser <username>
+```
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login Username
+```
+su <username>
+```
+
+- Logout Username
+```
+exit
+```
+
+---
+</details>
+
+- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main?tab=readme-ov-file#install-desktop-environment)
+
+- [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
+</br>
+
+---
+<p align="center">Good Luck</p>
+
+---
