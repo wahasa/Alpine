@@ -82,6 +82,72 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 </details>
 <details><summary><b><code>Update Repository</code></b></summary></br>
 
+> apk add nano
+
+```
+rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
+```
+
+- Edit Repository
+Repo Alpine 3.20 (Latest)
+
+```
+nano /etc/apk/repositories
+```
+```
+https://dl-cdn.alpinelinux.org/alpine/v3.20/main
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community
+```
+
+---
+```
+nano /etc/os-release
+```
+```
+PRETTY_NAME="Alpine 3.20 Linux"
+NAME="Alpine"
+VERSION_ID="3.20"
+VERSION="3.20.3"
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+DOCUMENTATION_URL="https://wiki.alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
+LOGO=alpinelinux-logo
+```
+
+Repo Alpine 3.21 (Devel)
+
+```
+nano /etc/apk/repositories
+```
+```
+https://dl-cdn.alpinelinux.org/alpine/edge/main
+https://dl-cdn.alpinelinux.org/alpine/edge/testing
+https://dl-cdn.alpinelinux.org/alpine/edge/community
+```
+
+---
+```
+nano /etc/os-release
+```
+```
+PRETTY_NAME="Alpine Edge (Development Branch)"
+NAME="Alpine"
+VERSION_ID="3.21"
+VERSION="3.21 Edge (Development)"
+VERSION_CODENAME=edge
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+DOCUMENTATION_URL="https://wiki.alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
+LOGO=alpinelinux-logo
+```
+
+---
 </details>
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
