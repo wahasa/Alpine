@@ -19,13 +19,13 @@ Copy and paste this commands to Termux
 #### PostmarketOS 24.06 (Latest)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
 ```
 
 #### PostmarketOS 24.12 (Devel)
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/PostmarketOS/Install/postmarketosdev.sh ; chmod +x postmarketosdev.sh ; ./postmarketosdev.sh
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketosdev.sh ; chmod +x postmarketosdev.sh ; ./postmarketosdev.sh
 ```
 
 #### List PostmarketOS | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/PostmarketOS/Install)
@@ -57,7 +57,7 @@ Basic commands Alpine
 
 ---
 Feature
-- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main?tab=readme-ov-file#install-desktop-environment)
+- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
 - [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
 </br>
 
