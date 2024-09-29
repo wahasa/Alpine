@@ -11,7 +11,7 @@
 ### Installation
 Copy and paste this commands to Termux
 
-#### Install Manjaro (Distro)
+#### Install Alpine (Distro)
 > apt update
 
 ```
