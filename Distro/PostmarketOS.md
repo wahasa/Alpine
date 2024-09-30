@@ -126,63 +126,7 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 
 ---
 </details>
-<details><summary><b><code>Update Repository</code></b></summary></br>
 
-> apk add nano
-
-```
-rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
-```
-
-- [x] Repo PostmarketOS 24.06 (Latest)
-
-- Edit Repo
-```
-nano /etc/apk/repositories
-```
-
-- Copy Script
-```
-https://mirror.postmarketos.org/postmarketos/v24.06
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community
-```
-Save : ctrl + x, click Y enter.
-
-- Edit Os-release
-```
-nano /etc/os-release
-```
-
-Copy Script
-```
-PRETTY_NAME="PostmarketOS 24.06 Linux"
-NAME="PostmarketOS"
-VERSION_ID="24.06"
-VERSION="24.06"
-ID=postmarketos
-ID_LIKE=alpine
-HOME_URL="https://postmarketos.org"
-DOCUMENTATION_URL="https://wiki.postmarketos.org"
-SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
-BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
-ALPINE_VERSION="3.20"
-LOGO=postmarketos-logo
-```
-Save : ctrl + x, click Y enter.
-
-```
-apk add -u --allow-untrusted postmarketos-keys
-```
-```
-apk update ; apk upgrade
-```
-
-- [x] List Repository | [Click Hare >](https://mirror.postmarketos.org/postmarketos)
-
----
-</details>
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
 In PostmarketOS, run this commands
