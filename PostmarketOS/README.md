@@ -3,6 +3,7 @@
 
 ---
 ### PostmarketOS on Termux Android
+<img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/PostmarketOS.jpg">
 
 * Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
