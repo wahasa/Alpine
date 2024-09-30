@@ -82,29 +82,33 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 </details>
 <details><summary><b><code>Update Repository</code></b></summary></br>
 
+In Alpine,run this commands
 > apk add nano
 
 ```
 rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 ```
 
-Edit Repository
-</br>
+- [x] Repo Alpine 3.20 (Latest)
 
-- Repo Alpine 3.20 (Latest)
-
+- Edit Repo
 ```
 nano /etc/apk/repositories
 ```
+
+Copy Script
 ```
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 ```
 Save : ctrl + x, click Y enter.
 
+- Edit Os-release
 ```
 nano /etc/os-release
 ```
+
+Copy Script
 ```
 PRETTY_NAME="Alpine 3.20 Linux"
 NAME="Alpine"
@@ -124,7 +128,7 @@ Save : ctrl + x, click Y enter.
 apk update ; apk upgrade
 ```
 
-- List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
+- [x] List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
 
 ---
 </details>
