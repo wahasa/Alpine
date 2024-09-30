@@ -120,37 +120,9 @@ LOGO=alpinelinux-logo
 ```
 Save : ctrl + x, click Y enter.
 
----
-- Repo Alpine 3.21 (Devel)
-
 ```
-nano /etc/apk/repositories
+apk update ; apk upgrade
 ```
-```
-https://dl-cdn.alpinelinux.org/alpine/edge/main
-https://dl-cdn.alpinelinux.org/alpine/edge/testing
-https://dl-cdn.alpinelinux.org/alpine/edge/community
-```
-Save : ctrl + x, click Y enter.
-
-```
-nano /etc/os-release
-```
-```
-PRETTY_NAME="Alpine Edge (Development Branch)"
-NAME="Alpine"
-VERSION_ID="3.21"
-VERSION="3.21 Edge (Development)"
-VERSION_CODENAME=edge
-ID=alpine
-HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://wiki.alpinelinux.org"
-SUPPORT_URL="https://alpinelinux.org/community"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpinelinux-logo
-```
-Save : ctrl + x, click Y enter.
 
 - List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
 
