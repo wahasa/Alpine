@@ -134,14 +134,14 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 ```
 
-Edit Repository
-</br>
+- [x] Repo PostmarketOS 24.06 (Latest)
 
-- Repo PostmarketOS 24.06 (Latest)
-
+- Edit Repo
 ```
 nano /etc/apk/repositories
 ```
+
+- Copy Script
 ```
 https://mirror.postmarketos.org/postmarketos/v24.06
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
@@ -149,9 +149,12 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 ```
 Save : ctrl + x, click Y enter.
 
+- Edit Os-release
 ```
 nano /etc/os-release
 ```
+
+Copy Script
 ```
 PRETTY_NAME="PostmarketOS 24.06 Linux"
 NAME="PostmarketOS"
@@ -176,50 +179,7 @@ apk add -u --allow-untrusted postmarketos-keys
 apk update ; apk upgrade
 ```
 
----
-- Repo PostmarketOS 24.12 (Devel)
-
-```
-nano /etc/apk/repositories
-```
-```
-https://mirror.postmarketos.org/postmarketos/master
-https://dl-cdn.alpinelinux.org/alpine/edge/main
-https://dl-cdn.alpinelinux.org/alpine/edge/testing
-https://dl-cdn.alpinelinux.org/alpine/edge/community
-```
-Save : ctrl + x, click Y enter.
-
-```
-nano /etc/os-release
-```
-```
-PRETTY_NAME="PostmarketOS Edge (Development Branch)"
-NAME="PostmarketOS"
-VERSION_ID="24.12"
-VERSION="24.12 Edge (Development)"
-VERSION_CODENAME=master
-ID=postmarketos
-ID_LIKE=alpine
-HOME_URL="https://postmarketos.org"
-DOCUMENTATION_URL="https://wiki.postmarketos.org"
-SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
-BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
-ALPINE_VERSION="3.21 Edge (Development)"
-ALPINE_CODENAME=edge
-LOGO=postmarketos-logo
-```
-Save : ctrl + x, click Y enter.
-
-```
-apk add -u --allow-untrusted postmarketos-keys
-```
-```
-apk update ; apk upgrade
-```
-
-- List Repository | [Click Hare >](https://mirror.postmarketos.org/postmarketos)
+- [x] List Repository | [Click Hare >](https://mirror.postmarketos.org/postmarketos)
 
 ---
 </details>
