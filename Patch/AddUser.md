@@ -1,4 +1,4 @@
-### Add Username on Alpine
+### Add Username on Linux
 
 In Linux, run this commands
 > apk add sudo
