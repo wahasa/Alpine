@@ -1,6 +1,9 @@
-### Fixed Chromium on Alpine
+<p align="center">My Channel</br><b>
+| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
+### Fixed Chromium on Alpine
+
 * Install Chromium
 > apk add chromium
 
@@ -9,7 +12,9 @@
 
 ---
 #### Fixed chromium not opening
-In Alpine, run this commands
+
+In Linux, run this commands
+> apk add nano
 
 * Edit script
 ```
@@ -24,8 +29,12 @@ Exec=/usr/bin/chromium --no-sandbox --test-type %U
 Save : ctrl + x, click Y enter.
 
 Example :
+> Exec=/usr/bin/chromium --test-type %U
 
-![Screenshot_2024-03-07-14-53-47-408_com termux](https://github.com/wahasa/Alpine/assets/69626847/57c0f0cf-e94a-4cfc-9764-2de938e00e03)
+To
+
+> Exec=/usr/bin/chromium --no-sandbox --test-type %U
+`
 
 * You can open chromium now.
 </br>
