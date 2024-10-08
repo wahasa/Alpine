@@ -1,4 +1,8 @@
-### Add Username on Linux
+<p align="center">My Channel</br><b>
+| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
+
+---
+### Add Username on Alpine
 
 In Linux, run this commands
 > apk add sudo
