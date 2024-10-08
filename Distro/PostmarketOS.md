@@ -32,7 +32,7 @@ apt install proot-distro -y ; proot-distro install alpine
 
 In Alpine, run this commands
 
-- Edit Repo
+- Edit Repository
 ```
 rm -rf /etc/apk/repositories
 ```
@@ -170,6 +170,7 @@ exit
 ---
 </details>
 
+---
 - [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
 
 - [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
