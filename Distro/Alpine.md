@@ -12,7 +12,7 @@
 ### Installation
 Copy and paste this commands to Termux
 
-#### Install Alpine (Distro)
+Install Alpine (Distro)
 > apt update
 
 ```
@@ -92,7 +92,7 @@ rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 
 - [x] Repo Alpine 3.20 (Latest)
 
-- Edit Repo
+- Edit Repository
 ```
 nano /etc/apk/repositories
 ```
