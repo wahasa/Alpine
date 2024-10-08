@@ -2,7 +2,7 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-### Termux-x11
+### Termux-x11 on Alpine
 - App Termux-x11
 
 - [x] [Link Download](https://github.com/termux/termux-x11/releases)
