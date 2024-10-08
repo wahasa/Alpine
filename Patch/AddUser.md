@@ -1,6 +1,6 @@
 ### Add Username on Alpine
 
-In Alpine, run this commands
+In Linux, run this commands
 > apk add sudo
 
 - Add Username
