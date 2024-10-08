@@ -1,4 +1,37 @@
-### Run BVNC Viewer
+<p align="center">My Channel</br><b>
+| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
+
+---
+### BVNC Viewer
+
+- App BVNC Viewer
+
+- [x] [Link Download](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC)
+
+---
+Commands in Termux
+
+- Install Package
+```
+apt install tigervnc xorg-xhost -y
+```
+
+- Add script
+```
+echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart
+```
+```
+echo "vncserver -kill :1" > $PREFIX/bin/vncstop
+```
+
+- Activate script
+```
+chmod +x $PREFIX/bin/vncstart
+```
+```
+chmod +x $PREFIX/bin/vncstop
+```
+#### Run BVNC Viewer
 - Start VNC Server
 
 In session 1(termux), run this command
@@ -10,7 +43,7 @@ Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In session 2 (alpine), run this commands
+In session 2 (linux), run this commands
 ```
 export DISPLAY=:1
 ```
@@ -37,7 +70,7 @@ mate-session
 ```
 
 ---
-- Open app BVNC Viewer
+- Open BVNC Viewer
 
 Add (+) VNC Client to connect, fill with :
 
@@ -55,10 +88,16 @@ Vnc Password
 ---
 - Stop VNC Server
 
-Close app BVNC Viewer
+Close BVNC Viewer
 
-In session 2 (alpine), run this command
+In session 2 (linux), run this command
 > Click Ctrl+c, enter (2X)
 
 In session 1(termux), run this command
 > vncstop
+</br>
+
+---
+<p align="center">Good Luck</p>
+
+---
