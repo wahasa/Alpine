@@ -137,7 +137,7 @@ apk update ; apk upgrade
 ---
 - [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
 
-- [x] [Run- Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
+- [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
 </br>
 
 ---
