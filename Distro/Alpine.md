@@ -133,51 +133,11 @@ apk update ; apk upgrade
 
 ---
 </details>
-<details><summary><b><code>Add New Username</code></b></summary></br>
-
-In Alpine, run this commands
-> apk add sudo
-
-- Add Username
-```
-adduser <username>
-```
-```
-passwd <username>
-```
-```
-echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
-```
-```
-su <username>
-```
-
-- Del Username
-```
-deluser <username>
-```
-
-</br>
-Note :</br>
-(username) : Replace with your username.
 
 ---
-- Login Username
-```
-su <username>
-```
-
-- Logout Username
-```
-exit
-```
-
----
-</details>
-
 - [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
 
-- [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
+- [x] [Run- Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
 </br>
 
 ---
