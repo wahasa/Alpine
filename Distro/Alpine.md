@@ -94,6 +94,9 @@ rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
 
 - Edit Repository
 ```
+rm -rf /etc/apk/repositories
+```
+```
 nano /etc/apk/repositories
 ```
 
@@ -105,6 +108,9 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 Save : ctrl + x, click Y enter.
 
 - Edit Os-release
+```
+rm -rf /etc/os-release
+```
 ```
 nano /etc/os-release
 ```
