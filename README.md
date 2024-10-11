@@ -126,7 +126,7 @@ Feature
 Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
-### Run Desktop Environment
+### Run Desktop Environments
 - [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/Termux-X11.md#termux-x11)
 - [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/RvncViewer.md#rvnc-viewer)
 - [x] With Bvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/BvncViewer.md#bvnc-viewer)
