@@ -34,7 +34,6 @@ Example :
 To
 
 > Exec=/usr/bin/chromium --no-sandbox --test-type %U
-`
 
 * You can open chromium now.
 </br>
