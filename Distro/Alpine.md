@@ -136,8 +136,6 @@ apk update ; apk upgrade
 ```
 
 - [x] List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
-
----
 </details>
 
 ---
