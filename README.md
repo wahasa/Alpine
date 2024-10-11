@@ -123,7 +123,7 @@ Feature
 - [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-crash)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps#list-applications)
 
-Visit problem now in : [Issues](https://github.com/wahasa/Alpine/issues)
+Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Run Desktop Environment
