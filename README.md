@@ -119,17 +119,17 @@ Feature
 - [x] Fixed Sound Output
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
-- [x] Add New Username     | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/AddUser.md)
-- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-crash)
+- [x] Add New Username     | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/AddUser.md#add-username-on-alpine)
+- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-on-alpine)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps#list-applications)
 
 Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
 ### Run Desktop Environments
-- [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/Termux-X11.md#termux-x11)
-- [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/RvncViewer.md#rvnc-viewer)
-- [x] With Bvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/BvncViewer.md#bvnc-viewer)
+- [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/Termux-X11.md#termux-x11-on-alpine)
+- [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/RvncViewer.md#rvnc-viewer-on-alpine)
+- [x] With Bvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/BvncViewer.md#bvnc-viewer-on-alpine)
 </br>
 
 ---
