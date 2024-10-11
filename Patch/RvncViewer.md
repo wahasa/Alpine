@@ -2,7 +2,7 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-### RVNC Viewer
+### RVNC Viewer on Alpine
 
 - App RVNC Viewer
 
