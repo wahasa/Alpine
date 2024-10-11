@@ -57,7 +57,7 @@ Basic commands Alpine
 > apk del (pkg) : Delete package.</br>
 
 ---
-### Install Desktop Environment
+### Install Desktop Environments
 
 In Alpine, run this commands
 > apk update
