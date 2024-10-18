@@ -133,7 +133,7 @@ exit" > $folder/root/.bash_profile
 NAME="PostmarketOS"
 VERSION_ID="24.12"
 VERSION="24.12 Edge (Development)"
-VERSION_CODENAME=master
+VERSION_CODENAME=edge
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
