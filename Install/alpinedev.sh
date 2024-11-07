@@ -1,43 +1,51 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
-termux-setup-storage
+#termux-setup-storage
 alpine=edge
 build=20240923
 folder=alpine-fs
-tarball="alpine-rootfs.tar.gz"
-mkdir -p $folder $folder/binds
-[ -f $tarball ] && check=1
-if [ "$check" -eq "1" ] > /dev/null 2>&1; then
-	echo "Please Waiting,."
-	if [ -x "$(command -v neofetch)" ]; then
-		neofetch --ascii_distro Alpine -L
-	fi
-	pv $tarball | proot --link2symlink tar -zxf - -C $folder || :
-else
-	case `dpkg --print-architecture` in
-	aarch64)
-		archurl="aarch64" ;;
-	arm*)
-		archurl="armhf" ;;
-	i386)
-		archurl="x86" ;;
-	x86_64)
-		archurl="x86_64" ;;
-	*)
-		echo "Unknown Architecture"; exit 1 ;;
-	esac
-	url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz
-	echo "Downloading and Extracting Rootfs,."
-	echo ""
-	if [ -x "$(command -v neofetch)" ]; then
-		neofetch --ascii_distro Alpine -L
-	fi
-	wget -qO- --tries=0 $url --show-progress --progress=bar:force:noscroll |proot --link2symlink tar -zxf - -C $folder --exclude='dev' || :
+neofetch --ascii_distro Alpine
+if [ -d "$folder" ]; then
+        first=1
+        echo "Skipping Downloading."
 fi
+tarball="alpine-rootfs.tar.gz"
+if [ "$first" != 1 ];then
+        if [ ! -f $tarball ]; then	
+           echo "Download Rootfs, this may take a while base on your internet speed."
+           case `dpkg --print-architecture` in
+	        aarch64)
+		        archurl="aarch64" ;;
+	        arm*)
+		        archurl="armhf" ;;
+	        i386)
+		        archurl="x86" ;;
+	        x86_64)
+		        archurl="x86_64" ;;
+	        *)
+		        echo "Unknown Architecture"; exit 1 ;;
+	        esac
+	        url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz	
+	fi
+        cur=`pwd`
+        mkdir -p "$folder"
+	mkdir -p $folder/binds
+        #cd "$folder"
+        echo "Decompressing Rootfs, please be patient."
+        proot --link2symlink  \
+          tar --warning=no-unknown-keyword \
+              --delay-directory-restore --preserve-permissions \
+              -xzpf ~/${tarball} -C ~/$folder/ --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
+	#proot --link2symlink tar -xzpf ${cur}/${tarball} --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
+        #tar -xzpf layer.tar ; rm layer.tar
+	#cd "$cur"
+   fi
+   echo "localhost" > ~/"$folder"/etc/hostname
+   echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
+   echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
 bin=.alpine
 linux=alpine
-if [ -d $folder/var ];then
    echo ""
    echo "Writing launch script"
    cat > $bin <<- EOM
@@ -86,7 +94,7 @@ fi
    command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
    command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
    command+=" TERM=\$TERM"
-   command+=" LANG=C.UTF-8"
+   #command+=" LANG=C.UTF-8"
    command+=" LANG=en_US.UTF-8"
    command+=" LC_ALL=C"
    command+=" LANGUAGE=en_US"
