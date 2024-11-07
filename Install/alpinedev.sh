@@ -4,13 +4,16 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 alpine=edge
 build=20240923
-folder=alpine-fs
-neofetch --ascii_distro Alpine
+bin=.alpine
+linux=alpine
+   echo ""
+   neofetch --ascii_distro $linux
+   folder=alpine-fs
 if [ -d "$folder" ]; then
         first=1
         echo "Skipping Downloading."
-fi
-tarball="alpine-rootfs.tar.gz"
+   fi
+   tarball="alpine-rootfs.tar.gz"
 if [ "$first" != 1 ];then
         if [ ! -f $tarball ]; then	
            echo "Download Rootfs, this may take a while base on your internet speed."
@@ -44,8 +47,6 @@ if [ "$first" != 1 ];then
    echo "localhost" > ~/"$folder"/etc/hostname
    echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
    echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-bin=.alpine
-linux=alpine
    echo ""
    echo "Writing launch script"
    cat > $bin <<- EOM
@@ -105,6 +106,7 @@ if [ -z "\$1" ];then
    exec \$command
 else
    \$command -c "\$com"
+   #\$command -c "\$@"
 fi
 EOM
 
