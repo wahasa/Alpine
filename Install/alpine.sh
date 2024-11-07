@@ -53,9 +53,12 @@ echo "Writing launch script"
 cat > $bin <<- EOM
 #!/data/data/com.termux/files/usr/bin/bash
 cd \$(dirname \$0)
+## Start pulseaudio
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 ## Unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
+## Uncomment following line if you are having FATAL: kernel too old message
+#command+=" -k 4.14.81"
 command="proot"
 command+=" --kill-on-exit"
 command+=" --link2symlink"
@@ -77,7 +80,7 @@ command+=" -b /proc/self/fd/1:/dev/stdout"
 command+=" -b /proc/self/fd/2:/dev/stderr"
 command+=" -b /sys"
 command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
-command+=" -b $folder/tmp:/dev/shm"
+#command+=" -b $folder/tmp:/dev/shm"
 command+=" -b $folder/root:/dev/shm"
 ## Uncomment the following line to have access to the home directory of termux
 command+=" -b /data/data/com.termux"
@@ -113,6 +116,7 @@ EOM
      #chmod -R 755 $folder
      echo "Removing image for some space"
      #rm $tarball
+echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
