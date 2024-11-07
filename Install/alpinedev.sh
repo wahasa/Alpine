@@ -53,36 +53,40 @@ pulseaudio --start \
 	command+=" --link2symlink"
 	command+=" -0"
 	command+=" -r $folder"
-	if [ -n "\$(ls -A $folder/binds)" ]; then
-    		for f in $folder/binds/* ;do
-      		. \$f
-    	done
-	fi
-	command+=" -b /dev"
-	command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
-	command+=" -b /proc"
-	command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
-	command+=" -b $folder/root:/dev/shm"
-	## Uncomment the following line to have access to the home directory of termux
-	#command+=" -b /data/data/com.termux/files/home:/root"
-	## Uncomment the following line to mount /sdcard directly to /
-	command+=" -b /sdcard"
-	command+=" -w /root"
-	command+=" /usr/bin/env -i"
-	command+=" HOME=/root"
-	command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
-	command+=" TERM=\$TERM"
-	command+=" LANG=en_US.UTF-8"
-	command+=" LC_ALL=C"
-	command+=" LANGUAGE=en_US"
-	command+=" /bin/sh --login"
-	com="\$@"
-	if [ -z "\$1" ];then
-    		exec \$command
-	else
-    		\$command -c "\$com"
-	fi
-	EOM
+if [ -n "\$(ls -A $folder/binds)" ]; then
+   for f in $folder/binds/* ;do
+      . \$f
+   done
+fi
+   command+=" -b /dev"
+   command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
+   command+=" -b /proc"
+   command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
+   command+=" -b $folder/root:/dev/shm"
+   ## Uncomment the following line to have access to the home directory of termux
+   #command+=" -b /data/data/com.termux/files/home:/root"
+   ## Uncomment the following line to mount /sdcard directly to /
+   command+=" -b /sdcard"
+   command+=" -b /mnt"
+   command+=" -w /root"
+   command+=" /usr/bin/env -i"
+   command+=" HOME=/root"
+   command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
+   command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
+   command+=" TERM=\$TERM"
+   command+=" LANG=C.UTF-8"
+   command+=" LANG=en_US.UTF-8"
+   command+=" LC_ALL=C"
+   command+=" LANGUAGE=en_US"
+   command+=" \$login_shell"
+   command+=" /bin/sh --login"
+   com="\$@"
+if [ -z "\$1" ];then
+   exec \$command
+else
+   \$command -c "\$com"
+fi
+EOM
 
 	if test -f "$bin"; then
   	echo "Fixing shebang of $linux"
