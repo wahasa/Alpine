@@ -50,64 +50,61 @@ if [ "$first" != 1 ];then
    echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
    echo ""
    echo "Writing launch script"
-   cat > $bin <<- EOM
-   #!/data/data/com.termux/files/usr/bin/bash
-   cd \$(dirname \$0)
-   ## Start pulseaudio
-   pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-   ## Set login shell for different distributions
-   login_shell=\$(grep "^root:" "$folder/etc/passwd" | cut -d ':' -f 7)
-   ## Unset LD_PRELOAD in case termux-exec is installed
-   unset LD_PRELOAD
-   ## Uncomment following line if you are having FATAL: kernel too old message
-   #command+=" -k 4.14.81"
-   command="proot"
-   command+=" --kill-on-exit"
-   command+=" --link2symlink"
-   command+=" -0"
-   command+=" -r $folder"
+cat > $bin <<- EOM
+#!/data/data/com.termux/files/usr/bin/bash
+cd \$(dirname \$0)
+## Start pulseaudio
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+## Unset LD_PRELOAD in case termux-exec is installed
+unset LD_PRELOAD
+## Uncomment following line if you are having FATAL: kernel too old message
+#command+=" -k 4.14.81"
+command="proot"
+command+=" --kill-on-exit"
+command+=" --link2symlink"
+command+=" -0"
+command+=" -r $folder"
 if [ -n "\$(ls -A $folder/binds)" ]; then
    for f in $folder/binds/* ;do
-      . \$f
+     . \$f
    done
 fi
-   command+=" -b /dev"
-   command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
-   command+=" -b /dev/null:/proc/stat"
-   command+=" -b /dev/urandom:/dev/random"
-   command+=" -b /proc"
-   command+=" -b /proc/self/fd:/dev/fd"
-   command+=" -b /proc/self/fd/0:/dev/stdin"
-   command+=" -b /proc/self/fd/1:/dev/stdout"
-   command+=" -b /proc/self/fd/2:/dev/stderr"
-   command+=" -b /sys"
-   command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
-   command+=" -b $folder/tmp:/dev/shm"
-   command+=" -b $folder/root:/dev/shm"
-   command+=" -b /data/data/com.termux"
-   ## Uncomment the following line to have access to the home directory of termux
-   #command+=" -b /data/data/com.termux/files/home:/root"
-   ## Uncomment the following line to mount /sdcard directly to /
-   command+=" -b /sdcard"
-   command+=" -b /mnt"
-   command+=" -w /root"
-   command+=" /usr/bin/env -i"
-   command+=" HOME=/root"
-   command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
-   command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
-   command+=" TERM=\$TERM"
-   #command+=" LANG=C.UTF-8"
-   command+=" LANG=en_US.UTF-8"
-   command+=" LC_ALL=C"
-   command+=" LANGUAGE=en_US"
-   command+=" \$login_shell"
-   command+=" /bin/sh --login"
-   com="\$@"
+command+=" -b /dev"
+command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
+command+=" -b /dev/null:/proc/stat"
+command+=" -b /dev/urandom:/dev/random"
+command+=" -b /proc"
+command+=" -b /proc/self/fd:/dev/fd"
+command+=" -b /proc/self/fd/0:/dev/stdin"
+command+=" -b /proc/self/fd/1:/dev/stdout"
+command+=" -b /proc/self/fd/2:/dev/stderr"
+command+=" -b /sys"
+command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
+command+=" -b $folder/tmp:/dev/shm"
+command+=" -b $folder/root:/dev/shm"
+## Uncomment the following line to have access to the home directory of termux
+command+=" -b /data/data/com.termux"
+command+=" -b /data/data/com.termux/files/home:/root"
+## Uncomment the following line to mount /sdcard directly to /
+command+=" -b /sdcard"
+command+=" -b /mnt"
+command+=" -w /root"
+command+=" /usr/bin/env -i"
+command+=" HOME=/root"
+command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
+command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
+command+=" TERM=\$TERM"
+command+=" LANG=C.UTF-8"
+command+=" LANG=en_US.UTF-8"
+command+=" LC_ALL=C"
+command+=" LANGUAGE=en_US"
+command+=" /bin/sh --login"
+com="\$@"
 if [ -z "\$1" ];then
    exec \$command
 else
+   \$command -c "\$@"
    \$command -c "\$com"
-   #\$command -c "\$@"
 fi
 EOM
     echo "Fixing shebang of $linux"
