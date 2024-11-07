@@ -134,7 +134,8 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/rep
 echo "#!/bin/bash
 touch ~/.hushlogin
 apk update ; apk upgrade
-apk add nano sudo dialog
+apk add dialog nano sudo ncurses tzdata
+ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 bash $bin
@@ -154,5 +155,5 @@ LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
      echo ""
      #rm alpine3.20.sh
 #
-## Script edited by 'WaHaSa', Script revision-4.
+## Script edited by 'WaHaSa', Script revision-5.
 #
