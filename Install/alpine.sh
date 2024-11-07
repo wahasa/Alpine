@@ -4,16 +4,17 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 alpine=3.20
 build=3
-folder=alpine-fs
+echo ""
 neofetch --ascii_distro Alpine -L
+folder=alpine-fs
 if [ -d "$folder" ]; then
         first=1
-        echo "Skipping Downloading"
+        echo "Skipping Downloading."
 fi
 tarball="alpine-rootfs.tar.gz"
 if [ "$first" != 1 ];then
         if [ ! -f $tarball ]; then
-	echo "Download Rootfs, this may take a while base on your internet speed"
+	echo "Download Rootfs, this may take a while base on your internet speed."
 	case `dpkg --print-architecture` in
 	aarch64)
 		archurl="aarch64" ;;
@@ -26,20 +27,20 @@ if [ "$first" != 1 ];then
 	*)
 		echo "Unknown Architecture"; exit 1 ;;
 	esac
-	wget "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
+	wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
 	fi
         cur=`pwd`
         mkdir -p "$folder"
 	mkdir -p $folder/binds
-        cd "$folder"
+        #cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
-        proot --link2symlink  \
+        proot --link2symlink \
           tar --warning=no-unknown-keyword \
               --delay-directory-restore --preserve-permissions \
               -xzpf ~/${tarball} -C ~/$folder/ --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
 	#proot --link2symlink tar -xzpf ${cur}/${tarball} --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
         #tar -xzpf layer.tar ; rm layer.tar
-	cd "$cur"
+	#cd "$cur"
 	fi
         echo "localhost" > ~/"$folder"/etc/hostname
 	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
@@ -91,10 +92,13 @@ else
    \$command -c "\$com"
 fi
 EOM
+        echo ""
   	echo "Fixing shebang of $linux"
 	termux-fix-shebang $bin
 	echo "Making $linux executable"
 	chmod +x $bin
+        echo "Fixing permissions for $linux"
+        #chmod -R 755 $folder
 	echo "Removing image for some space"
 	#rm $tarball
 echo ""
