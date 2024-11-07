@@ -32,6 +32,7 @@ if [ "$first" != 1 ];then
         cur=`pwd`
         mkdir -p "$folder"
 	mkdir -p $folder/binds
+        mkdir -p $folder/dev/shm
         #cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
         proot --link2symlink \
@@ -42,8 +43,8 @@ if [ "$first" != 1 ];then
         #tar -xzpf layer.tar ; rm layer.tar
 	#cd "$cur"
 	fi
-     echo "" > $folder/etc/fstab
-     echo "localhost" > ~/"$folder"/etc/hostname
+     echo "" > ~/$folder/etc/fstab
+     echo "localhost" > ~/$folder/etc/hostname
      echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
      echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
 bin=.alpine
