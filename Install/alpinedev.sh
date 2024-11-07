@@ -115,37 +115,14 @@ EOM
     #chmod -R 755 $folder
     #echo "Removing image for some space"
     #rm $tarball
-cat <<- EOF >> "~/"$folder"/etc/apk/repositories"
-#Alpine Development Repositories
-https://dl-cdn.alpinelinux.org/alpine/edge/main
-https://dl-cdn.alpinelinux.org/alpine/edge/testing
-https://dl-cdn.alpinelinux.org/alpine/edge/community
-EOF
-    ./$bin apk update
-    ./$bin apk add --no-cache bash
-    sed -i 's/ash/bash/g' $folder/etc/passwd
-    sed -i 's/bin\/sh/bin\/bash/g' $bin
-    echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-    echo 'bash .alpine' > $PREFIX/bin/$linux
-    chmod +x $PREFIX/bin/$linux
-cat <<- EOF >> "~/"$folder"/etc/os-release"
-PRETTY_NAME="Alpine Edge (Development Branch)"
-NAME="Alpine"
-VERSION_ID="3.21"
-VERSION="3.21.0 (Development)"
-VERSION_CODENAME=edge
-ID=alpine
-HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://wiki.alpinelinux.org"
-SUPPORT_URL="https://alpinelinux.org/community"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpinelinux-logo
-EOF
-   clear
-   echo ""
-   echo "Updating Alpine,.."
-   echo ""
+echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
+echo '#!/bin/bash
+bash .alpine' > $PREFIX/bin/$linux
+chmod +x $PREFIX/bin/$linux
+    clear
+    echo ""
+    echo "Updating Alpine,.."
+    echo ""
 echo "#!/bin/bash
 touch ~/.hushlogin
 apk update ; apk upgrade
