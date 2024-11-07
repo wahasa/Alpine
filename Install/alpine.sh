@@ -25,7 +25,7 @@ if [ "$first" != 1 ];then
 	x86_64)
 		archurl="x86_64" ;;
 	*)
-		echo "Unknown Architecture"; exit 1 ;;
+		echo "Unknown Architecture."; exit 1 ;;
 	esac
 	wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
 	fi
