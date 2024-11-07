@@ -42,6 +42,7 @@ if [ "$first" != 1 ];then
         #tar -xzpf layer.tar ; rm layer.tar
 	#cd "$cur"
 	fi
+        echo "" > $folder/etc/fstab
         echo "localhost" > ~/"$folder"/etc/hostname
 	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
         echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
@@ -50,11 +51,9 @@ linux=alpine
 echo ""
 echo "Writing launch script"
 cat > $bin <<- EOM
-	#!/data/data/com.termux/files/usr/bin/bash
-pulseaudio --start \
-    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
-    --exit-idle-time=-1
+#!/data/data/com.termux/files/usr/bin/bash
 cd \$(dirname \$0)
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 ## Unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
 command="proot"
@@ -92,61 +91,51 @@ else
    \$command -c "\$com"
 fi
 EOM
-        echo ""
-  	echo "Fixing shebang of $linux"
-	termux-fix-shebang $bin
-	echo "Making $linux executable"
-	chmod +x $bin
-        echo "Fixing permissions for $linux"
-        #chmod -R 755 $folder
-	echo "Removing image for some space"
-	#rm $tarball
-echo ""
-echo "" > $folder/etc/fstab
-#echo "alpine" > ~/"$folder"/etc/hostname
-#echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
-#echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
+     echo ""
+     echo "Fixing shebang of $linux"
+     termux-fix-shebang $bin
+     echo "Making $linux executable"
+     chmod +x $bin
+     echo "Fixing permissions for $linux"
+     #chmod -R 755 $folder
+     echo "Removing image for some space"
+     #rm $tarball
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
-	./$bin apk update
-        ./$bin apk add --no-cache bash
-        sed -i 's/ash/bash/g' $folder/etc/passwd
-        sed -i 's/bin\/sh/bin\/bash/g' $bin
-	echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-	echo 'bash .alpine' > $PREFIX/bin/$linux
-	chmod +x $PREFIX/bin/$linux
-	clear
-	echo ""
-	echo "Updating Alpine,.."
-	echo ""
+     ./$bin apk update
+     ./$bin apk add --no-cache bash
+     sed -i 's/ash/bash/g' $folder/etc/passwd
+     sed -i 's/bin\/sh/bin\/bash/g' $bin
+     echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
+     echo 'bash .alpine' > $PREFIX/bin/$linux
+     chmod +x $PREFIX/bin/$linux
+     clear
+     echo ""
+     echo "Updating Alpine,.."
+     echo ""
 echo "#!/bin/bash
+touch ~/.hushlogin
 apk update ; apk upgrade
 apk add nano sudo dialog
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 bash $bin
-#echo 'PRETTY_NAME="Alpine 3.20 Linux"
-#NAME="Alpine"
-#VERSION_ID="3.20"
-#VERSION="3.20.3"
-#ID=alpine
-#HOME_URL="https://alpinelinux.org"
-#DOCUMENTATION_URL="https://wiki.alpinelinux.org"
-#SUPPORT_URL="https://alpinelinux.org/community"
-#BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-#PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-#LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
-	clear
-	echo ""
-        echo "You can login to Alpine with 'alpine' script next time"
-	echo ""
-	#rm alpine3.20.sh
-#else
-#        echo ""
-#	echo "Installation Unsuccessful"
-#        echo ""
-#fi
+sleep 1
+echo 'PRETTY_NAME="Alpine 3.20 Linux"
+NAME="Alpine Linux"
+VERSION_ID="3.20"
+VERSION="3.20.3"
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
+    clear
+    echo ""
+    echo "You can login to Alpine with 'alpine' script next time"
+    echo ""
+    #rm alpine3.20.sh
  #
 ### Script edited by 'WaHaSa', Script revision-4.
  #
