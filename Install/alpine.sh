@@ -42,10 +42,10 @@ if [ "$first" != 1 ];then
         #tar -xzpf layer.tar ; rm layer.tar
 	#cd "$cur"
 	fi
-        echo "" > $folder/etc/fstab
-        echo "localhost" > ~/"$folder"/etc/hostname
-	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
-        echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
+     echo "" > $folder/etc/fstab
+     echo "localhost" > ~/"$folder"/etc/hostname
+     echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
+     echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
 bin=.alpine
 linux=alpine
 echo ""
