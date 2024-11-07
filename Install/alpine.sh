@@ -68,18 +68,30 @@ if [ -n "\$(ls -A $folder/binds)" ]; then
 fi
 command+=" -b /dev"
 command+=" -b /dev/null:/proc/sys/kernel/cap_last_cap"
+command+=" -b /dev/null:/proc/stat"
+command+=" -b /dev/urandom:/dev/random"
 command+=" -b /proc"
+command+=" -b /proc/self/fd:/dev/fd"
+command+=" -b /proc/self/fd/0:/dev/stdin"
+command+=" -b /proc/self/fd/1:/dev/stdout"
+command+=" -b /proc/self/fd/2:/dev/stderr"
+command+=" -b /sys"
 command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
+command+=" -b $folder/tmp:/dev/shm"
 command+=" -b $folder/root:/dev/shm"
 ## Uncomment the following line to have access to the home directory of termux
+command+=" -b /data/data/com.termux"
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## Uncomment the following line to mount /sdcard directly to /
 command+=" -b /sdcard"
+command+=" -b /mnt"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
 command+=" PATH=/bin:/usr/bin:/sbin:/usr/sbin"
+command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
 command+=" TERM=\$TERM"
+#command+=" LANG=C.UTF-8"
 command+=" LANG=en_US.UTF-8"
 command+=" LC_ALL=C"
 command+=" LANGUAGE=en_US"
@@ -88,6 +100,7 @@ com="\$@"
 if [ -z "\$1" ];then
    exec \$command
 else
+   #\$command -c "\$@"
    \$command -c "\$com"
 fi
 EOM
@@ -131,11 +144,11 @@ HOME_URL="https://alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
-    clear
-    echo ""
-    echo "You can login to Alpine with 'alpine' script next time"
-    echo ""
-    #rm alpine3.20.sh
- #
-### Script edited by 'WaHaSa', Script revision-4.
- #
+     clear
+     echo ""
+     echo "You can login to Alpine with 'alpine' script next time"
+     echo ""
+     #rm alpine3.20.sh
+#
+## Script edited by 'WaHaSa', Script revision-4.
+#
