@@ -2,10 +2,10 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
+linux=alpine
 alpine=edge
 build=20240923
 bin=.alpine
-linux=alpine
    echo ""
    neofetch --ascii_distro $linux
    folder=alpine-fs
@@ -29,7 +29,7 @@ if [ "$first" != 1 ];then
 	        *)
 		        echo "Unknown Architecture"; exit 1 ;;
 	        esac
-	        url=https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz	
+	        wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz" -O $tarball	
 	fi
         cur=`pwd`
         mkdir -p "$folder"
@@ -44,6 +44,7 @@ if [ "$first" != 1 ];then
         #tar -xzpf layer.tar ; rm layer.tar
 	#cd "$cur"
    fi
+   echo "" > $folder/etc/fstab
    echo "localhost" > ~/"$folder"/etc/hostname
    echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
    echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
@@ -109,54 +110,32 @@ else
    #\$command -c "\$@"
 fi
 EOM
-
-	if test -f "$bin"; then
-  	echo "Fixing shebang of $linux"
-		termux-fix-shebang $bin
-	fi
-
-	FD=$folder
-	if [ -d "$FD" ]; then
-	echo "Making $linux executable"
-		chmod +x $bin
-	fi
-
-	UFD=$folder/binds
-	if [ -d "$UFD" ]; then
-	echo "Removing image for some space"
-		#rm $tarball
-	fi
-
-	echo ""
-	echo "" > $folder/etc/fstab
-	echo "alpine" > ~/"$folder"/etc/hostname
-   	echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
-	echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
-        echo "#Alpine Development
+    echo "Fixing shebang of $linux"
+    termux-fix-shebang $bin
+    echo "Making $linux executable"
+    chmod +x $bin
+    #echo "Fixing permissions for $linux"
+    #chmod -R 755 $folder
+    #echo "Removing image for some space"
+    #rm $tarball
+cat <<- EOF >> "~/"$folder"/etc/apk/repositories"
+#Alpine Development Repositories
 https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
-https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
-	./$bin apk update
-        ./$bin apk add --no-cache bash
-        sed -i 's/ash/bash/g' $folder/etc/passwd
-        sed -i 's/bin\/sh/bin\/bash/g' $bin
-	echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-	echo 'bash .alpine' > $PREFIX/bin/$linux
-	chmod +x $PREFIX/bin/$linux
-	clear
-	echo ""
-	echo "Updating Alpine,.."
-	echo ""
-	echo "#!/bin/bash
-apk update ; apk upgrade
-apk add nano sudo dialog
-rm -rf ~/.bash_profile
-exit" > $folder/root/.bash_profile
-	bash $bin
-	echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
+https://dl-cdn.alpinelinux.org/alpine/edge/community
+EOF
+    ./$bin apk update
+    ./$bin apk add --no-cache bash
+    sed -i 's/ash/bash/g' $folder/etc/passwd
+    sed -i 's/bin\/sh/bin\/bash/g' $bin
+    echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
+    echo 'bash .alpine' > $PREFIX/bin/$linux
+    chmod +x $PREFIX/bin/$linux
+cat <<- EOF >> "~/"$folder"/etc/os-release"
+PRETTY_NAME="Alpine Edge (Development Branch)"
 NAME="Alpine"
 VERSION_ID="3.21"
-VERSION="3.21 Edge (Development)"
+VERSION="3.21.0 (Development)"
 VERSION_CODENAME=edge
 ID=alpine
 HOME_URL="https://alpinelinux.org"
@@ -164,17 +143,24 @@ DOCUMENTATION_URL="https://wiki.alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
-LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
-	clear
-	echo ""
-        echo "You can login to Alpine with 'alpine' script next time"
-	echo ""
-	#rm alpinedev.sh
-else
-        echo ""
-	echo "Installation Unsuccessful"
-        echo ""
-fi
+LOGO=alpinelinux-logo
+EOF
+   clear
+   echo ""
+   echo "Updating Alpine,.."
+   echo ""
+echo "#!/bin/bash
+touch ~/.hushlogin
+apk update ; apk upgrade
+apk add nano sudo dialog
+rm -rf ~/.bash_profile
+exit" > $folder/root/.bash_profile
+bash $bin
+   clear
+   echo ""
+   echo "You can login to Alpine with 'alpine' script next time"
+   echo ""
+   #rm alpinedev.sh
  #
-### Script edited by 'WaHaSa', Script revision-4.
+### Script edited by 'WaHaSa', Script revision-5.
  #
