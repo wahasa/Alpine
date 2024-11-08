@@ -136,7 +136,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
 echo "#!/bin/bash
 touch ~/.hushlogin
 apk update ; apk upgrade
-apk add dialog nano sudo gst-libav ncurses tzdata
+apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
@@ -157,6 +157,6 @@ LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
      echo "You can login to Alpine with 'alpine' script next time"
      echo ""
      #rm alpinedev.sh
-##
+#
 ## Script edited by 'WaHaSa', Script revision-5.
-##
+#
