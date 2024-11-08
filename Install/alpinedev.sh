@@ -27,7 +27,7 @@ if [ "$first" != 1 ];then
 	*)
 		echo "Unknown Architecture."; exit 1 ;;
 	esac
-	wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
+	wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz" -O $tarball
 	fi
         cur=`pwd`
         mkdir -p "$folder"
@@ -145,7 +145,7 @@ sleep 1
 echo 'PRETTY_NAME="Alpine Edge (Development Branch)"
 NAME="Alpine Linux"
 VERSION_ID="3.21"
-VERSION="3.20.0 (Development)"
+VERSION="3.21.0 (Development)"
 VERSION_CODENAME=edge
 ID=alpine
 HOME_URL="https://alpinelinux.org"
