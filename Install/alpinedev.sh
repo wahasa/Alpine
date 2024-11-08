@@ -2,10 +2,10 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
-alpine=3.20
-build=3
-echo ""
-neofetch --ascii_distro Alpine -L
+alpine=edge
+build=20240923
+     echo ""
+     neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
         first=1
@@ -119,9 +119,9 @@ EOM
      #rm $tarball
 echo ""
 echo "#Alpine Repositories
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
+https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repositories
      ./$bin apk update
      ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
@@ -136,7 +136,7 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/rep
 echo "#!/bin/bash
 touch ~/.hushlogin
 apk update ; apk upgrade
-apk add dialog nano sudo ncurses tzdata
+apk add dialog nano sudo gst-libav ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
@@ -157,6 +157,6 @@ LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
      echo "You can login to Alpine with 'alpine' script next time"
      echo ""
      #rm alpinedev.sh
-#
+##
 ## Script edited by 'WaHaSa', Script revision-5.
-#
+##
