@@ -4,8 +4,8 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 alpine=3.20
 build=3
-echo ""
-neofetch --ascii_distro Alpine -L
+     echo ""
+     neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
         first=1
@@ -135,7 +135,7 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/rep
 echo "#!/bin/bash
 touch ~/.hushlogin
 apk update ; apk upgrade
-apk add dialog nano sudo ncurses tzdata
+apk add dialog nano sudo gst-libav ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
@@ -155,6 +155,6 @@ LOGO=alpinelinux-logo' > ~/"$folder"/etc/os-release
      echo "You can login to Alpine with 'alpine' script next time"
      echo ""
      #rm alpine3.20.sh
-#
+##
 ## Script edited by 'WaHaSa', Script revision-5.
-#
+##
