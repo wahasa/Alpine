@@ -131,7 +131,7 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/rep
      chmod +x $PREFIX/bin/$linux
      clear
      echo ""
-     echo "Updating postmarketos,.."
+     echo "Updating PostmarketOS,.."
      echo ""
 echo "#!/bin/bash
 touch ~/.hushlogin
