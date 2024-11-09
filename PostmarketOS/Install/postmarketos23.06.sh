@@ -152,7 +152,7 @@ ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
 SUPPORT_URL="https://gitlab.postmarketos.org/postmarketOS"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-ALPINE_VERSION="3.20"
+ALPINE_VERSION="3.18"
 LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
      clear
      echo ""
