@@ -118,7 +118,7 @@ EOM
      echo "Removing image for some space"
      #rm $tarball
 echo ""
-echo "#Alpine Repositories
+echo "#PostmarketOS Repositories
 https://mirror.postmarketos.org/postmarketos/master
 https://dl-cdn.alpinelinux.org/alpine/edge/main
 https://dl-cdn.alpinelinux.org/alpine/edge/testing
@@ -132,7 +132,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
      chmod +x $PREFIX/bin/$linux
      clear
      echo ""
-     echo "Updating Alpine,.."
+     echo "Updating PostmarketOS,.."
      echo ""
 echo "#!/bin/bash
 touch ~/.hushlogin
