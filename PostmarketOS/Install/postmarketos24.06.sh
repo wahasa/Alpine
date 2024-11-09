@@ -159,6 +159,6 @@ LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
      echo "You can login to PostmarketOS with 'postmarketos' script next time"
      echo ""
      #rm postmarketos24.06.sh
-###
+##
 ## Script edited by 'WaHaSa', Script revision-5.
-###
+##
