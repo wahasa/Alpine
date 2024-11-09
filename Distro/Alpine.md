@@ -75,7 +75,7 @@ chmod +x $PREFIX/bin/alpine
 > exit
 
 ---
-In Alpine,run this commands
+In Alpine, run this command
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
@@ -84,7 +84,7 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 </details>
 <details><summary><b><code>Update Repository</code></b></summary></br>
 
-In Alpine,run this commands
+In Alpine, run this commands
 > apk add nano
 
 ```
