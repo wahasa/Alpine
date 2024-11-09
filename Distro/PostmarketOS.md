@@ -12,7 +12,7 @@
 #### Installation
 Copy and paste this commands to Termux
 
-#### Install Alpine (Distro)
+- [x] Install Alpine (Distro)
 > apt update
 
 ```
@@ -28,8 +28,8 @@ apt install proot-distro -y ; proot-distro install alpine
 - Uninstall : proot-distro remove alpine
 
 ---
-- [x] Repo PostmarketOS 24.06 (Latest)
-- [x] Repo Alpine 3.20 (Latest)
+- [x] Add Repo PostmarketOS 24.06 (Latest)
+- [x] Add Repo Alpine 3.20 (Latest)
 
 In Alpine, run this commands
 
