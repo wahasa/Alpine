@@ -1,3 +1,4 @@
+
 <p align="center">My Channel</br><b>
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
@@ -28,8 +29,8 @@ apt install proot-distro -y ; proot-distro install alpine
 - Uninstall : proot-distro remove alpine
 
 ---
-#### PostmarketOS 24.06 (Add-Repo)
-
+#### Repo PostmarketOS 24.06 (Latest)
+#### Repo Alpine 3.20 (Latest)
 In Alpine, run this commands
 
 - Edit Repository
@@ -45,6 +46,8 @@ https://mirror.postmarketos.org/postmarketos/v24.06
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
 https://dl-cdn.alpinelinux.org/alpine/v3.20/community
 ```
+Save : ctrl + x, click Y enter.
+
 - Edit Os-release
 ```
 rm -rf /etc/os-release
@@ -66,6 +69,8 @@ BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues
 ALPINE_VERSION="3.20"
 LOGO=postmarketos-logo
 ```
+Save : ctrl + x, click Y enter.
+
 ```
 apk add -u --allow-untrusted postmarketos-keys
 ```
@@ -118,7 +123,7 @@ chmod +x $PREFIX/bin/postmarketos
 > exit
 
 ---
-In PostmarketOS,run this commands
+In Linux,run this command
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
@@ -128,7 +133,7 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
-In PostmarketOS, run this commands
+In Linux, run this commands
 > apk add sudo
 
 - Add Username
