@@ -1,4 +1,3 @@
-
 <p align="center">My Channel</br><b>
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
@@ -29,8 +28,9 @@ apt install proot-distro -y ; proot-distro install alpine
 - Uninstall : proot-distro remove alpine
 
 ---
-#### Repo PostmarketOS 24.06 (Latest)
-#### Repo Alpine 3.20 (Latest)
+- [x] Repo PostmarketOS 24.06 (Latest)
+- [x] Repo Alpine 3.20 (Latest)
+
 In Alpine, run this commands
 
 - Edit Repository
@@ -123,7 +123,7 @@ chmod +x $PREFIX/bin/postmarketos
 > exit
 
 ---
-In Linux, run this command
+In PostmarketOS, run this command
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
