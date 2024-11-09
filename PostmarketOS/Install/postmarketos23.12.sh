@@ -139,8 +139,8 @@ apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-bash $bin
-sleep 2
+     bash $bin
+     sleep 2
 echo 'PRETTY_NAME="PostmarketOS 23.12 Linux"
 NAME="PostmarketOS"
 VERSION_ID="23.12"
@@ -159,4 +159,4 @@ LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
      #rm postmarketos23.12.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
-##
+#
