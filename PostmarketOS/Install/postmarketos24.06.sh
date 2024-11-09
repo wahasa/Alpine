@@ -38,9 +38,9 @@ if [ "$first" != 1 ];then
         proot --link2symlink \
           tar --warning=no-unknown-keyword \
               --delay-directory-restore --preserve-permissions \
-              -xzpf ~/${tarball} -C ~/$folder/ --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
-	#proot --link2symlink tar -xzpf ${cur}/${tarball} --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
-        #tar -xzpf layer.tar ; rm layer.tar
+              -xpf ~/${tarball} -C ~/$folder/ --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
+	#proot --link2symlink tar -xpf ${cur}/${tarball} --strip-components=1 --exclude json --exclude VERSION --exclude='dev'||:
+        #tar -xpf layer.tar ; rm layer.tar
 	#cd "$cur"
 	fi
      echo "" > ~/$folder/etc/fstab
