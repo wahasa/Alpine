@@ -123,10 +123,8 @@ VERSION_ID="3.20"
 VERSION="3.20"
 ID=alpine
 HOME_URL="https://alpinelinux.org"
-DOCUMENTATION_URL="https://wiki.alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-PRIVACY_POLICY_URL="https://wiki.alpinelinux.org/wiki/Alpine_Linux:Privacy_policy"
 LOGO=alpinelinux-logo
 ```
 Save : ctrl + x, click Y enter.
