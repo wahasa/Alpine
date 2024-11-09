@@ -58,8 +58,6 @@ cd \$(dirname \$0)
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 ## Unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
-## Uncomment following line if you are having FATAL: kernel too old message
-#command+=" -k 4.14.81"
 command="proot"
 command+=" --kill-on-exit"
 command+=" --link2symlink"
