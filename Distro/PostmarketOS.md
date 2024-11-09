@@ -61,10 +61,8 @@ VERSION="24.06"
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
-DOCUMENTATION_URL="https://wiki.postmarketos.org"
-SUPPORT_URL="https://wiki.postmarketos.org/wiki/Contributing"
-BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-PRIVACY_POLICY_URL="https://postmarketos.org/privacy-policy"
+SUPPORT_URL="https://gitlab.postmarketos.org/postmarketOS"
+BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues
 ALPINE_VERSION="3.20"
 LOGO=postmarketos-logo
 ```
