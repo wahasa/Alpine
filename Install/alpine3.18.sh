@@ -137,8 +137,8 @@ apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-bash $bin
-sleep 1
+     bash $bin
+     sleep 2
 echo 'PRETTY_NAME="Alpine 3.18 Linux"
 NAME="Alpine Linux"
 VERSION_ID="3.18"
