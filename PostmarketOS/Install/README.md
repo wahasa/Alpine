@@ -6,4 +6,3 @@
 
 <b>PostmarketOS Repository</b>
 - https://mirror.postmarketos.org/postmarketos
-
