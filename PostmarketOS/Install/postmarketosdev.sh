@@ -128,7 +128,7 @@ https://dl-cdn.alpinelinux.org/alpine/edge/community" > ~/"$folder"/etc/apk/repo
      sed -i 's/ash/bash/g' $folder/etc/passwd
      sed -i 's/bin\/sh/bin\/bash/g' $bin
      echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-     echo 'bash .alpine' > $PREFIX/bin/$linux
+     echo 'bash .postmarketos' > $PREFIX/bin/$linux
      chmod +x $PREFIX/bin/$linux
      clear
      echo ""
@@ -143,7 +143,7 @@ ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
 bash $bin
-sleep 1
+sleep 2
 echo 'PRETTY_NAME="PostmarketOS Edge (Development Branch)"
 NAME="PostmarketOS"
 VERSION_ID="24.12"
@@ -162,6 +162,6 @@ LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
      echo "You can login to PostmarketOS with 'postmarketos' script next time"
      echo ""
      #rm postmarketosdev.sh
-##
+#
 ## Script edited by 'WaHaSa', Script revision-5.
 ##
