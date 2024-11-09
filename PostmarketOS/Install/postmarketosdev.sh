@@ -140,8 +140,8 @@ apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-bash $bin
-sleep 2
+     bash $bin
+     sleep 2
 echo 'PRETTY_NAME="PostmarketOS Edge (Development Branch)"
 NAME="PostmarketOS"
 VERSION_ID="24.12"
@@ -162,4 +162,4 @@ LOGO=postmarketos-logo' > ~/"$folder"/etc/os-release
      #rm postmarketosdev.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
-##
+#
