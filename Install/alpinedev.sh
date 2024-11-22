@@ -35,10 +35,10 @@ if [ "$first" != 1 ];then
 	echo "Decompressing Rootfs, please be patient."
         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
 	fi
-        echo "" > ~/$folder/etc/fstab
-        echo "localhost" > ~/$folder/etc/hostname
-        echo "127.0.0.1 localhost" > ~/"$folder"/etc/hosts
-        echo "nameserver 8.8.8.8" > ~/"$folder"/etc/resolv.conf
+        echo "" > $folder/etc/fstab
+        echo "localhost" > $folder/etc/hostname
+        echo "127.0.0.1 localhost" > $folder/etc/hosts
+        echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
 bin=.alpine
 linux=alpine
 echo ""
@@ -104,7 +104,7 @@ EOM
      echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > $folder/etc/apk/repositories
      ./$bin apk update
      ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
