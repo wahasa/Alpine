@@ -4,41 +4,39 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 alpine=edge
 build=20240923
-        echo ""
-        neofetch --ascii_distro Alpine -L
-folder=alpine-fs
+   echo ""
+   neofetch --ascii_distro Alpine -L
+folder=fedora-fs
 if [ -d "$folder" ]; then
         first=1
         echo "Skipping Downloading."
 fi
 tarball="alpine-rootfs.tar.gz"
 if [ "$first" != 1 ];then
-        if [ ! -f $tarball ]; then
-	echo "Download Rootfs, this may take a while base on your internet speed."
-	case `dpkg --print-architecture` in
-	aarch64)
-		archurl="aarch64" ;;
-	arm*)
-		archurl="armhf" ;;
-	i386)
-		archurl="x86" ;;
-	x86_64)
-		archurl="x86_64" ;;
-	*)
-		echo "Unknown Architecture."; exit 1 ;;
-	esac
-	wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
-	fi
-        mkdir -p $folder
-	mkdir -p $folder/binds
-        mkdir -p $folder/dev/shm
-	echo "Decompressing Rootfs, please be patient."
-        proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
-	fi
-        echo "" > $folder/etc/fstab
-        echo "localhost" > $folder/etc/hostname
-        echo "127.0.0.1 localhost" > $folder/etc/hosts
-        echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
+         if [ ! -f $tarball ]; then
+               echo "Download Rootfs, this may take a while base on your internet speed."
+               case `dpkg --print-architecture` in
+               aarch64)
+                       archurl="aarch64" ;;
+               arm*)
+                       archurl="armhf" ;;
+               i386)
+		       archurl="x86" ;;
+               x86_64)
+                       archurl="x86_64" ;;
+               *)
+                       echo "Unknown Architecture."; exit 1 ;;
+               esac
+	       wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/${alpine}/releases/${archurl}/alpine-minirootfs-${build}-${archurl}.tar.gz" -O $tarball
+	 fi
+         mkdir -p $folder
+	 mkdir -p $folder/binds
+         echo "Decompressing Rootfs, please be patient."
+         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
+    fi
+    echo "localhost" > $folder/etc/hostname
+    echo "127.0.0.1 localhost" > $folder/etc/hosts
+    echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
 bin=.alpine
 linux=alpine
 echo ""
@@ -84,7 +82,7 @@ command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/us
 command+=" TERM=\$TERM"
 command+=" LC_ALL=C"
 command+=" LANG=C.UTF-8"
-command+=" /bin/bash --login"
+command+=" /bin/sh --login"
 com="\$@"
 if [ -z "\$1" ];then
    exec \$command
@@ -103,15 +101,15 @@ EOM
      rm $tarball
      echo ""
 echo "#Alpine Repositories
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > $folder/etc/apk/repositories
-     ./$bin apk update
+https://dl-cdn.alpinelinux.org/alpine/edge/main
+https://dl-cdn.alpinelinux.org/alpine/edge/testing
+https://dl-cdn.alpinelinux.org/alpine/edge/community" > $folder/etc/apk/repositories
+echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
+echo 'bash .alpine' > $PREFIX/bin/$linux
+chmod +x $PREFIX/bin/$linux
      ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
      sed -i 's/bin\/sh/bin\/bash/g' $bin
-     echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
-     echo 'bash .alpine' > $PREFIX/bin/$linux
-     chmod +x $PREFIX/bin/$linux
      clear
      echo ""
      echo "Updating Alpine,.."
@@ -128,7 +126,7 @@ exit" > $folder/root/.bash_profile
      echo ""
      echo "You can login to Alpine with 'alpine' script next time"
      echo ""
-     #rm alpine3.20.sh
+     #rm alpinedev.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 ##
