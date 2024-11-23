@@ -6,10 +6,10 @@ alpine=edge
 build=20240923
    echo ""
    neofetch --ascii_distro Alpine -L
-folder=fedora-fs
+folder=alpine-fs
 if [ -d "$folder" ]; then
-        first=1
-        echo "Skipping Downloading."
+         first=1
+         echo "Skipping Downloading."
 fi
 tarball="alpine-rootfs.tar.gz"
 if [ "$first" != 1 ];then
@@ -21,7 +21,7 @@ if [ "$first" != 1 ];then
                arm*)
                        archurl="armhf" ;;
                i386)
-		                   archurl="x86" ;;
+		       archurl="x86" ;;
                x86_64)
                        archurl="x86_64" ;;
                *)
@@ -106,9 +106,9 @@ https://dl-cdn.alpinelinux.org/alpine/v3.21/community" > $folder/etc/apk/reposit
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
-     ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
      sed -i 's/bin\/sh/bin\/bash/g' $bin
+     ./$bin apk add --no-cache bash
      clear
      echo ""
      echo "Updating Alpine,.."
