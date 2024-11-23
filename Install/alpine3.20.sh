@@ -99,10 +99,10 @@ EOM
      #chmod -R 755 $folder
      echo "Removing image for some space"
      rm $tarball
-echo ""
+     echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > ~/"$folder"/etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > $folder/etc/apk/repositories
      ./$bin apk update
      ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
