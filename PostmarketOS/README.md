@@ -9,6 +9,11 @@
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
+---
+Warning :</br>
+this just adds the posmarketos repository to alpine, but the underlying base is still alpine.
+
+---
 ### Installation
 
 Copy and paste this commands to Termux
