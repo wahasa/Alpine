@@ -17,19 +17,30 @@ Copy and paste this commands to Termux
 <details><summary><b><code>Install Alpine</code></b></summary></br>
 
 > apt install wget
-#### Alpine 3.20 (Latest)
+- [x] Alpine 3.21 (Pre-release)
+
+Rootfs : Armhf, Arm64, i386, Amd64
+```
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.21.sh ; chmod +x alpine3.21.sh ; ./alpine3.21.sh
+```
+- [x] Alpine 3.20 (Latest-release)
+
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
 ```
+- [x] Alpine 3.19 (Old-release)
 
-#### Alpine 3.21 (Devel)
+Rootfs : Armhf, Arm64, i386, Amd64
+```
+wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.19.sh ; chmod +x alpine3.19.sh ; ./alpine3.19.sh
+```
+- [x] Alpine Edge (Development)
+
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
 ```
-
-#### List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
 </details>
 
 ---
