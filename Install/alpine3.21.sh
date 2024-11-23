@@ -102,7 +102,7 @@ EOM
      echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.21/main
-https://dl-cdn.alpinelinux.org/alpine/v3.21/community" > $folder/etc/apk/repositories
+#https://dl-cdn.alpinelinux.org/alpine/v3.21/community" > $folder/etc/apk/repositories
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
