@@ -31,11 +31,9 @@ if [ "$first" != 1 ];then
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
-         mkdir -p $folder/dev/shm
          echo "Decompressing Rootfs, please be patient."
          proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
     fi
-    echo "" > $folder/etc/fstab
     echo "localhost" > $folder/etc/hostname
     echo "127.0.0.1 localhost" > $folder/etc/hosts
     echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
@@ -84,7 +82,7 @@ command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/us
 command+=" TERM=\$TERM"
 command+=" LC_ALL=C"
 command+=" LANG=C.UTF-8"
-command+=" /bin/sh --login"
+command+=" /bin/bash --login"
 com="\$@"
 if [ -z "\$1" ];then
    exec \$command
@@ -100,7 +98,7 @@ EOM
      echo "Fixing permissions for $linux"
      #chmod -R 755 $folder
      echo "Removing image for some space"
-     #rm $tarball
+     rm $tarball
 echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.20/main
