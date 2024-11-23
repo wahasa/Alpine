@@ -106,7 +106,6 @@ https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > $folder/etc/apk/reposit
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .alpine' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
-     ./$bin apk update
      ./$bin apk add --no-cache bash
      sed -i 's/ash/bash/g' $folder/etc/passwd
      sed -i 's/bin\/sh/bin\/bash/g' $bin
