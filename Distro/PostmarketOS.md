@@ -1,4 +1,4 @@
-<p align="center">My Channel</br><b>
+ <p align="center">My Channel</br><b>
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
@@ -9,6 +9,11 @@
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
+---
+Warning :</br>
+This just adds the PosmarketOS repository to Alpine, but the underlying base is still Alpine.
+
+---
 #### Installation
 Copy and paste this commands to Termux
 
