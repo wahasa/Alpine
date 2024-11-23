@@ -11,7 +11,7 @@
 
 ---
 Warning :</br>
-this just adds the posmarketos repository to alpine, but the underlying base is still alpine.
+This just adds the PosmarketOS repository to Alpine, but the underlying base is still Alpine.
 
 ---
 ### Installation
