@@ -18,7 +18,7 @@ passwd <username>
 echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
 ```
 
----
+</br>
 Note :</br>
 (username) : Replace with your username.
 
