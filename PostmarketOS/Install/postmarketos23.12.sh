@@ -5,7 +5,7 @@ pkg install proot xz-utils neofetch pulseaudio -y
 alpine=3.19
 build=4
    echo ""
-   neofetch --ascii_distro PostmarketOs -L
+   neofetch --ascii_distro PostmarketOS -L
 folder=postmarketos-fs
 if [ -d "$folder" ]; then
          first=1
