@@ -73,6 +73,9 @@ chmod +x $PREFIX/bin/alpine
 - Logout Alpine
 > exit
 
+- Remove Alpine
+> rm $PREFIX/bin/alpine
+
 ---
 In Alpine, run this command
 ```
@@ -134,9 +137,10 @@ apk update ; apk upgrade
 ```
 
 - [x] List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
-</details>
 
 ---
+</details>
+
 - [x] [Install Desktop Environments](https://github.com/wahasa/Alpine/tree/main#install-desktop-environments)
 
 - [x] [Run Desktop Environments](https://github.com/wahasa/Alpine/tree/main#run-desktop-environments)
