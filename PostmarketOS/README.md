@@ -36,7 +36,7 @@ Rootfs : Armhf, Arm64, i386, Amd64
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos23.12.sh ; chmod +x postmarketos23.12.sh ; ./postmarketos23.12.sh
 ```
 
-- [x] PostmarketOS Edge (Development)
+- [x] PostmarketOS 24.12 (Development)
 
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
