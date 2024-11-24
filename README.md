@@ -36,7 +36,7 @@ Rootfs : Armhf, Arm64, i386, Amd64
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
 ```
 
-- [x] List Fedora | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
+- [x] List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
 </details>
 
 ---
