@@ -44,6 +44,7 @@ Feature
 In Termux, run this commands
 > apt update
 
+- Edit Script
 ```
 apt install pulseaudio nano -y
 ```
@@ -74,24 +75,21 @@ chmod +x $PREFIX/bin/alpine
 > exit
 
 - Remove Alpine
-> rm $PREFIX/bin/alpine
+> rm $PREFIX/bin/alpine ; pd remove alpine
 
 ---
-In Alpine, run this command
+In Linux, run this command
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
 
 ---
 </details>
+
 <details><summary><b><code>Update Repository</code></b></summary></br>
 
-In Alpine, run this commands
+In Linux, run this commands
 > apk add nano
-
-```
-rm -rf /etc/apk/repositories ; rm -rf /etc/os-release
-```
 
 - [x] Repo Alpine 3.20 (Latest)
 
@@ -105,8 +103,8 @@ nano /etc/apk/repositories
 
 Copy Script
 ```
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community
+https://dl-cdn.alpinelinux.org/alpine/v3.21/main
+https://dl-cdn.alpinelinux.org/alpine/v3.21/community
 ```
 Save : ctrl + x, click Y enter.
 
@@ -120,10 +118,10 @@ nano /etc/os-release
 
 Copy Script
 ```
-PRETTY_NAME="Alpine 3.20 Linux"
+PRETTY_NAME="Alpine 3.21 Linux"
 NAME="Alpine"
-VERSION_ID="3.20"
-VERSION="3.20"
+VERSION_ID="3.21"
+VERSION="3.21"
 ID=alpine
 HOME_URL="https://alpinelinux.org"
 SUPPORT_URL="https://alpinelinux.org/community"
@@ -135,8 +133,6 @@ Save : ctrl + x, click Y enter.
 ```
 apk update ; apk upgrade
 ```
-
-- [x] List Repository | [Click Hare >](https://dl-cdn.alpinelinux.org/alpine)
 
 ---
 </details>
