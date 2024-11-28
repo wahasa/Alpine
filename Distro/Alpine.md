@@ -75,7 +75,9 @@ chmod +x $PREFIX/bin/alpine
 > exit
 
 - Remove Alpine
-> rm $PREFIX/bin/alpine ; pd remove alpine
+```
+rm $PREFIX/bin/alpine ; pd remove alpine
+```
 
 ---
 In Linux, run this command
@@ -91,7 +93,7 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 In Linux, run this commands
 > apk add nano
 
-- [x] Repo Alpine 3.20 (Latest)
+- [x] Repo Alpine 3.21 (Latest)
 
 - Edit Repository
 ```
