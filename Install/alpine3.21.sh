@@ -34,12 +34,12 @@ if [ "$first" != 1 ];then
          echo "Decompressing Rootfs, please be patient."
          proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
     fi
+    echo ""
     echo "localhost" > $folder/etc/hostname
     echo "127.0.0.1 localhost" > $folder/etc/hosts
     echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
 bin=.alpine
 linux=alpine
-echo ""
 echo "Writing launch script"
 cat > $bin <<- EOM
 #!/data/data/com.termux/files/usr/bin/bash
@@ -99,7 +99,7 @@ EOM
      #chmod -R 755 $folder
      echo "Removing image for some space"
      rm $tarball
-     echo ""
+echo ""
 echo "#Alpine Repositories
 https://dl-cdn.alpinelinux.org/alpine/v3.21/main
 https://dl-cdn.alpinelinux.org/alpine/v3.21/community" > $folder/etc/apk/repositories
