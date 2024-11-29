@@ -33,10 +33,11 @@ apt install proot-distro -y ; proot-distro install alpine
 - Uninstall : proot-distro remove alpine
 
 ---
-- [x] Add Repo PostmarketOS 24.06 (Latest)
-- [x] Add Repo Alpine 3.20 (Latest)
+- [x] Add Repository
+> Alpine 3.20 (Latest)
+> PostmarketOS 24.06 (Latest)
 
-In Alpine, run this commands
+<b>In Alpine, run this commands</b>
 
 - Edit Repository
 ```
@@ -45,6 +46,7 @@ rm -rf /etc/apk/repositories
 ```
 nano /etc/apk/repositories
 ```
+
 Copy Script
 ```
 https://mirror.postmarketos.org/postmarketos/v24.06
@@ -60,6 +62,7 @@ rm -rf /etc/os-release
 ```
 nano /etc/os-release
 ```
+
 Copy Script
 ```
 PRETTY_NAME="PostmarketOS 24.06 Linux"
@@ -82,6 +85,7 @@ apk add -u --allow-untrusted postmarketos-keys
 ```
 apk update ; apk upgrade
 ```
+
 ---
 Basic commands Alpine
 > apk update : Update list package.</br>
@@ -95,9 +99,10 @@ Feature
 
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
-In Termux, run this commands
+<b>In Termux, run this commands</b>
 > apt update
 
+- Edit Script
 ```
 apt install pulseaudio nano -y
 ```
@@ -128,10 +133,12 @@ chmod +x $PREFIX/bin/postmarketos
 > exit
 
 - Remove PostmarketOS
-> rm $PREFIX/bin/postmarketos
+```
+rm $PREFIX/bin/postmarketos ; pd remove alpine
+```
 
 ---
-In PostmarketOS, run this command
+<b>In Linux, run this command</b>
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
@@ -139,6 +146,78 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ---
 </details>
 
+<details><summary><b><code>Add New Username</code></b></summary></br>
+
+<b>In Linux, run this commands</b>
+> apk add sudo
+
+- Add Username
+```
+adduser <username>
+```
+```
+passwd <username>
+```
+```
+echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+```
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login Username
+```
+su <username>
+```
+
+- Logout Username
+```
+exit
+```
+
+- Remove Username
+```
+deluser <username>
+```
+
+---
+<b>In Termux, run this commands</b>
+> apt install nano
+
+- Edit Script
+```
+nano $PREFIX/bin/postmarketos
+```
+</br>
+
+> proot-distro login alpine --shared-tmp
+
+To
+
+```
+proot-distro login --user <username> alpine --shared-tmp
+```
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login PostmarketOS
+> postmarketos
+
+- Logout PostmarketOS
+> exit
+
+- Remove PostmarketOS
+```
+rm $PREFIX/bin/postmarketos ; pd remove alpine
+```
+</details>
+
+---
 - [x] [Install Desktop Environments](https://github.com/wahasa/Alpine/tree/main#install-desktop-environments)
 
 - [x] [Run Desktop Environments](https://github.com/wahasa/Alpine/tree/main#run-desktop-environments)
