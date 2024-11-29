@@ -39,6 +39,57 @@ Basic commands Alpine
 ---
 Feature
 
+<details><summary><b><code>Update Repository</code></b></summary></br>
+
+In Linux, run this commands
+> apk add nano
+
+- [x] Repo Alpine 3.21 (Latest)
+
+- Edit Repository
+```
+rm -rf /etc/apk/repositories
+```
+```
+nano /etc/apk/repositories
+```
+
+Copy Script
+```
+https://dl-cdn.alpinelinux.org/alpine/v3.21/main
+https://dl-cdn.alpinelinux.org/alpine/v3.21/community
+```
+Save : ctrl + x, click Y enter.
+
+- Edit Os-release
+```
+rm -rf /etc/os-release
+```
+```
+nano /etc/os-release
+```
+
+Copy Script
+```
+PRETTY_NAME="Alpine 3.21 Linux"
+NAME="Alpine"
+VERSION_ID="3.21"
+VERSION="3.21"
+ID=alpine
+HOME_URL="https://alpinelinux.org"
+SUPPORT_URL="https://alpinelinux.org/community"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+LOGO=alpinelinux-logo
+```
+Save : ctrl + x, click Y enter.
+
+```
+apk update ; apk upgrade
+```
+
+---
+</details>
+
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
 In Termux, run this commands
@@ -88,52 +139,72 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ---
 </details>
 
-<details><summary><b><code>Update Repository</code></b></summary></br>
+<details><summary><b><code>Add New Username</code></b></summary></br>
 
 In Linux, run this commands
-> apk add nano
+> apk add sudo
 
-- [x] Repo Alpine 3.21 (Latest)
-
-- Edit Repository
+- Add Username
 ```
-rm -rf /etc/apk/repositories
+adduser <username>
 ```
 ```
-nano /etc/apk/repositories
-```
-
-Copy Script
-```
-https://dl-cdn.alpinelinux.org/alpine/v3.21/main
-https://dl-cdn.alpinelinux.org/alpine/v3.21/community
-```
-Save : ctrl + x, click Y enter.
-
-- Edit Os-release
-```
-rm -rf /etc/os-release
+passwd <username>
 ```
 ```
-nano /etc/os-release
+echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
 ```
 
-Copy Script
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login Username
 ```
-PRETTY_NAME="Alpine 3.21 Linux"
-NAME="Alpine"
-VERSION_ID="3.21"
-VERSION="3.21"
-ID=alpine
-HOME_URL="https://alpinelinux.org"
-SUPPORT_URL="https://alpinelinux.org/community"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-LOGO=alpinelinux-logo
+su <username>
 ```
-Save : ctrl + x, click Y enter.
+
+- Logout Username
+```
+exit
+```
+
+- Remove Username
+```
+deluser <username>
+```
+
+In Termux, run this commands
+> apt install nano
+
+- Edit Script
+```
+nano $PREFIX/bin/alpine
+```
+
+> proot-distro login alpine --shared-tmp
+
+To
 
 ```
-apk update ; apk upgrade
+proot-distro login --user <username> alpine --shared-tmp
+```
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login Alpine
+> alpine
+
+- Logout Alpine
+> exit
+
+- Remove Alpine
+```
+rm $PREFIX/bin/alpine ; pd remove alpine
 ```
 
 ---
