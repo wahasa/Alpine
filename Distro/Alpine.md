@@ -41,7 +41,7 @@ Feature
 
 <details><summary><b><code>Update Repository</code></b></summary></br>
 
-In Linux, run this commands
+<b>In Linux, run this commands</b>
 > apk add nano
 
 - [x] Repo Alpine 3.21 (Latest)
@@ -92,7 +92,7 @@ apk update ; apk upgrade
 
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
-In Termux, run this commands
+<b>In Termux, run this commands</b>
 > apt update
 
 - Edit Script
@@ -131,7 +131,7 @@ rm $PREFIX/bin/alpine ; pd remove alpine
 ```
 
 ---
-In Linux, run this command
+<b>In Linux, run this command</b>
 ```
 echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 ```
@@ -141,7 +141,7 @@ echo "export PULSE_SERVER=127.0.0.1" > ~/.bashrc
 
 <details><summary><b><code>Add New Username</code></b></summary></br>
 
-In Linux, run this commands
+<b>In Linux, run this commands</b>
 > apk add sudo
 
 - Add Username
@@ -175,13 +175,15 @@ exit
 deluser <username>
 ```
 
-In Termux, run this commands
+---
+<b>In Termux, run this commands</b>
 > apt install nano
 
 - Edit Script
 ```
 nano $PREFIX/bin/alpine
 ```
+</br>
 
 > proot-distro login alpine --shared-tmp
 
@@ -206,10 +208,9 @@ Note :</br>
 ```
 rm $PREFIX/bin/alpine ; pd remove alpine
 ```
-
----
 </details>
 
+---
 - [x] [Install Desktop Environments](https://github.com/wahasa/Alpine/tree/main#install-desktop-environments)
 
 - [x] [Run Desktop Environments](https://github.com/wahasa/Alpine/tree/main#run-desktop-environments)
