@@ -12,7 +12,7 @@
 ### Installation
 Copy and paste this commands to Termux
 
-Install Alpine (Distro)
+- [x] Install Alpine (Distro)
 > apt update
 
 ```
