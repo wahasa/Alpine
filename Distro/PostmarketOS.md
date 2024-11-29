@@ -34,7 +34,8 @@ apt install proot-distro -y ; proot-distro install alpine
 
 ---
 - [x] Add Repository
-> Alpine 3.20 (Latest)
+
+> Alpine 3.20 (Latest)</br>
 > PostmarketOS 24.06 (Latest)
 
 <b>In Alpine, run this commands</b>
