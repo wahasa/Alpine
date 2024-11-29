@@ -2,25 +2,26 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
-v3.20.3
-v3.19.4
-v3.18.9
-v3.17.10
-v3.16.9
-v3.15.11
-v3.14.10
-v3.13.12
-v3.12.12
-v3.11.13
-v3.10.9
-v3.9.6
-v3.8.5
-v3.7.3
-v3.6.5
-v3.5.3
-echo ""
-alpine=3.18
-build=9
+blk='\e[0;30m' red='\e[0;31m'
+grn='\e[0;32m' ylw='\e[0;33m'
+blu='\e[0;34m' pur='\e[0;35m'
+cyn='\e[0;36m' wht='\e[0;37m'
+clear
+printf "${blu}  Welcome To Alpine Termux For Android\n"
+printf "${wht}> https://github.com/wahasa/Alpine\n"
+printf "\n"
+printf "${cyn}List Alpine Release Versions\n"
+printf "\n"
+printf "${ylw}[+] ${grn}3.20.3          ${ylw}[+] ${grn}3.12.12\n"
+printf "${ylw}[+] ${grn}3.19.4          ${ylw}[+] ${grn}3.11.13\n"
+printf "${ylw}[+] ${grn}3.18.9          ${ylw}[+] ${grn}3.10.9\n"
+printf "${ylw}[+] ${grn}3.17.10         ${ylw}[+] ${grn}3.9.6\n"
+printf "${ylw}[+] ${grn}3.16.9          ${ylw}[+] ${grn}3.8.5\n"
+printf "${ylw}[+] ${grn}3.15.11         ${ylw}[+] ${grn}3.7.3\n"
+printf "${ylw}[+] ${grn}3.14.10         ${ylw}[+] ${grn}3.6.5\n"
+printf "${ylw}[+] ${grn}3.13.12         ${ylw}[+] ${grn}3.5.3\n"
+printf "${blu}\n"
+read -p "Please, Choose the Alpine Version : " alpine
 neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
@@ -43,7 +44,7 @@ if [ "$first" != 1 ];then
                *)
                        echo "Unknown Architecture."; exit 1 ;;
                esac
-	       wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
+	       wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}-${archurl}.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
