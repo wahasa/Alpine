@@ -120,7 +120,7 @@ apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-     bash $bin
+bash $bin
      clear
      echo ""
      echo "You can login to Linux with 'alpine' script next time"
