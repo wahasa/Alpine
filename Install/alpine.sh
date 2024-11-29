@@ -2,6 +2,22 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
+v3.20.3
+v3.19.4
+v3.18.9
+v3.17.10
+v3.16.9
+v3.15.11
+v3.14.10
+v3.13.12
+v3.12.12
+v3.11.13
+v3.10.9
+v3.9.6
+v3.8.5
+v3.7.3
+v3.6.5
+v3.5.3
 echo ""
 alpine=3.18
 build=9
