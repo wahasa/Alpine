@@ -115,7 +115,7 @@ chmod +x $PREFIX/bin/$linux
      sed -i 's/bin\/sh/bin\/bash/g' $bin
      clear
      echo ""
-     echo "Updating PostmarketOS,.."
+     echo "Updating Package,.."
      echo ""
 echo "#!/bin/bash
 apk update ; apk upgrade
