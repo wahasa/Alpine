@@ -142,4 +142,4 @@ LOGO=postmarketos-logo' > $folder/etc/os-release
      #rm postmarketos23.12.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
-##
+#
