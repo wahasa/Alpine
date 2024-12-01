@@ -200,6 +200,7 @@ To
 ```
 proot-distro login --user <username> alpine --shared-tmp
 ```
+Save : ctrl + x, click y enter.
 
 </br>
 Note :</br>
