@@ -2,10 +2,10 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
+echo ""
 alpine=3.19
 build=4
-   echo ""
-   neofetch --ascii_distro PostmarketOS -L
+neofetch --ascii_distro PostmarketOS -L
 folder=postmarketos-fs
 if [ -d "$folder" ]; then
          first=1
@@ -34,12 +34,12 @@ if [ "$first" != 1 ];then
          echo "Decompressing Rootfs, please be patient."
          proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
     fi
+    echo ""
     echo "localhost" > $folder/etc/hostname
     echo "127.0.0.1 localhost" > $folder/etc/hosts
     echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
 bin=.postmarketos
 linux=postmarketos
-echo ""
 echo "Writing launch script"
 cat > $bin <<- EOM
 #!/data/data/com.termux/files/usr/bin/bash
@@ -99,11 +99,12 @@ EOM
      #chmod -R 755 $folder
      echo "Removing image for some space"
      rm $tarball
-     echo ""
+echo ""
 echo "#PostmarketOS Repositories
 https://mirror.postmarketos.org/postmarketos/v23.12
 https://dl-cdn.alpinelinux.org/alpine/v3.19/main
 https://dl-cdn.alpinelinux.org/alpine/v3.19/community" > $folder/etc/apk/repositories
+echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .postmarketos' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
@@ -113,10 +114,9 @@ chmod +x $PREFIX/bin/$linux
      sed -i 's/bin\/sh/bin\/bash/g' $bin
      clear
      echo ""
-     echo "Updating PostmarketOS,.."
+     echo "Updating Package,.."
      echo ""
 echo "#!/bin/bash
-touch ~/.hushlogin
 apk update ; apk upgrade
 apk add dialog nano sudo ncurses tzdata
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -137,7 +137,7 @@ ALPINE_VERSION="3.19"
 LOGO=postmarketos-logo' > $folder/etc/os-release
      clear
      echo ""
-     echo "You can login to PostmarketOS with 'postmarketos' script next time"
+     echo "You can login to Linux with 'postmarketos' script next time"
      echo ""
      #rm postmarketos23.12.sh
 #
