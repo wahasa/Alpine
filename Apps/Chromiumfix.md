@@ -3,6 +3,7 @@
 
 ---
 ### Fixed Chromium on Alpine
+<img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/Chromium.jpg">
 
 * Install Chromium
 > apk add chromium
