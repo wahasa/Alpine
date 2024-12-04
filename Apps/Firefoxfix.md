@@ -3,6 +3,7 @@
 
 ---
 ### Fixed Firefox on Alpine
+<img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/Firefox.jpg">
 
 * Install Firefox
 > apk add firefox-esr
