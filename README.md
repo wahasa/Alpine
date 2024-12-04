@@ -72,10 +72,10 @@ In Alpine, run this commands
 <details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
 ```
-apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+apk add --no-cache bash-completion openssl gvfs udisks2
 ```
 ```
-apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme lightdm-gtk-greeter firefox-esr xfburn parole ristretto pulseaudio gst-libav eudev dbus
+apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme xfburn parole ristretto firefox-esr pulseaudio gst-libav eudev dbus
 ```
 ```
 apk add xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce4-notifyd
@@ -85,10 +85,10 @@ apk add xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugrap
 <details><summary><b><code>Lxqt Desktop</code></b></summary></br>
 
 ```
-apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+apk add --no-cache bash-completion openssl gvfs udisks2
 ```
 ```
-apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt adwaita-xfce-icon-theme adwaita-qt sddm firefox-esr pulseaudio eudev dbus
+apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt adwaita-xfce-icon-theme adwaita-qt firefox-esr pulseaudio eudev dbus
 ```
 ```
 apk add screengrab breeze oxygen qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2
@@ -98,20 +98,20 @@ apk add screengrab breeze oxygen qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-
 <details><summary><b><code>Kde- Desktop</code></b></summary></br>
 
 ```
-apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+apk add --no-cache bash-completion openssl gvfs udisks2
 ```
 ```
-apk add plasma-desktop plasma-desktop-meta sddm firefox-esr pulseaudio eudev dbus
+apk add plasma-desktop plasma-desktop-meta firefox-esr pulseaudio eudev dbus
 ```
 </details>
 
 <details><summary><b><code>Mate Desktop</code></b></summary></br>
 
 ```
-apk add --no-cache ca-certificates openssl bash-completion gvfs udisks2
+apk add --no-cache bash-completion openssl gvfs udisks2
 ```
 ```
-apk add mate-desktop-environment adwaita-icon-theme faenza-icon-theme lxdm firefox-esr pulseaudio eudev dbus
+apk add mate-desktop-environment adwaita-icon-theme faenza-icon-theme firefox-esr pulseaudio eudev dbus
 ```
 </details>
 
