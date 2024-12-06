@@ -4,7 +4,7 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 echo ""
 alpine=3.21
-build=0_rc4
+build=0
 neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
@@ -19,7 +19,7 @@ if [ "$first" != 1 ];then
                aarch64)
                        archurl="aarch64" ;;
                arm*)
-                       archurl="armhf" ;;
+                       archurl="armv7" ;;
                i386)
 		       archurl="x86" ;;
                x86_64)
