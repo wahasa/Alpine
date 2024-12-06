@@ -19,7 +19,7 @@ if [ "$first" != 1 ];then
                aarch64)
                        archurl="aarch64" ;;
                arm*)
-                       archurl="armhf" ;;
+                       archurl="armv7" ;;
                i386)
 		       archurl="x86" ;;
                x86_64)
