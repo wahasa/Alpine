@@ -24,14 +24,14 @@ Copy and paste this commands to Termux
 > apt install wget
 - [x] PostmarketOS 24.06 (Latest-release)
 
-Rootfs : Armhf, Arm64, i386, Amd64
+Rootfs : Armhf, Arm64, Amd64
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
 ```
 
 - [x] PostmarketOS 23.12 (Old-release)
 
-Rootfs : Armhf, Arm64, i386, Amd64
+Rootfs : Armhf, Arm64, Amd64
 ```
 wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos23.12.sh ; chmod +x postmarketos23.12.sh ; ./postmarketos23.12.sh
 ```
