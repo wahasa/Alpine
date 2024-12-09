@@ -39,6 +39,9 @@ apt install proot-distro -y ; proot-distro install alpine
 > PostmarketOS 24.06 (Latest)
 
 <b>In Alpine, run this commands</b>
+```
+apk add dialog wget nano sudo
+```
 
 - Edit Repository
 ```
