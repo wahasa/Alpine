@@ -9,7 +9,7 @@
 
 <b>Alpine Rootfs</b>
 
-- https://github.com/termux/proot-distro/releases/tag/v4.6.0
+- https://github.com/termux/proot-distro/releases
 
 ---
 <b>PostmarketOS Site</b>
