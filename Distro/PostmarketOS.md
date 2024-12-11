@@ -35,8 +35,8 @@ apt install proot-distro -y ; proot-distro install alpine
 ---
 - [x] Add Repository
 
-> Alpine 3.20 (Latest)</br>
-> PostmarketOS 24.06 (Latest)
+> Alpine 3.21 (Latest)</br>
+> PostmarketOS 24.12 (Latest)
 
 <b>In Alpine, run this commands</b>
 ```
@@ -53,9 +53,9 @@ nano /etc/apk/repositories
 
 Copy Script
 ```
-https://mirror.postmarketos.org/postmarketos/v24.06
-https://dl-cdn.alpinelinux.org/alpine/v3.20/main
-https://dl-cdn.alpinelinux.org/alpine/v3.20/community
+https://mirror.postmarketos.org/postmarketos/v24.12
+https://dl-cdn.alpinelinux.org/alpine/v3.21/main
+https://dl-cdn.alpinelinux.org/alpine/v3.21/community
 ```
 Save : ctrl + x, click Y enter.
 
@@ -69,16 +69,16 @@ nano /etc/os-release
 
 Copy Script
 ```
-PRETTY_NAME="PostmarketOS 24.06 Linux"
+PRETTY_NAME="PostmarketOS 24.12 Linux"
 NAME="PostmarketOS"
-VERSION_ID="24.06"
-VERSION="24.06"
+VERSION_ID="24.12"
+VERSION="24.12"
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
 SUPPORT_URL="https://gitlab.postmarketos.org/postmarketOS"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues
-ALPINE_VERSION="3.20"
+ALPINE_VERSION="3.21"
 LOGO=postmarketos-logo
 ```
 Save : ctrl + x, click Y enter.
