@@ -3,8 +3,8 @@ pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 echo ""
-alpine=3.19
-build=4
+alpine=3.20
+build=3
 neofetch --ascii_distro PostmarketOS -L
 folder=postmarketos-fs
 if [ -d "$folder" ]; then
@@ -101,9 +101,9 @@ EOM
      rm $tarball
 echo ""
 echo "#PostmarketOS Repositories
-https://mirror.postmarketos.org/postmarketos/v23.12
-https://dl-cdn.alpinelinux.org/alpine/v3.19/main
-https://dl-cdn.alpinelinux.org/alpine/v3.19/community" > $folder/etc/apk/repositories
+https://mirror.postmarketos.org/postmarketos/v24.06
+https://dl-cdn.alpinelinux.org/alpine/v3.20/main
+https://dl-cdn.alpinelinux.org/alpine/v3.20/community" > $folder/etc/apk/repositories
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .postmarketos' > $PREFIX/bin/$linux
@@ -124,22 +124,22 @@ rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
      bash $bin
      sleep 2
-echo 'PRETTY_NAME="PostmarketOS 23.12 Linux"
+echo 'PRETTY_NAME="PostmarketOS 24.06 Linux"
 NAME="PostmarketOS"
-VERSION_ID="23.12"
-VERSION="23.12"
+VERSION_ID="24.06"
+VERSION="24.06"
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
 SUPPORT_URL="https://gitlab.postmarketos.org/postmarketOS"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-ALPINE_VERSION="3.19"
+ALPINE_VERSION="3.20"
 LOGO=postmarketos-logo' > $folder/etc/os-release
      clear
      echo ""
      echo "You can login to Linux with 'postmarketos' script next time"
      echo ""
-     #rm postmarketos23.12.sh
+     #rm postmarketos24.06.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 #
