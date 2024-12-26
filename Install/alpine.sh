@@ -1,10 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/bash
-pkg install root-repo x11-repo
-pkg install proot xz-utils neofetch pulseaudio -y
-#termux-setup-storage
+clear
+echo "Alpine on Termux Android"
 echo ""
+pkg install root-repo x11-repo
+#termux-setup-storage
 alpine=3.21
 build=0
+echo ""
+for i in proot neofetch pulseaudio; do
+      if [ -e "$PREFIX"/bin/$i ]; then
+         echo "$i is already."
+      else
+         echo "Installing $i,.."
+         apt install $i -y
+      fi
+    done
+apt upgrade -y
+echo ""
 neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
@@ -16,7 +28,7 @@ if [ "$first" != 1 ];then
          if [ ! -f $tarball ]; then
                echo "Download Rootfs, this may take a while base on your internet speed."
                case `dpkg --print-architecture` in
-               aarch64)
+               aarch)
                        archurl="aarch64" ;;
                arm*)
                        archurl="armv7" ;;
