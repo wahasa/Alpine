@@ -65,7 +65,7 @@ Basic commands Alpine
 > apk del (pkg) : Delete package.</br>
 
 ---
-### Install Desktop Environments
+### Install Desktop Environment
 
 In Alpine, run this commands
 > apk update
@@ -91,7 +91,7 @@ Feature
 Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
 
 ---
-### Run Desktop Environments
+### Run Desktop Environment
 - [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/Termux-X11.md#termux-x11-on-alpine)
 - [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/RvncViewer.md#rvnc-viewer-on-alpine)
 </br>
