@@ -1,7 +1,3 @@
-<p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
-
----
 ### RVNC Viewer on Alpine
 <img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/RVNC-Viewer.jpg">
 
@@ -12,25 +8,19 @@
 ---
 Commands in Termux (session 1)
 
-- Install Package
+- Install pkg
 ```
 apt install tigervnc xorg-xhost -y
 ```
 
 - Add script
 ```
-echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart
-```
-```
-echo "vncserver -kill :1" > $PREFIX/bin/vncstop
+echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart ; echo "vncserver -kill :1" > $PREFIX/bin/vncstop
 ```
 
 - Activate script
 ```
-chmod +x $PREFIX/bin/vncstart
-```
-```
-chmod +x $PREFIX/bin/vncstop
+chmod +x $PREFIX/bin/vnc*
 ```
 
 ---
@@ -51,26 +41,10 @@ nano /usr/local/bin/vncstart
 #!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
-
-# --XFCE-- #
-#startxfce4
-
-# --LXQT-- #
-#startlxqt
-
-# --KDE-- #
-#startplasma-x11
-
-# --MATE-- #
-#mate-session
-
-# --END-- #
+startxfce4
 ```
 
 Save : ctrl + x, click Y enter.
-
-Note :</br>
-Remove the sign (#) on the desktop you are installing now.
 
 - Activate script
 ```
