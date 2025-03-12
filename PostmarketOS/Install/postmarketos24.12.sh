@@ -1,10 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot xz-utils neofetch pulseaudio -y
+pkg install proot neofetch pulseaudio -y
 #termux-setup-storage
 echo ""
 alpine=3.21
-build=0
+build=3
 neofetch --ascii_distro PostmarketOS -L
 folder=postmarketos-fs
 if [ -d "$folder" ]; then
@@ -27,7 +27,7 @@ if [ "$first" != 1 ];then
                *)
                        echo "Unknown Architecture."; exit 1 ;;
                esac
-	       wget -q --show-progress "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
+	       wget "https://dl-cdn.alpinelinux.org/alpine/v${alpine}/releases/${archurl}/alpine-minirootfs-${alpine}.${build}-${archurl}.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
@@ -101,10 +101,7 @@ EOM
      echo "Removing image for some space"
      rm $tarball
 echo ""
-echo "#PostmarketOS Repositories
-https://mirror.postmarketos.org/postmarketos/v24.12
-https://dl-cdn.alpinelinux.org/alpine/v3.21/main
-https://dl-cdn.alpinelinux.org/alpine/v3.21/community" > $folder/etc/apk/repositories
+echo "https://mirror.postmarketos.org/postmarketos/v24.12" >> $folder/etc/apk/repositories
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .postmarketos' > $PREFIX/bin/$linux
