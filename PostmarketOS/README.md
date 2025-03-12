@@ -59,8 +59,8 @@ Basic commands Alpine
 
 ---
 Feature
-- [x] [Install Desktop Environments](https://github.com/wahasa/Alpine/tree/main#install-desktop-environments)
-- [x] [Run Desktop Environments](https://github.com/wahasa/Alpine/tree/main#run-desktop-environments)
+- [x] [Install Desktop Environment](https://github.com/wahasa/Alpine/tree/main#install-desktop-environment)
+- [x] [Run Desktop Environment](https://github.com/wahasa/Alpine/tree/main#run-desktop-environment)
 </br>
 
 ---
