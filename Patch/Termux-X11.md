@@ -1,7 +1,3 @@
-<p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
-
----
 ### Termux-x11 on Alpine
 <img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/Termux-X11.jpg">
 
@@ -12,25 +8,19 @@
 ---
 Commands in Termux (session 1)
 
-- Install Package
+- Install pkg
 ```
 apt install termux-x11-nightly -y
 ```
 
 - Add script
 ```
-echo "termux-x11 :1" > $PREFIX/bin/start-x11
-```
-```
-echo "pkill -f com.termux.x11" > $PREFIX/bin/stop-x11
+echo "termux-x11 :1" > $PREFIX/bin/start-x11 ; echo "pkill -f com.termux.x11" > $PREFIX/bin/stop-x11
 ```
 
 - Activate script
 ```
-chmod +x $PREFIX/bin/start-x11
-```
-```
-chmod +x $PREFIX/bin/stop-x11
+chmod +x $PREFIX/bin/start-x11 ; chmod +x $PREFIX/bin/stop-x11
 ```
 
 - Edit Properties
@@ -65,26 +55,10 @@ nano /usr/local/bin/start-x11
 #!/bin/sh
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
-
-# --XFCE-- #
-#startxfce4
-
-# --LXQT-- #
-#startlxqt
-
-# --KDE-- #
-#startplasma-x11
-
-# --MATE-- #
-#mate-session
-
-# --END-- #
+startxfce4
 ```
 
 Save : ctrl + x, click Y enter.
-
-Note :</br>
-Remove the sign (#) on the desktop you are installing now.
 
 - Activate script
 ```
