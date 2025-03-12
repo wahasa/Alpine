@@ -85,7 +85,7 @@ Feature
 - [x] Access to Sdcard
 - [x] Access to Termux-x11
 - [x] Add New Username     | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/AddUser.md#add-username-on-alpine)
-- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Firefoxfix.md#fixed-firefox-on-alpine)
+- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Apps/Chromiumfix.md#fixed-chromium-on-alpine)
 - [x] Install Applications | [Click Here >](https://github.com/wahasa/Alpine/tree/main/Apps#list-applications)
 
 Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
