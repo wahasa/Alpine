@@ -19,30 +19,19 @@ This just adds the PosmarketOS repository to Alpine, but the underlying base is 
 Copy and paste this commands to Termux
 > apt update
 
-<details><summary><b><code>Install PostmarketOS</code></b></summary></br>
-
-> apt install wget
-- [x] PostmarketOS 24.06 (Latest-release)
+- [x] PostmarketOS 24.06
 
 Rootfs : Armhf, Arm64, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos24.06.sh ; chmod +x postmarketos24.06.sh ; ./postmarketos24.06.sh
 ```
 
-- [x] PostmarketOS 23.12 (Old-release)
+- [x] PostmarketOS 23.12
 
 Rootfs : Armhf, Arm64, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos23.12.sh ; chmod +x postmarketos23.12.sh ; ./postmarketos23.12.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketos23.12.sh ; chmod +x postmarketos23.12.sh ; ./postmarketos23.12.sh
 ```
-
-- [x] PostmarketOS 24.12 (Development)
-
-Rootfs : Armhf, Arm64, i386, Amd64
-```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/PostmarketOS/Install/postmarketosdev.sh ; chmod +x postmarketosdev.sh ; ./postmarketosdev.sh
-```
-</details>
 
 ---
 * Login PostmarketOS
@@ -64,7 +53,7 @@ rm -rf postmarketos-fs .postmarketos $PREFIX/bin/postmarketos
 Basic commands Alpine
 > apk update : Update list package.</br>
 > apk upgrade : Upgrade package.</br>
-> apk search (pkg) : Search package.</br>
+> apk search (pkg) : Search pkg.</br>
 > apk add (pkg) : Install package.</br>
 > apk del (pkg) : Delete package.</br>
 
