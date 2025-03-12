@@ -73,13 +73,10 @@ In Alpine, run this commands
 - [x] Xfce Desktop
 
 ```
-apk add --no-cache bash-completion openssl gvfs udev udisks2
+apk add --no-cache bash-completion openssl udev udisks2
 ```
 ```
-apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme xfburn parole ristretto firefox-esr pulseaudio gst-libav dbus
-```
-```
-apk add xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce4-notifyd
+apk add xfce4 xfce4-screenshooter xfce4-screensaver xfce4-taskmanager xfce4-notifyd xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme xfburn parole ristretto pulseaudio chromium dbus-x11
 ```
 
 ---
@@ -97,7 +94,6 @@ Visit problems now in : [Issues](https://github.com/wahasa/Alpine/issues)
 ### Run Desktop Environments
 - [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/Termux-X11.md#termux-x11-on-alpine)
 - [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/RvncViewer.md#rvnc-viewer-on-alpine)
-- [x] With Bvnc Viewer | [Click Here >](https://github.com/wahasa/Alpine/blob/main/Patch/BvncViewer.md#bvnc-viewer-on-alpine)
 </br>
 
 ---
