@@ -1,7 +1,3 @@
-<p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
-
----
 ### Add Username on Alpine
 <img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/Username.jpg">
 
@@ -16,7 +12,7 @@ adduser <username>
 passwd <username>
 ```
 ```
-echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+echo "<username>  ALL=(ALL:ALL) ALL" >> /etc/sudoers
 ```
 
 </br>
