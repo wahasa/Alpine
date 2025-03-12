@@ -14,30 +14,31 @@
 Copy and paste this commands to Termux
 > apt update
 
-<details><summary><b><code>Install Alpine</code></b></summary></br>
-
-> apt install wget
-- [x] Alpine 3.21 (Latest-release)
+- [x] Alpine 3.21
 
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.21.sh ; chmod +x alpine3.21.sh ; ./alpine3.21.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine_3.21.sh ; chmod +x alpine_3.21.sh ; ./alpine_3.21.sh
 ```
-- [x] Alpine 3.20 (Old-release)
+- [x] Alpine 3.20
 
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine3.20.sh ; chmod +x alpine3.20.sh ; ./alpine3.20.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine_3.20.sh ; chmod +x alpine_3.20.sh ; ./alpine_3.20.sh
 ```
-- [x] Alpine 3.21 (Development)
+- [x] Alpine 3.19
 
 Rootfs : Armhf, Arm64, i386, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpinedev.sh ; chmod +x alpinedev.sh ; ./alpinedev.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine_3.19.sh ; chmod +x alpine_3.19.sh ; ./alpine_3.19.sh
 ```
 
-- [x] List Alpine | [Click Hare >](https://github.com/wahasa/Alpine/tree/main/Install)
-</details>
+- [x] Alpine 3.18
+
+Rootfs : Armhf, Arm64, i386, Amd64
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Alpine/main/Install/alpine_3.18.sh ; chmod +x alpine_3.18.sh ; ./alpine_3.18.sh
+```
 
 ---
 * Login Alpine
@@ -69,7 +70,7 @@ Basic commands Alpine
 In Alpine, run this commands
 > apk update
 
-<details><summary><b><code>Xfce Desktop</code></b></summary></br>
+- [x] Xfce Desktop
 
 ```
 apk add --no-cache bash-completion openssl gvfs udev udisks2
@@ -80,40 +81,6 @@ apk add xfce4 xfce4-terminal adw-gtk3 adwaita-xfce-icon-theme xfburn parole rist
 ```
 apk add xfce4-screenshooter xfce4-screensaver xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-whiskermenu-plugin xfce4-taskmanager xfce4-notifyd
 ```
-</details>
-
-<details><summary><b><code>Lxqt Desktop</code></b></summary></br>
-
-```
-apk add --no-cache bash-completion openssl gvfs udev udisks2
-```
-```
-apk add lxqt-desktop lximage-qt obconf-qt pavucontrol-qt adwaita-xfce-icon-theme adwaita-qt firefox-esr pulseaudio dbus
-```
-```
-apk add screengrab breeze oxygen qt5-qtgraphicaleffects qt5-qtquickcontrols qt5-qtquickcontrols2
-```
-</details>
-
-<details><summary><b><code>Kde- Desktop</code></b></summary></br>
-
-```
-apk add --no-cache bash-completion openssl gvfs udev udisks2
-```
-```
-apk add plasma-desktop plasma-desktop-meta firefox-esr pulseaudio dbus
-```
-</details>
-
-<details><summary><b><code>Mate Desktop</code></b></summary></br>
-
-```
-apk add --no-cache bash-completion openssl gvfs udev udisks2
-```
-```
-apk add mate-desktop-environment adwaita-icon-theme faenza-icon-theme firefox-esr pulseaudio dbus
-```
-</details>
 
 ---
 Feature
