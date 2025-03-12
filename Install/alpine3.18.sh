@@ -1,10 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install root-repo x11-repo
-pkg install proot xz-utils neofetch pulseaudio -y
+pkg install proot neofetch pulseaudio -y
 #termux-setup-storage
 echo ""
 alpine=3.18
-build=9
+build=12
 neofetch --ascii_distro Alpine -L
 folder=alpine-fs
 if [ -d "$folder" ]; then
@@ -67,14 +67,12 @@ command+=" -b /proc/self/fd:/dev/fd"
 command+=" -b /proc/self/fd/0:/dev/stdin"
 command+=" -b /proc/self/fd/1:/dev/stdout"
 command+=" -b /proc/self/fd/2:/dev/stderr"
-command+=" -b /sys"
 command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 command+=" -b $folder/root:/dev/shm"
 ## Uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## Uncomment the following line to mount /sdcard directly to /
 command+=" -b /sdcard"
-command+=" -b /mnt"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
@@ -101,9 +99,6 @@ EOM
      echo "Removing image for some space"
      rm $tarball
 echo ""
-echo "#Alpine Repositories
-https://dl-cdn.alpinelinux.org/alpine/v3.18/main
-https://dl-cdn.alpinelinux.org/alpine/v3.18/community" > $folder/etc/apk/repositories
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/root/.bashrc
 echo 'bash .alpine' > $PREFIX/bin/$linux
