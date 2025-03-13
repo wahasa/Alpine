@@ -23,20 +23,6 @@ echo "termux-x11 :1" > $PREFIX/bin/x11start ; echo "pkill -f com.termux.x11" > $
 chmod +x $PREFIX/bin/x11*
 ```
 
-- Edit Properties
-```
-nano ~/.termux/termux.properties
-```
-
-Example :
-> #allow-external-apps = true
-
-To
-
-> allow-external-apps = true
-
-Save : ctrl + x, click Y enter.
-
 ---
 Add new session :</br>
 Swipe the screen from left to right in termux, click 'New Session'.
@@ -91,6 +77,8 @@ In session 2 (linux), run this command
 > Click Ctrl+c, enter (2X)
 
 In session 1(termux), run this command
+> Click Ctrl+c, enter
+
 > x11stop
 </br>
 
