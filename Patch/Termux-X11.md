@@ -15,12 +15,12 @@ apt install termux-x11-nightly -y
 
 - Add script
 ```
-echo "termux-x11 :1" > $PREFIX/bin/start-x11 ; echo "pkill -f com.termux.x11" > $PREFIX/bin/stop-x11
+echo "termux-x11 :1" > $PREFIX/bin/x11start ; echo "pkill -f com.termux.x11" > $PREFIX/bin/x11stop
 ```
 
 - Activate script
 ```
-chmod +x $PREFIX/bin/start-x11 ; chmod +x $PREFIX/bin/stop-x11
+chmod +x $PREFIX/bin/x11*
 ```
 
 - Edit Properties
@@ -47,7 +47,7 @@ Commands in Linux (session 2)
 
 - Edit script
 ```
-nano /usr/local/bin/start-x11
+nano /usr/local/bin/x11start
 ```
 
 - Add script
@@ -62,7 +62,7 @@ Save : ctrl + x, click Y enter.
 
 - Activate script
 ```
-chmod +x /usr/local/bin/start-x11
+chmod +x /usr/local/bin/x11start
 ```
 
 ---
@@ -71,12 +71,12 @@ chmod +x /usr/local/bin/start-x11
 
 In session 1(termux), run this command
 ```
-start-x11
+x11start
 ```
 
 In session 2 (linux), run this command
 ```
-start-x11
+x11start
 ```
 
 Open Termux-x11
@@ -91,7 +91,7 @@ In session 2 (linux), run this command
 > Click Ctrl+c, enter (2X)
 
 In session 1(termux), run this command
-> stop-x11
+> x11stop
 </br>
 
 ---
