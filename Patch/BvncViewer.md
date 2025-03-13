@@ -1,7 +1,3 @@
-<p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
-
----
 ### BVNC Viewer on Alpine
 <img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/BVNC-Viewer.jpg">
 
@@ -19,18 +15,12 @@ apt install tigervnc xorg-xhost -y
 
 - Add script
 ```
-echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart
-```
-```
-echo "vncserver -kill :1" > $PREFIX/bin/vncstop
+echo "vncserver -geometry 1600x900 -listen tcp :1 && DISPLAY=:1 xhost +" > $PREFIX/bin/vncstart ; echo "vncserver -kill :1" > $PREFIX/bin/vncstop
 ```
 
 - Activate script
 ```
-chmod +x $PREFIX/bin/vncstart
-```
-```
-chmod +x $PREFIX/bin/vncstop
+chmod +x $PREFIX/bin/vnc*
 ```
 #### Run BVNC Viewer
 - Start VNC Server
@@ -51,23 +41,8 @@ export DISPLAY=:1
 ```
 export PULSE_SERVER=127.0.0.1
 ```
-
----
-XFCE Desktop
 ```
 startxfce4
-```
-LXQT Desktop
-```
-startlxqt
-```
-KDE- Desktop
-```
-startplasma-x11
-```
-MATE Desktop
-```
-mate-session
 ```
 
 ---
