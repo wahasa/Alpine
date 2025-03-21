@@ -152,7 +152,7 @@ adduser <username>
 passwd <username>
 ```
 ```
-echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+echo "<username>  ALL=(ALL:ALL) ALL" >> /etc/sudoers
 ```
 
 </br>
