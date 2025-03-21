@@ -32,7 +32,7 @@ if [ "$first" != 1 ];then
          mkdir -p $folder
 	 mkdir -p $folder/binds
          echo "Decompressing Rootfs, please be patient."
-         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
+         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev' ||:
     fi
     echo ""
     echo "localhost" > $folder/etc/hostname
@@ -136,7 +136,7 @@ LOGO=postmarketos-logo' > $folder/etc/os-release
      echo ""
      echo "You can login to Linux with 'postmarketos' script next time"
      echo ""
-     #rm postmarketos24.12.sh
+     #rm postmarketos_24.12.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 #
