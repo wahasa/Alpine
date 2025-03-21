@@ -126,7 +126,7 @@ bash $bin
      echo ""
      echo "You can login to Linux with 'alpine' script next time"
      echo ""
-     #rm alpinedev.sh
+     #rm alpine_dev.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 #
