@@ -11,7 +11,7 @@
 
 ---
 Warning :</br>
-This just adds the PosmarketOS repository to Alpine, but the underlying base is still Alpine.
+This is a PostmarketOS repository which is based on the alpine linux operating system designed for mobile devices.
 
 ---
 ### Installation
