@@ -11,7 +11,7 @@
 
 ---
 Warning :</br>
-This is a PostmarketOS repository which is based on the alpine linux operating system designed for mobile devices. | [Click Here >](https://postmarketos.org)
+This is a PostmarketOS repository which is based on the alpine linux operating system designed for mobile devices | [Click Here >](https://postmarketos.org)
 
 ---
 ### Installation
