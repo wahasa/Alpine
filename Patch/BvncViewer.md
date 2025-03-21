@@ -8,7 +8,7 @@
 ---
 Commands in Termux
 
-- Install Package
+- Install pkg
 ```
 apt install tigervnc xorg-xhost -y
 ```
