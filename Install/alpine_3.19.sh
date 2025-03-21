@@ -122,7 +122,7 @@ bash $bin
      echo ""
      echo "You can login to Linux with 'alpine' script next time"
      echo ""
-     #rm alpine3.19.sh
+     #rm alpine_3.19.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 #
