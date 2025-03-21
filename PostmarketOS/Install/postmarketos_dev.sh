@@ -32,7 +32,7 @@ if [ "$first" != 1 ];then
          mkdir -p $folder
 	 mkdir -p $folder/binds
          echo "Decompressing Rootfs, please be patient."
-         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
+         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev' ||:
     fi
     echo ""
     echo "localhost" > $folder/etc/hostname
@@ -127,22 +127,22 @@ exit" > $folder/root/.bash_profile
      sleep 2
 echo 'PRETTY_NAME="PostmarketOS Edge (Development Branch)"
 NAME="PostmarketOS"
-VERSION_ID="24.12"
-VERSION="24.12 Edge"
+VERSION_ID="25.06"
+VERSION="25.06 Edge"
 VERSION_CODENAME=edge
 ID=postmarketos
 ID_LIKE=alpine
 HOME_URL="https://postmarketos.org"
 SUPPORT_URL="https://gitlab.postmarketos.org/postmarketOS"
 BUG_REPORT_URL="https://gitlab.com/postmarketOS/pmaports/-/issues"
-ALPINE_VERSION="3.21 Edge"
+ALPINE_VERSION="3.22 Edge"
 ALPINE_CODENAME=edge
 LOGO=postmarketos-logo' > $folder/etc/os-release
      clear
      echo ""
      echo "You can login to Linux with 'postmarketos' script next time"
      echo ""
-     #rm postmarketosdev.sh
+     #rm postmarketos_dev.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
 #
