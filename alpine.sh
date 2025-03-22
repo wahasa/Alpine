@@ -2,18 +2,21 @@
 pkg install root-repo x11-repo
 pkg install proot neofetch pulseaudio -y
 #termux-setup-storage
-
+alpine=3.21
+build=3
+linux=alpine
 lib=../usr/var/lib
 if [[ ! -d "$lib/proot-distro" ]]; then
    mkdir -p $lib/proot-distro
    mkdir -p $lib/proot-distro/installed-rootfs
    mkdir -p $lib/proot-distro/installed-rootfs/alpine
 fi
-folder=$lib/proot-distro/installed-rootfs/alpine
 tarball="alpine-rootfs.tar.gz"
+neofetch --ascii_distro $linux -L
+folder=$lib/proot-distro/installed-rootfs/alpine
 if [ ! -f $tarball ]; then
    echo "Download Rootfs, this may take a while base on your internet speed."
-         case `dpkg --print-architecture` in
+	 case `dpkg --print-architecture` in
          aarch64)
                 archurl="aarch64" ;;
          arm*)
