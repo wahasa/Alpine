@@ -51,9 +51,9 @@ rm -rf postmarketos-fs .postmarketos $PREFIX/bin/postmarketos
 
 ---
 Basic commands Alpine
-> apk update : Update list package.</br>
+> apk update : Update repo package.</br>
 > apk upgrade : Upgrade package.</br>
-> apk search (pkg) : Search pkg.</br>
+> apk search (pkg) : Search package.</br>
 > apk add (pkg) : Install package.</br>
 > apk del (pkg) : Delete package.</br>
 
