@@ -70,8 +70,9 @@ Basic commands Alpine
 In Alpine, run this commands
 > apk update
 
-- [x] Xfce Desktop
+<img src="https://raw.githubusercontent.com/wahasa/Alpine/refs/heads/main/Patch/Xfce.jpg">
 
+- [x] Xfce Desktop
 ```
 apk add --no-cache bash-completion openssl udev udisks2
 ```
